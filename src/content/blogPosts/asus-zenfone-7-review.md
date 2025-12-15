@@ -62,11 +62,9 @@ coverImageCredit: ''
 
 6GB 的記憶體也只能算是堪用，開 5~7 個 App 勉強能夠不 LAG 和不重開 App
 
-{% gp 1-2 %}
 ![GeekBench 5 CPU 跑分](https://i.imgur.com/lE8WNvz.png)
 
 ![儲存空間測速結果](https://i.imgur.com/MbPFqYm.png)
-{% endgp %}
 
 ### 螢幕
 
