@@ -1,0 +1,30 @@
+---
+import { siteConfig } from '@/site.config'
+import { getAllPosts } from '@Utils/postUtils'
+import { getAllTags } from '@Utils/tagUtils'
+import BaseLayout from '@Layouts/BaseLayout.astro'
+import TagCard from '@Components/common/TagCard.astro'
+
+const allPosts = await getAllPosts()
+
+const allTags = await getAllTags(allPosts, 'tagCount')
+---
+
+<BaseLayout title=`文章標籤 | ${siteConfig.title}`>
+	<main class="main-container">
+		<div class="flex flex-wrap items-center">
+			<h1 class="page-title">文章標籤</h1>
+		</div>
+		<div class="py-14">
+			<ul class="flex flex-wrap justify-center gap-5">
+				{
+					allTags.map((tag) => (
+						<li>
+							<TagCard tag={tag} />
+						</li>
+					))
+				}
+			</ul>
+		</div>
+	</main>
+</BaseLayout>

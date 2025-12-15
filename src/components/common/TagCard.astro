@@ -1,0 +1,14 @@
+---
+import { Icon } from 'astro-icon/components'
+import { tagNameSlugify } from '@Utils/tagUtils'
+
+const { tag } = Astro.props
+---
+
+<a href=`/tags/${tagNameSlugify(tag.name)}` class="tagCard group">
+	<Icon name="material-symbols:tag-rounded" size={25} />
+	<span>{tag.name}</span>
+	<span class={`flex justify-center items-center ${tag.frequency >= 100 ? `w-10` : `w-8`} h-8 ml-0.75 rounded-lg bg-gray-200/75 dark:bg-gray-200/20`}
+		>{tag.frequency}</span
+	>
+</a>

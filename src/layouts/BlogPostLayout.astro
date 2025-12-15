@@ -1,0 +1,87 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import type { MarkdownHeading } from 'astro'
+import { Image } from 'astro:assets'
+import { Icon } from 'astro-icon/components'
+import { siteConfig } from '@/site.config'
+import dayjs from 'dayjs'
+import BaseLayout from './BaseLayout.astro'
+import FormattedDate from '@Components/common/FormattedDate.astro'
+import TableOfContents from '@Components/toc/TableOfContents.astro'
+import { getChiCategoryName } from '@Utils/categoryUtils'
+
+type Props = CollectionEntry<'blogPosts'>['data'] & {
+	headings: MarkdownHeading[]
+}
+
+const { title, description, categories, pubDate, updatedDate, coverImage, coverImageCredit, headings } = Astro.props
+---
+
+<BaseLayout title={title + ' | ' + siteConfig.title} description={description} image={coverImage}>
+	<main>
+		<article>
+			<div class="app-container relative flex flex-col justify-around gap-8 pt-20 pb-10 lg:flex-row-reverse">
+				<aside class="relative hidden xl:block xl:w-1/4">
+					<div class="sticky hidden lg:block xl:top-35">
+						<TableOfContents headings={headings} />
+					</div>
+				</aside>
+				<div class="w-full grow md:max-w-[110ch]">
+					<div class={!coverImage ? 'mb-5' : null}>
+						<h1 class="pt-0 text-2xl leading-snug font-bold md:pt-14 md:text-4xl">{title}</h1>
+						<div class="flex flex-wrap items-center gap-4 py-4 text-lg">
+							<span
+								class="flex items-center"
+								title={`發表日期：${dayjs(pubDate).format('YYYY-MM-DD HH:mm:ss')}`}
+								aria-label={`發表日期：${dayjs(pubDate).format('YYYY-MM-DD HH:mm:ss')}`}
+							>
+								<Icon name="lucide:calendar" class="mr-1" size={20} />
+								<FormattedDate date={pubDate} format="YYYY-MM-DD HH:mm" />
+							</span>
+							{
+								updatedDate && !dayjs(dayjs(updatedDate)).isSame(dayjs(pubDate)) && (
+									<span
+										class="hidden items-center md:flex"
+										title={`更新日期：${dayjs(updatedDate).format('YYYY-MM-DD HH:mm:ss')}`}
+										aria-label={`更新日期：${dayjs(updatedDate).format('YYYY-MM-DD HH:mm:ss')}`}
+									>
+										<Icon name="lucide:calendar-arrow-up" class="mr-1" size={20} />
+										<FormattedDate date={updatedDate} format="YYYY-MM-DD HH:mm" />
+									</span>
+								)
+							}
+							{
+								categories && (
+									<>
+										<span class="flex items-center">
+											<a href={`${siteConfig.base}/categories/${categories}/`} class="inline-flex items-center">
+												<Icon name="lucide:folder" class="mr-1" size={20} />
+												<span>{getChiCategoryName(categories)}</span>
+											</a>
+										</span>
+									</>
+								)
+							}
+						</div>
+						{
+							coverImage && (
+								<>
+									<Image
+										src={coverImage}
+										alt={title}
+										class={coverImageCredit ? 'rounded-sm shadow-lg/30' : 'mb-10 rounded-sm shadow-lg/30'}
+										inferSize={true}
+									/>
+									{coverImageCredit && <p class="mt-2 mb-10 text-sm opacity-80">圖片來源：{coverImageCredit}</p>}
+								</>
+							)
+						}
+					</div>
+					<div class="prose prose-zinc prose-lg md:prose-xl dark:prose-invert prose-element-modify max-w-none text-justify">
+						<slot />
+					</div>
+				</div>
+			</div>
+		</article>
+	</main>
+</BaseLayout>

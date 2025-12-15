@@ -1,0 +1,22 @@
+---
+import { siteConfig } from '@/site.config'
+import { getAllPosts } from '@Utils/postUtils'
+import { getAllCategories } from '@Utils/categoryUtils'
+import BaseLayout from '@Layouts/BaseLayout.astro'
+import CategoryCard from '@Components/common/CategoryCard.astro'
+
+const allPosts = await getAllPosts()
+
+const allCategories = await getAllCategories(allPosts, 'postCount')
+---
+
+<BaseLayout title=`文章分類 | ${siteConfig.title}`>
+	<main class="main-container">
+		<div class="flex flex-wrap items-center">
+			<h1 class="page-title">文章分類</h1>
+		</div>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 my-14">
+			{allCategories.map((category) => <CategoryCard category={category} />)}
+		</div>
+	</main>
+</BaseLayout>

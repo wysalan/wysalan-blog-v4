@@ -1,0 +1,43 @@
+---
+import { type GetStaticPathsOptions } from 'astro'
+import { siteConfig } from '@/site.config'
+import { Icon } from 'astro-icon/components'
+import { getAllPosts } from '@Utils/postUtils'
+import { getChiCategoryName } from '@Utils/categoryUtils'
+import BaseLayout from '@Layouts/BaseLayout.astro'
+import PostBlock from '@Components/common/PostBlock.astro'
+import Pagination from '@Components/Pagination.astro'
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+	const allPosts = await getAllPosts()
+	const allCategories = [...new Set(allPosts.flatMap((post) => post.data.categories))]
+	return allCategories.flatMap((category) => {
+		const filteredPosts = allPosts.filter((post) => post.data.categories === category)
+		return paginate(filteredPosts, {
+			params: { categories: category },
+			pageSize: siteConfig.pageSize,
+		})
+	})
+}
+
+const { page } = Astro.props
+const { data } = page
+const { categories } = Astro.params
+---
+
+<BaseLayout title=`分類：${getChiCategoryName(categories)} | ${siteConfig.title}`>
+	<main class="main-container">
+		<div class="flex flex-wrap items-center">
+			<Icon name="lucide:folder" class="mr-3 inline-block" size="48px" />
+			<h1 class="page-title">{getChiCategoryName(categories)}</h1>
+		</div>
+		<div class="mt-14">
+			<div class='postList"'>
+				{data.map((post, index) => <PostBlock post={post} showCategory={false} />)}
+			</div>
+		</div>
+		<div class="my-8">
+			<Pagination page={page} firstPageUrl={`/categories/${categories}`} urlPattern={`/categories/${categories}/page/{}`} />
+		</div>
+	</main>
+</BaseLayout>

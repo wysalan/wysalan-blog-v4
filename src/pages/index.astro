@@ -1,0 +1,29 @@
+---
+import { siteConfig, siteSetting } from '@/site.config'
+import { Icon } from 'astro-icon/components'
+import { getAllPosts } from '@Utils/postUtils'
+import BaseLayout from '@Layouts/BaseLayout.astro'
+import PostCard from '@Components/common/PostCard.astro'
+
+const posts = await getAllPosts(4)
+---
+
+<BaseLayout>
+	<main class="site-title-container">
+		<div>
+			<p class="mt-9 mb-6.5 block text-3xl opacity-70">歡迎來到</p>
+			<h1 class="text-7xl leading-none font-bold xl:text-8xl">{siteConfig.title}</h1>
+		</div>
+		<p class="max-w-2xl text-2xl leading-normal">{siteSetting.homePageDescription}</p>
+	</main>
+	<section class="app-container pb-20">
+		<h2 class="py-3 text-4xl font-semibold">最新文章</h2>
+		<div class="home-post-container">
+			{posts.map((post) => <PostCard post={post} />)}
+		</div>
+		<a class="btn-secondary mt-4" href=`${siteConfig.base}/posts`>
+			<span>檢視所有文章</span>
+			<Icon size={20} name="lucide:arrow-right" />
+		</a>
+	</section>
+</BaseLayout>

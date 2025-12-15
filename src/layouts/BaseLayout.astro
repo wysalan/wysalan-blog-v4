@@ -1,0 +1,42 @@
+---
+import { ClientRouter } from 'astro:transitions'
+import { siteConfig } from '@/site.config'
+import BaseHead from '@Components/BaseHead.astro'
+import Navbar from '@Components/Navbar.astro'
+import Footer from '@Components/Footer.astro'
+
+interface Props {
+	title?: string
+	description?: string
+	image?: string
+}
+
+const { title, description, image } = Astro.props
+
+import '@fontsource-variable/inter'
+import '@fontsource-variable/jetbrains-mono'
+import '@fontsource-variable/noto-sans-tc'
+---
+
+<!doctype html>
+<html lang={siteConfig.language || 'en'}>
+	<head>
+		<BaseHead title={title || siteConfig.title} description={description || siteConfig.description} image={image} />
+		<ClientRouter />
+		<script src="../utils/mediumZoom.ts"></script>
+		<script is:inline>
+			const storedTheme = localStorage.getItem('theme')
+			const userPreferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+			if (storedTheme === 'dark' || userPreferredTheme) {
+				document.documentElement.classList.add('dark')
+			} else {
+				document.documentElement.classList.remove('dark')
+			}
+		</script>
+	</head>
+	<body class="text-foreground bg-background dark:text-foreground-dark dark:bg-background-dark font-normal transition-colors">
+		<Navbar title={siteConfig.title} />
+		<slot />
+		<Footer />
+	</body>
+</html>

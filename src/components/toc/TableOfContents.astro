@@ -1,0 +1,222 @@
+---
+import type { MarkdownHeading } from 'astro'
+import { Icon } from 'astro-icon/components'
+import ChildrenList from './ChildrenList.astro'
+
+interface Props {
+	headings: MarkdownHeading[]
+}
+
+const { headings } = Astro.props
+
+/**
+ * 將原始的一維文章目錄轉換成具有層級關係的多維陣列
+ * @param headings 文章目錄
+ */
+function generateNestedHeading(headings: MarkdownHeading[]) {
+	const root = []
+	const stack = []
+	for (const heading of headings) {
+		const item: any = { ...heading, children: [] }
+		if (stack.length === 0) {
+			root.push(item)
+			stack.push(item)
+			continue
+		}
+		// 檢查下一個標題的深度是否比上一個還要深，如果深度相同或更淺就回到父層
+		if (heading.depth > stack[stack.length - 1].depth) {
+			stack[stack.length - 1].children.push(item)
+			stack.push(item)
+		} else {
+			while (stack.length > 0 && heading.depth <= stack[stack.length - 1].depth) {
+				stack.pop()
+			}
+			if (stack.length === 0) {
+				root.push(item)
+				stack.push(item)
+			} else {
+				stack[stack.length - 1].children.push(item)
+				stack.push(item)
+			}
+		}
+	}
+	return root
+}
+
+const nestedHeadings = generateNestedHeading(headings)
+---
+
+{
+	nestedHeadings.length ? (
+		<nav class="toc">
+			<div class="mb-4 flex items-center">
+				<h2 class="font-bold md:text-lg 2xl:text-2xl">文章目錄</h2>
+				<div class="group relative ml-1.5 w-12 md:h-6 2xl:h-7">
+					<span
+						class="pagePercent absolute inset-0 flex items-center justify-center font-mono font-semibold opacity-60 transition-opacity group-hover:opacity-0"
+						title="文章瀏覽百分比"
+					/>
+					<span
+						class="back-to-top absolute inset-0 flex cursor-pointer items-center justify-center rounded-lg opacity-0 shadow transition-all group-hover:opacity-100 hover:bg-zinc-200/70 active:shadow-none dark:hover:bg-zinc-200/20"
+						title="回到文章頂部"
+						aria-label="回到文章頂部"
+					>
+						<Icon name="lucide:arrow-up-to-line" size={20} class="dark:text-foreground-dark" />
+					</span>
+				</div>
+			</div>
+			<ul class="toc-list max-h-[70vh] space-y-1 overflow-y-auto 2xl:max-h-[75vh]">
+				{/* H2 */}
+				{nestedHeadings.map((heading) => (
+					<li>
+						<a
+							class="toc-link hover:text-primary dark:hover:text-primary-dark line-clamp-2 max-w-max rounded-md rounded-l-none px-2 py-1 transition-all"
+							href={`#${heading.slug}`}
+						>
+							{heading.text}
+						</a>
+						{/* H3 and deeper heading */}
+						{heading.children.length > 0 && <ChildrenList headings={heading.children} />}
+					</li>
+				))}
+			</ul>
+		</nav>
+	) : (
+		<div />
+	)
+}
+
+<script>
+	document.addEventListener('astro:page-load', () => {
+		let initialStatus = true
+
+		// Get headings in Post
+		const headings = Array.from(document.querySelectorAll('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]'))
+		if (headings.length === 0) return
+
+		// Get Toc links
+		const tocLinks = document.querySelectorAll('.toc-list li a')
+
+		// First visible heading of all visible headings
+		let visibleHeadingID: string | null = null
+
+		/** Highlight first visible heading of all visible headings on page loaded */
+		const initObserver = new IntersectionObserver((entries, observer) => {
+			const visibleEntries = entries.filter((entry) => entry.isIntersecting)
+			if (visibleEntries.length === 0) return
+			const id = visibleEntries[0].target.getAttribute('id')
+			const tocLink: HTMLAnchorElement | null = document.querySelector(`.toc-list li a[href="#${id}"]`)
+			if (tocLink) {
+				tocLinkHighlight(tocLink)
+			}
+			observer.disconnect()
+		})
+
+		/** Observing all visible heading on window to decide what heading should be highlighted */
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					const entryID = entry.target.getAttribute('id')
+					if (!initialStatus && !isEntryDisappearFromTopOfWindow(entry) && !entry.isIntersecting) {
+						let indexOfHeading = getHeadingIndex(entry)
+						if (indexOfHeading === 0) {
+							tocLinks.forEach((link) => link.classList.remove('toc-highlight'))
+						} else {
+							visibleHeadingID = headings[indexOfHeading - 1].id
+						}
+					} else if (entry.isIntersecting) {
+						visibleHeadingID = entryID
+					}
+				})
+				const tocLink: HTMLAnchorElement | null = document.querySelector(`.toc-list li a[href="#${visibleHeadingID}"]`)
+
+				if (visibleHeadingID && tocLink) {
+					tocLinkHighlight(tocLink)
+				}
+			},
+			{
+				rootMargin: '-80px 0px -80% 0px',
+				threshold: [0, 1],
+			}
+		)
+
+		/**
+		 * Highlight 特定的 TOC 連結
+		 * @param tocLink 要 Highlight 的 TOC 連結
+		 */
+		function tocLinkHighlight(tocLink: HTMLAnchorElement) {
+			tocLinks.forEach((link) => link.classList.remove('toc-highlight'))
+			tocLink.classList.add('toc-highlight')
+			tocLink.scrollIntoView({
+				behavior: 'smooth',
+				block: 'nearest',
+			})
+		}
+
+		/**
+		 * 檢查標題是否從畫面頂部消失（用來偵測畫面正在向上或向下滾動）
+		 * @param entry 要判斷的標題
+		 * @return true 代表標題從畫面頂部消失 (向下滾動), false 代表標題從畫面頂部出現 (向上滾動)
+		 */
+		function isEntryDisappearFromTopOfWindow(entry: IntersectionObserverEntry) {
+			if (!entry.rootBounds) return
+			return entry.rootBounds.bottom - entry.boundingClientRect.bottom > entry.rootBounds.bottom / 2
+		}
+
+		/**
+		 * 取得標題在陣列裡的索引值
+		 * @param entry 要搜尋的標題
+		 * @return 標題位於陣列的索引值
+		 */
+		function getHeadingIndex(entry: IntersectionObserverEntry) {
+			let target = (element: Element) => element === entry.target
+			return headings.findIndex(target)
+		}
+
+		headings.forEach((heading) => {
+			initObserver.observe(heading)
+			observer.observe(heading)
+		})
+
+		/** Timer for executing toc highlight when url contains hashtag */
+		setTimeout(() => {
+			const hash = window.location.hash.substring(1)
+
+			if (hash) {
+				const tocLink: HTMLAnchorElement | null = document.querySelector(`.toc-list li a[href="#${hash}"]`)
+
+				if (tocLink) {
+					tocLinkHighlight(tocLink)
+				}
+			}
+		}, 200)
+
+		/** Timer for preventing toc highlight observer execute on wrong timing  */
+		setTimeout(() => {
+			initialStatus = false
+		}, 1000)
+
+		/** Back to top elements */
+		const backToTopButton: HTMLElement | null = document.querySelector('.back-to-top')
+		const pagePercent: HTMLElement | null = document.querySelector('.pagePercent')
+
+		/** Init the value of page percent */
+		setPagePercent()
+
+		document.addEventListener('scroll', () => {
+			setPagePercent()
+		})
+
+		backToTopButton?.addEventListener('click', () => {
+			window.scrollTo(0, 0)
+		})
+
+		function setPagePercent() {
+			const pageHeight: number = document.body.scrollHeight - window.innerHeight
+			const scrollPercent: number = pageHeight > 0 ? Math.min((100 * window.scrollY) / pageHeight, 100) : 0
+			if (pagePercent) {
+				pagePercent.innerHTML = `${Math.ceil(scrollPercent).toString()}%`
+			}
+		}
+	})
+</script>

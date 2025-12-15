@@ -1,0 +1,44 @@
+---
+import { type GetStaticPathsOptions } from 'astro'
+import { siteConfig } from '@/site.config'
+import { Icon } from 'astro-icon/components'
+import { getAllPosts } from '@Utils/postUtils'
+import { tagNameSlugify } from '@Utils/tagUtils'
+import BaseLayout from '@Layouts/BaseLayout.astro'
+import PostBlock from '@Components/common/PostBlock.astro'
+import Pagination from '@Components/Pagination.astro'
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+	const allPosts = await getAllPosts()
+	const allTags = [...new Set(allPosts.map((post) => post.data.tags).flat())]
+	return allTags.flatMap((tag) => {
+		const filteredPosts = allPosts.filter((post) => post.data.tags?.flat().includes(tag || ''))
+		return paginate(filteredPosts, {
+			params: { tags: tagNameSlugify(tag) },
+			props: { origTagName: tag },
+			pageSize: siteConfig.pageSize,
+		})
+	})
+}
+
+const { page, origTagName } = Astro.props
+const { tags } = Astro.params
+const { data } = page
+---
+
+<BaseLayout title=`標籤：${origTagName} | ${siteConfig.title}`>
+	<main class="main-container">
+		<div class="flex flex-wrap items-center">
+			<Icon name="material-symbols:tag-rounded" class="mr-3 inline-block" size="48px" />
+			<h1 class="page-title">{origTagName}</h1>
+		</div>
+		<div class="mt-14">
+			<div class="postList">
+				{data.map((post, index) => <PostBlock post={post} />)}
+			</div>
+		</div>
+		<div class="my-8">
+			<Pagination page={page} firstPageUrl={`/tags/${tags}`} urlPattern={`/tags/${tags}/page/{}`} />
+		</div>
+	</main>
+</BaseLayout>

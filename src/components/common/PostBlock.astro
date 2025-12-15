@@ -1,0 +1,75 @@
+---
+import { siteConfig } from '@/site.config'
+import { Icon } from 'astro-icon/components'
+import { Image } from 'astro:assets'
+import dayjs from 'dayjs'
+import FormattedDate from './FormattedDate.astro'
+import { getChiCategoryName } from '@Utils/categoryUtils'
+import { tagNameSlugify } from '@Utils/tagUtils'
+
+const { post, showCategory = true } = Astro.props
+
+const { title, description, pubDate, updatedDate, categories, tags, coverImage } = post.data
+---
+
+<div class="postBlock group">
+	{/* Cover Image */}
+	<a href={`${siteConfig.base}/posts/${post.id}/`} class="inline-flex w-full shrink-0 lg:h-36 lg:w-1/4 xl:w-1/5">
+		{coverImage && <Image src={coverImage} alt={title} class="inline-block aspect-video rounded-lg object-cover" inferSize={true} />}
+	</a>
+
+	{/* Post Content */}
+	<div class="flex flex-col justify-evenly gap-y-2.25 md:gap-y-1.75">
+		<div class="flex items-center gap-4">
+			<span
+				class="flex items-center"
+				title={`發表日期：${dayjs(pubDate).format('YYYY-MM-DD HH:mm:ss')}`}
+				aria-label={`發表日期：${dayjs(pubDate).format('YYYY-MM-DD HH:mm:ss')}`}
+			>
+				<Icon name="lucide:calendar" class="mr-1" size={20} />
+				<FormattedDate date={pubDate} format="YYYY-MM-DD HH:mm" />
+			</span>
+			{
+				updatedDate && !dayjs(dayjs(updatedDate)).isSame(dayjs(pubDate)) && (
+					<span
+						class="hidden items-center lg:flex"
+						title={`更新日期：${dayjs(updatedDate).format('YYYY-MM-DD HH:mm:ss')}`}
+						aria-label={`更新日期：${dayjs(updatedDate).format('YYYY-MM-DD HH:mm:ss')}`}
+					>
+						<Icon name="lucide:calendar-arrow-up" class="mr-1" size={20} />
+						<FormattedDate date={updatedDate} format="YYYY-MM-DD HH:mm" />
+					</span>
+				)
+			}
+			{
+				showCategory && (
+					<span class="flex">
+						<a href={`${siteConfig.base}/categories/${categories}/`} class="text-md flex items-center text-balance">
+							<Icon name="lucide:folder" class="mr-1" size={20} />
+							<span>{getChiCategoryName(categories)}</span>
+						</a>
+					</span>
+				)
+			}
+		</div>
+		<h2 class="group-hover:text-primary dark:group-hover:text-primary-dark text-2xl font-semibold tracking-normal transition-colors">
+			<a href={`${siteConfig.base}/posts/${post.id}/`}>{title}</a>
+		</h2>
+		<p class="line-clamp-1 text-lg opacity-90">{description}</p>
+		<div class="group flex items-center gap-2">
+			{
+				tags &&
+					tags.flat() != '' &&
+					tags.flat().map((tag: string) => (
+						<a
+							href={`${siteConfig.base}/tags/${tagNameSlugify(tag)}`}
+							class="inline-flex items-center justify-center rounded-lg bg-zinc-200/50 px-2 py-1.25 text-sm transition-all group-hover:shadow hover:bg-zinc-300/80 dark:bg-zinc-600/80 dark:hover:bg-zinc-500"
+						>
+							<Icon name="material-symbols:tag-rounded" class="mr-0.5 inline-flex" size={18} />
+							<span>{tag}</span>
+						</a>
+					))
+			}
+		</div>
+	</div>
+</div>

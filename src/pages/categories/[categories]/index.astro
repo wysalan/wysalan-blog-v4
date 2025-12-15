@@ -1,0 +1,63 @@
+---
+import { siteConfig } from '@/site.config'
+import { Icon } from 'astro-icon/components'
+import { getAllPosts } from '@Utils/postUtils'
+import { getChiCategoryName } from '@Utils/categoryUtils'
+import BaseLayout from '@Layouts/BaseLayout.astro'
+import PostBlock from '@Components/common/PostBlock.astro'
+import Pagination from '@Components/Pagination.astro'
+
+export async function getStaticPaths() {
+	const allPosts = await getAllPosts()
+	const allCategories = [...new Set(allPosts.flatMap((post) => post.data.categories))]
+	return allCategories.flatMap((category) => {
+		const filteredPosts = allPosts.filter((post) => post.data.categories === category)
+		const totalPostsCount = filteredPosts.length
+		return {
+			params: { categories: category },
+			props: { data: filteredPosts.slice(0, siteConfig.pageSize), totalPostsCount },
+		}
+	})
+}
+
+const { categories } = Astro.params
+const { data, totalPostsCount } = Astro.props
+
+const totalPages = Math.ceil(totalPostsCount / siteConfig.pageSize)
+const nextUrl = totalPages > 1 ? `/categories/${categories}/page/2` : null
+const lastUrl = totalPages > 1 ? `/categories/${categories}/page/${totalPostsCount}` : null
+
+const page = {
+	data: data,
+	start: 0,
+	end: siteConfig.pageSize - 1,
+	size: siteConfig.pageSize,
+	total: totalPostsCount,
+	currentPage: 1,
+	lastPage: totalPages,
+	url: {
+		current: `/categories/${categories}/page/1`,
+		next: nextUrl,
+		prev: null,
+		first: null,
+		last: lastUrl,
+	},
+}
+---
+
+<BaseLayout title=`分類：${getChiCategoryName(categories)} | ${siteConfig.title}`>
+	<main class="main-container">
+		<div class="flex flex-wrap items-center">
+			<Icon name="lucide:folder" class="mr-3" size={48} />
+			<h1 class="page-title">{getChiCategoryName(categories)}</h1>
+		</div>
+		<div class="mt-14">
+			<div class='postList"'>
+				{data.map((post, index) => <PostBlock post={post} showCategory={false} />)}
+			</div>
+		</div>
+		<div class="my-8">
+			<Pagination page={page} firstPageUrl={`/categories/${categories}`} urlPattern={`/categories/${categories}/page/{}`} />
+		</div>
+	</main>
+</BaseLayout>

@@ -1,0 +1,37 @@
+---
+import { siteConfig } from '@/site.config'
+import FormattedDate from './FormattedDate.astro'
+import { Image } from 'astro:assets'
+import { Icon } from 'astro-icon/components'
+import { getChiCategoryName } from '@Utils/categoryUtils'
+
+const { post } = Astro.props
+---
+
+<a href={`${siteConfig.base}/posts/${post.id}/`} class="postCard group transition-colors">
+	<div class="w-full overflow-hidden rounded-xl transition-all group-hover:shadow-md">
+		{
+			post.data.coverImage && (
+				<Image
+					src={post.data.coverImage}
+					alt={post.data.title}
+					class="aspect-video object-cover"
+					inferSize={true}
+					fetchpriority="high"
+					loading="eager"
+				/>
+			)
+		}
+	</div>
+	<h2 class="group-hover:text-primary dark:group-hover:text-primary-dark text-xl font-semibold transition-colors">{post.data.title}</h2>
+	<div class="mt-auto flex flex-wrap items-center">
+		<span class="mr-2 flex items-center">
+			<Icon name="lucide:calendar" class="mr-1 inline-block" size="20px" />
+			<FormattedDate date={post.data.pubDate} format="YYYY-MM-DD" />
+		</span>
+		<span class="ml-2 flex items-center">
+			<Icon name="lucide:folder" class="mr-1.25 inline-block" size="20px" />
+			<span>{getChiCategoryName(post.data.categories)}</span>
+		</span>
+	</div>
+</a>

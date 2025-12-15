@@ -1,0 +1,65 @@
+---
+import { siteConfig } from '@/site.config'
+import { Icon } from 'astro-icon/components'
+import { getAllPosts } from '@Utils/postUtils'
+import { tagNameSlugify } from '@Utils/tagUtils'
+import BaseLayout from '@Layouts/BaseLayout.astro'
+import PostBlock from '@Components/common/PostBlock.astro'
+import Pagination from '@Components/Pagination.astro'
+
+export async function getStaticPaths() {
+	const allPosts = await getAllPosts()
+	const allTags = [...new Set(allPosts.map((post) => post.data.tags).flat())]
+	return allTags.flatMap((tag) => {
+		const filteredPosts = allPosts.filter((post) => post.data.tags?.flat().includes(tag || ''))
+		const totalPostsCount = filteredPosts.length
+		return {
+			params: {
+				tags: tagNameSlugify(tag),
+			},
+			props: { data: filteredPosts.slice(0, siteConfig.pageSize), totalPostsCount, origTagName: tag },
+		}
+	})
+}
+
+const { tags } = Astro.params
+const { data, totalPostsCount, origTagName } = Astro.props
+
+const totalPages = Math.ceil(totalPostsCount / siteConfig.pageSize)
+const nextUrl = totalPages > 1 ? `/tags/${tags}/page/2` : null
+const lastUrl = totalPages > 1 ? `/tags/${tags}/page/${totalPostsCount}` : null
+
+const page = {
+	data: data,
+	start: 0,
+	end: siteConfig.pageSize - 1,
+	size: siteConfig.pageSize,
+	total: totalPostsCount,
+	currentPage: 1,
+	lastPage: totalPages,
+	url: {
+		current: `/tags/${tags}/page/1`,
+		next: nextUrl,
+		prev: null,
+		first: null,
+		last: lastUrl,
+	},
+}
+---
+
+<BaseLayout title=`標籤：${origTagName} | ${siteConfig.title}`>
+	<main class="main-container">
+		<div class="flex items-center">
+			<Icon name="material-symbols:tag-rounded" class="mr-3" size={48} />
+			<h1 class="page-title">{origTagName}</h1>
+		</div>
+		<div class="mt-14">
+			<div class="postList">
+				{data.map((post, index) => <PostBlock post={post} />)}
+			</div>
+		</div>
+		<div class="my-8">
+			<Pagination page={page} firstPageUrl={`/tags/${tags}`} urlPattern={`/tags/${tags}/page/{}`} />
+		</div>
+	</main>
+</BaseLayout>

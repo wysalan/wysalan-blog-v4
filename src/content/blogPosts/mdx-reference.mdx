@@ -1,0 +1,139 @@
+---
+title: 'MDX 測試'
+description: '測試各種自製 Astro component 及 JSX 的東西'
+categories: ''
+tags: ['Test']
+pubDate: '2025-11-21 23:25:00'
+updatedDate: '2025-11-21 23:25:00'
+coverImage: 'https://storage.googleapis.com/salan_blog/upgrade_my_pc_spec_2022.webp'
+coverImageCredit: ''
+---
+
+import YouTube from '@Components/mdx/YouTube.astro'
+import Aside from '@Components/mdx/Aside.astro'
+
+測試各種 MDX 相關功能與自製的 Astro 元件。
+
+## 嵌入 YouTube 影片
+
+```mdx
+<YouTube src="" start={} noCookie={} />
+```
+
+- src：影片網址
+  - https://\*\.youtube.com/watch?v=VideoId
+    - \* 可以是：www、m、music 或 gaming
+  - https://youtu.be/VideoId
+  - VideoId
+- start：開始位置（秒數）
+- noCookie：是否停用 Cookie
+
+<YouTube src="https://www.youtube.com/watch?v=dQw4w9WgXcQ" start={27} />
+
+<YouTube src="https://music.youtube.com/watch?v=vqTXMw9zdto" noCookie={true} />
+
+<YouTube src="https://youtu.be/15XD_iW6qSQ" />
+
+## 程式碼
+
+```js
+/**
+ * 找出所有分類及其包含的文章數量，並進行排序處理
+ * @param allPosts 所有文章
+ * @param sortBy 排序方式（可選，填入 postCount 將按照「分類內文章數量」排序，留空則按照「分類名稱」排序）
+ * @returns 含有分類名稱及文章數量的陣列 (Promise)
+ */
+export async function getAllCategories(allPosts: CollectionEntry<'blogPosts'>[], sortBy?: string) {
+	const allCategories = [...new Set(allPosts.map((post) => post.data.categories).flat())]
+	const result: any[] = []
+	allCategories.flatMap((category) => {
+		const item: any = { name: category, frequency: 0 }
+		item.frequency = allPosts.filter((post) => post.data.categories === category).length
+		result.push(item)
+	})
+	if (sortBy === 'postCount') {
+		return result.sort((a, b) => {
+			if (a.frequency !== b.frequency) {
+				return b.frequency - a.frequency
+			}
+			return getChiCategoryName(a.name).localeCompare(getChiCategoryName(b.name))
+		})
+	} else {
+		return result.sort((a, b) => {
+			return getChiCategoryName(a.name).localeCompare(getChiCategoryName(b.name), 'zh-TW')
+		})
+	}
+}
+```
+
+## 備註
+
+```mdx
+<Aside type="note|caution|danger" title="">
+	內容
+</Aside>
+```
+
+- `type` 及 `title` 為選擇性參數
+- `type` 若未傳入參數，預設值為 `note`
+- `title` 若未傳入參數，預設值為
+  - `type` 值為 note：注意
+  - `type` 值為 caution：警告
+  - `type` 值為 danger：危險
+
+### 單段內容
+
+<Aside type="note" title="提示">
+	Astro 必須在本地安裝，而非全域安裝。請確保你沒有執行 `npm install -g astro`、`pnpm add -g astro` 或 `yarn add global astro`。
+</Aside>
+
+<Aside type="danger" title="危險">
+	任何檔案都記得要做好備份，而且不要將太過私密或重要的檔案上傳到網路上，因為網路是個公開環境。
+</Aside>
+
+### 多段內容
+
+<Aside type="note" title="提示">
+當您的應用程式安裝在模擬器裝置上之後，您就可以使用 `Apply Changes` 部署特定的程式碼和資源變更，而不需要建立新的 APK。 如需詳細資訊，請參閱 [Android 開發人員指南](https://developer.android.com/studio/run#apply-changes)
+
+Astro 的 Markdown 程式碼區塊預設由 `Shiki` 進行樣式設置，預先配置了 [github-dark](https://github.com) 主題。編譯後的輸出將僅限於內嵌 style，不包含任何額外的 CSS 類別、樣式表或客戶端 JS。
+
+任何檔案都記得要做好備份，而且不要將太過私密或重要的檔案上傳到網路上，因為網路是個公開環境。
+
+</Aside>
+
+### 包含其他元素
+
+```mdx
+<Aside type="note" title="圖片">
+	若圖片為 Markdown 格式，需包含在 `div` 元素內
+	<div>![AMD Ryzen 7 5800X 包裝盒](https://i.imgur.com/2lokGoR.jpg)</div>
+</Aside>
+```
+
+<Aside type="note" title="圖片">
+	若圖片為 Markdown 格式，需包含在 `div` 元素內
+	<div>![AMD Ryzen 7 5800X 包裝盒](https://i.imgur.com/2lokGoR.jpg)</div>
+</Aside>
+
+<Aside type="note" title="程式碼">
+該插件使用 `mdast-util-to-string` 套件來取得 Markdown 檔案的文字內容，然後將文字傳遞給 `reading-time` 以計算閱讀所需的分鐘數。
+
+```ts
+import getReadingTime from 'reading-time'
+import { toString } from 'mdast-util-to-string'
+
+export function remarkReadingTime() {
+	return function (tree, { data }) {
+		const textOnPage = toString(tree)
+		const readingTime = getReadingTime(textOnPage)
+		data.astro.frontmatter.minutesRead = readingTime.text
+	}
+}
+```
+
+</Aside>
+
+![AMD Ryzen 7 5800X 包裝盒](https://i.imgur.com/2lokGoR.jpg)
+
+456

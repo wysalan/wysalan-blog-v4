@@ -1,0 +1,13 @@
+---
+import { siteConfig } from '@SiteConfig'
+import BaseLayout from '@Layouts/BaseLayout.astro'
+---
+
+<BaseLayout title=`關於本站 | ${siteConfig.title}`>
+	<main class="app-container pt-36">
+		<h1 class="page-title">關於本站</h1>
+	</main>
+	<section class="app-container mb-8 flex justify-center py-12">
+		<div class="prose prose-zinc prose-lg md:prose-xl dark:prose-invert prose-element-modify w-full md:max-w-[110ch]"></div>
+	</section>
+</BaseLayout>

@@ -1,0 +1,105 @@
+---
+import { Image } from 'astro:assets'
+import { getYoutubeEmbedUrl, getYoutubeThumbnail } from '@Utils/youtubeEmbed'
+import PlayButton from '@/assets/PlayButton.svg'
+
+interface Props {
+	src: string
+	title?: string
+	start?: number
+	noCookie?: boolean
+	className?: string
+}
+
+const { src, title = 'YouTube 影片播放器', start, noCookie, className } = Astro.props
+
+const embedUrl = start ? getYoutubeEmbedUrl(src, noCookie) + `&start=${start}` : getYoutubeEmbedUrl(src, noCookie)
+const thumbnail = await getYoutubeThumbnail(src)
+const isPlayable = Boolean(embedUrl)
+const ariaLabel = isPlayable ? '播放 YouTube 影片' : 'YouTube 影片（無法播放）'
+---
+
+<youtube-player
+	class:list={['my-5 block', className]}
+	data-embed-url={isPlayable ? embedUrl : undefined}
+	data-video-title={title}
+	data-playable={isPlayable}
+>
+	<div class="relative aspect-video h-full w-full overflow-hidden rounded-sm bg-black">
+		<button
+			type="button"
+			class="group absolute inset-0 h-full w-full cursor-pointer overflow-hidden"
+			data-youtube-trigger
+			aria-label={ariaLabel}
+			disabled={!isPlayable}
+		>
+			<Image layout="full-width" src={thumbnail} width={1280} height={720} class="m-0! h-full w-full object-cover" alt={title} />
+			<span class="pointer-events-none absolute inset-0 flex items-center justify-center">
+				<PlayButton class="text-white opacity-80 transition-all group-hover:text-red-600 group-hover:opacity-90" width={84} height={84} />
+			</span>
+		</button>
+	</div>
+</youtube-player>
+
+<script>
+	class YouTubePlayer extends HTMLElement {
+		private activated = false
+
+		connectedCallback() {
+			const embedUrl = this.dataset.embedUrl
+			const title = this.dataset.videoTitle
+			const isPlayable = this.dataset.playable === 'true'
+
+			if (!embedUrl || !isPlayable) return
+
+			const trigger = this.querySelector('[data-youtube-trigger]')
+			if (!(trigger instanceof HTMLButtonElement)) return
+
+			trigger.addEventListener('click', () => this.activate(embedUrl, title), { once: true })
+		}
+
+		private activate(embedUrl: string, title?: string) {
+			if (this.activated) return
+			this.activated = true
+
+			const container = document.createElement('div')
+			container.className = 'relative aspect-video h-full w-full overflow-hidden rounded-sm bg-black'
+
+			const loading = document.createElement('span')
+			loading.className = 'flex h-full justify-center items-center select-none text-white opacity-60'
+			loading.innerHTML = `
+				<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24" class="animate-spin mr-2"><path fill="currentColor" d="M12 4V2A10 10 0 0 0 2 12h2a8 8 0 0 1 8-8"/></svg>
+			`
+			container.appendChild(loading)
+
+			const iframe = document.createElement('iframe')
+			iframe.src = embedUrl
+			iframe.title = title || 'YouTube 影片播放器'
+			iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+			iframe.allowFullscreen = true
+			iframe.loading = 'lazy'
+			iframe.referrerPolicy = 'strict-origin-when-cross-origin'
+			iframe.className = 'w-full h-full absolute inset-0 rounded-sm'
+
+			this.innerHTML = ''
+			this.appendChild(container)
+
+			iframe.addEventListener('load', () => {
+				loading.remove()
+			})
+
+			container.appendChild(iframe)
+
+			this.dispatchEvent(
+				new CustomEvent('youtube-activated', {
+					detail: { embedUrl, title },
+					bubbles: true,
+				})
+			)
+		}
+	}
+
+	if (!customElements.get('youtube-player')) {
+		customElements.define('youtube-player', YouTubePlayer)
+	}
+</script>

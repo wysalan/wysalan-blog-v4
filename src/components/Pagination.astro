@@ -1,0 +1,130 @@
+---
+import { type Page } from 'astro'
+import { Icon } from 'astro-icon/components'
+
+const { page, firstPageUrl, urlPattern } = Astro.props
+
+/**
+ * 取得 Page 並回傳需要顯示的頁碼
+ * @param page {Page} 分頁物件
+ * @param pageItemSize {Number} 欲顯示的頁碼數量 (預設為 3)
+ */
+export function getPageNumbers(page: Page, pageItemSize: number = 3) {
+	let first = 1
+	let last = page.lastPage
+	const halfPageItemSize = Math.floor(pageItemSize / 2)
+	const pageRemainder = page.lastPage - page.currentPage
+	if (page.currentPage <= halfPageItemSize) {
+		if (page.lastPage > pageItemSize) {
+			last = pageItemSize
+		}
+		// 目前位於的頁數小於顯示頁碼數量 (pageItemSize)
+	} else if (pageRemainder <= halfPageItemSize) {
+		first = Math.max(page.lastPage - pageItemSize + 1, first)
+	} else {
+		first = Math.max(page.currentPage - halfPageItemSize, first)
+		last = Math.min(page.currentPage + halfPageItemSize, last)
+	}
+	const pageNumbers = Array(last - first + 1)
+		.fill(0)
+		.map((_, index) => first + index)
+	return pageNumbers
+}
+
+/**
+ * 將 Pattern 轉換成對應的分頁網址
+ * @param pattern 完整網址（以 "/{}" 結尾，會被替換成頁碼）
+ * @param targetPageNumber 目標頁碼
+ * @param firstPageUrl 此分頁第一頁的網址
+ */
+export function patternToUrl(pattern: string, targetPageNumber: number, firstPageUrl?: string) {
+	if (targetPageNumber === 1) {
+		if (firstPageUrl) {
+			return firstPageUrl
+		}
+		return pattern.replace('{}', '')
+	}
+	return pattern.replace('{}', targetPageNumber.toString())
+}
+
+const pageNumbers = getPageNumbers(page)
+const firstPageNumber = pageNumbers[0]
+const lastPageNumber = pageNumbers[pageNumbers.length - 1]
+const currentPage = page.currentPage
+const prevUrl = firstPageUrl && currentPage == 2 ? firstPageUrl : page.url.prev
+const nextUrl = page.url.next
+const showFirstPage = pageNumbers[0] !== 1
+const showLastPage = lastPageNumber !== page.lastPage
+---
+
+<nav role="navigation" aria-label="Pagination">
+	<ul class="flex flex-wrap justify-center select-none">
+		<li>
+			{
+				(
+					<a href={prevUrl ? prevUrl : ''} class={`btn-pagination-arrow ${!prevUrl ? `pointer-events-none opacity-40` : ''}`} aria-label="返回上一頁">
+						<Icon size={24} name="mdi:chevron-left" />
+					</a>
+				)
+			}
+		</li>
+		{
+			showFirstPage && (
+				<li>
+					<a href={patternToUrl(urlPattern, 1, firstPageUrl)} class="btn-pagination" aria-label="前往第 1 頁">
+						1
+					</a>
+				</li>
+			)
+		}
+		{
+			firstPageNumber > 2 && (
+				<li>
+					<span class="pagination-ellipsis">&hellip;</span>
+				</li>
+			)
+		}
+		{
+			pageNumbers.map((pageNumber) => {
+				return (
+					<li>
+						{pageNumber === page.currentPage ? (
+							<span class="btn-pagination-active" aria-label={`目前頁面為第 ${pageNumber} 頁`}>
+								{pageNumber}
+							</span>
+						) : (
+							<a href={patternToUrl(urlPattern, pageNumber, firstPageUrl)} class="btn-pagination" aria-label={`前往第 ${pageNumber} 頁`}>
+								{pageNumber}
+							</a>
+						)}
+					</li>
+				)
+			})
+		}
+		{
+			lastPageNumber < page.lastPage - 1 && (
+				<li>
+					<span class="pagination-ellipsis">&hellip;</span>
+				</li>
+			)
+		}
+		{
+			showLastPage && (
+				<li>
+					<a href={patternToUrl(urlPattern, page.lastPage, firstPageUrl)} class="btn-pagination" aria-label={`前往第 ${page.lastPage} 頁`}>
+						{page.lastPage}
+					</a>
+				</li>
+			)
+		}
+		<li>
+			{
+				(
+					<a href={nextUrl ? nextUrl : ''} class={`btn-pagination-arrow ${!nextUrl ? `pointer-events-none opacity-40` : ''}`} aria-label="前往下一頁">
+						<Icon size={24} name="mdi:chevron-right" />
+					</a>
+				)
+			}
+		</li>
+	</ul>
+</nav>

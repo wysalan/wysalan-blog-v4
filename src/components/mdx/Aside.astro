@@ -1,0 +1,76 @@
+---
+import { AstroError } from 'astro/errors'
+import { Icon } from 'astro-icon/components'
+
+interface Props {
+	type?: (typeof types)[number]
+	title?: string
+}
+
+const defaultTitle = {
+	note: '注意',
+	caution: '警告',
+	danger: '危險',
+} as const
+
+const icons = {
+	note: 'lucide:circle-alert',
+	caution: 'lucide:triangle-alert',
+	danger: 'lucide:octagon-alert',
+} as const
+
+const types = ['note', 'caution', 'danger'] as const
+
+const { type = 'note', title = defaultTitle[type] } = Astro.props
+
+if (!types.includes(type)) {
+	throw new AstroError(
+		`Invalid \`type\` prop. (@Components/mdx/Aside.astro) \n`,
+		`Input: ${JSON.stringify(type)}\nExpected: One of ${types.map((i) => JSON.stringify(i)).join(', ')}`
+	)
+}
+---
+
+<aside class={`aside aside-${type}`}>
+	<div class="aside-container">
+		<div class="not-prose flex items-center font-semibold">
+			<Icon name={`${icons[type]}`} size={22} />
+			<p class="pl-1.5 text-lg">{title}</p>
+		</div>
+		<div class="aside-content">
+			<slot />
+		</div>
+	</div>
+</aside>
+
+<style>
+	@reference "../../styles/global.css";
+
+	.aside {
+		@apply my-5 rounded-lg p-5;
+		* {
+			@apply dark:text-foreground/70;
+		}
+	}
+	.aside-note {
+		@apply bg-blue-100 dark:opacity-85;
+	}
+	.aside-caution {
+		@apply bg-orange-100 dark:opacity-85;
+	}
+	.aside-danger {
+		@apply bg-red-100 dark:opacity-85;
+	}
+	.aside-content {
+		@apply mt-3;
+		*:first-child {
+			@apply mt-3;
+		}
+		*:last-child {
+			@apply mb-0;
+		}
+		* {
+			@apply my-3;
+		}
+	}
+</style>

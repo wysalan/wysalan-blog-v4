@@ -1,0 +1,39 @@
+---
+import { type GetStaticPathsOptions } from 'astro'
+import { siteConfig } from '@/site.config'
+import { Icon } from 'astro-icon/components'
+import { getAllPosts } from '@Utils/postUtils'
+import BaseLayout from '@Layouts/BaseLayout.astro'
+import PostBlock from '@Components/common/PostBlock.astro'
+import Pagination from '@Components/Pagination.astro'
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+	const posts = await getAllPosts()
+	return paginate(posts, { pageSize: siteConfig.pageSize })
+}
+
+const { page } = Astro.props
+const { data } = page
+---
+
+<BaseLayout title=`所有文章 | ${siteConfig.title}`>
+	<main class="main-container">
+		<div class="flex flex-wrap items-center">
+			<h1 class="page-title">所有文章</h1>
+			<a href="/archives" class="group btn-folded ml-3">
+				<Icon name="lucide:archive" size={20} />
+				<span class="max-w-0 overflow-hidden pl-0 whitespace-nowrap transition-all duration-250 ease-in-out group-hover:max-w-20 group-hover:pl-1"
+					>文章歸檔</span
+				>
+			</a>
+		</div>
+		<div class="mt-14">
+			<div class="postList">
+				{data.map((post, index) => <PostBlock post={post} />)}
+			</div>
+		</div>
+		<div class="my-8">
+			<Pagination page={page} firstPageUrl={'/posts'} urlPattern={'/posts/page/{}'} />
+		</div>
+	</main>
+</BaseLayout>

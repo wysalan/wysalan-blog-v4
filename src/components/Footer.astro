@@ -1,0 +1,61 @@
+---
+import { siteConfig, siteSetting, SocialLinks, WebsiteLinks } from '@/site.config'
+import { Icon } from 'astro-icon/components'
+import LogoSVG from '../assets/logo.svg'
+
+const today = new Date()
+---
+
+<footer>
+	<div class="app-container border-foreground/50 dark:border-foreground-dark/50 grid gap-12 border-t-2 py-16 md:grid-cols-3">
+		<div>
+			<a href="/" class="flex max-w-max items-center">
+				<LogoSVG height={32} width={32} />
+				<h3 class="pl-2 text-2xl font-semibold">{siteSetting.footerTitle || siteConfig.title}</h3>
+			</a>
+			<div class="mt-4 flex flex-wrap gap-4">
+				<p class="text-lg opacity-80">{siteSetting.footerDescription || siteConfig.description}</p>
+			</div>
+		</div>
+		<div>
+			<h3 class="text-2xl font-semibold">連結</h3>
+			<div class="mt-4 flex flex-wrap items-center gap-4">
+				{
+					WebsiteLinks.map((link) => (
+						<a class="text-lg hover:text-sky-700" href={'/' + link.url} rel="noopener noreferrer">
+							{link.name}
+						</a>
+					))
+				}
+				<a
+					href=`${siteConfig.base}/rss.xml`
+					target="_blank"
+					rel="noopener noreferrer"
+					class="text-lg hover:text-sky-700"
+					title="RSS Feed"
+					aria-label="RSS Feed"
+				>
+					<Icon name="mdi:rss" size={24} />
+				</a>
+			</div>
+		</div>
+		<div>
+			<h3 class="text-2xl font-semibold">社群</h3>
+			<div class="mt-4 flex flex-wrap gap-4">
+				{
+					SocialLinks.map((link) => (
+						<a class="group link-folded" href={link.url} target="_blank" rel="noopener noreferrer">
+							<Icon name={`${link.icon}`} size={24} />
+							<span class="text-md max-w-0 overflow-hidden pl-0 whitespace-nowrap transition-all duration-250 ease-in-out group-hover:max-w-25 group-hover:pl-1">
+								{link.name}
+							</span>
+						</a>
+					))
+				}
+			</div>
+		</div>
+	</div>
+	<div class="app-container flex items-center justify-between pb-6 text-center">
+		<p class="w-full pb-2 text-lg md:text-center">&copy; {today.getFullYear()} {siteConfig.author}</p>
+	</div>
+</footer>

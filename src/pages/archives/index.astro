@@ -1,0 +1,55 @@
+---
+import { type CollectionEntry } from 'astro:content'
+import { siteConfig } from '@SiteConfig'
+import { getAllPosts } from '@Utils/postUtils'
+import dayjs from 'dayjs'
+import BaseLayout from '@Layouts/BaseLayout.astro'
+import FormattedDate from '@Components/common/FormattedDate.astro'
+
+type Props = {
+	posts: CollectionEntry<'blogPosts'>[]
+}
+
+const allPosts = await getAllPosts()
+const allYears = [...new Set(allPosts.flatMap((post) => dayjs(post.data.pubDate).year()))]
+---
+
+<BaseLayout title=`文章歸檔 | ${siteConfig.title}`>
+	<main class="main-container">
+		<div class="flex flex-wrap items-center">
+			<h1 class="page-title">文章歸檔</h1>
+		</div>
+		<div class="mt-14 mb-22">
+			<ul class="grid gap-5 md:gap-10">
+				{
+					allYears.map((year) => (
+						<li>
+							<h2 class="py-3 text-4xl font-semibold">
+								{year}
+								<span class="pl-1 text-xl opacity-30 select-none">
+									共 {allPosts.filter((post) => dayjs(post.data.pubDate).year() === year).length} 篇
+								</span>
+							</h2>
+							{allPosts
+								.filter((post) => dayjs(post.data.pubDate).year() === year)
+								.map((post) => (
+									<div class="group ml-2.5 grid items-center rounded-md rounded-l-none border-l-3 py-3 text-xl transition-all hover:scale-[1.025] hover:ring-3 md:grid-cols-[120px_1fr] md:py-2">
+										<span
+											class="flex items-center pl-4 font-mono md:pl-5"
+											title={`發表日期：${dayjs(post.data.pubDate).format('YYYY-MM-DD HH:mm')}`}
+											aria-label="發表日期"
+										>
+											<FormattedDate date={post.data.pubDate} format="MM-DD" />
+										</span>
+										<a href={`${siteConfig.base}/posts/${post.id}/`} class="pl-4 group-hover:font-semibold md:pl-0">
+											{post.data.title}
+										</a>
+									</div>
+								))}
+						</li>
+					))
+				}
+			</ul>
+		</div>
+	</main>
+</BaseLayout>

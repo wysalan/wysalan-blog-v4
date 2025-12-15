@@ -1,0 +1,49 @@
+---
+import { getPostsByCategory } from '@Utils/postUtils'
+import { getChiCategoryName } from '@Utils/categoryUtils'
+import FormattedDate from './FormattedDate.astro'
+import dayjs from 'dayjs'
+
+const { category } = Astro.props
+
+const allCategoryPosts = await getPostsByCategory(category.name)
+
+const filteredPosts = allCategoryPosts.filter((post) => dayjs(post.data.pubDate).diff(dayjs(), 'month') >= 0)
+---
+
+<div class="categoryCard group">
+	<div class="text-center">
+		<a href=`/categories/${category.name}` class="group-hover:text-primary dark:group-hover:text-primary-dark text-2xl font-medium">
+			{getChiCategoryName(category.name)}
+		</a>
+		<p class="text-lg opacity-70 select-none">{`（共 ${category.frequency} 篇）`}</p>
+	</div>
+	<div class="border-t border-neutral-500/25 pt-2 dark:border-neutral-500">
+		<h2 class="text-md pt-1.75 text-gray-500 select-none dark:text-gray-200">近一個月內文章</h2>
+		<div class="flex flex-col md:h-35 md:overflow-y-auto">
+			{
+				filteredPosts.length ? (
+					filteredPosts.map((post) => (
+						<div class="flex flex-col gap-1 pt-2 text-lg md:gap-3">
+							<a
+								href={`./posts/${post.id}`}
+								title={post.data.title}
+								aria-label={post.data.title}
+								class="rounded-lg p-1.5 transition-all hover:bg-zinc-200/50 dark:hover:bg-zinc-200/15"
+							>
+								<div class="line-clamp-1">{post.data.title}</div>
+								<div class="block text-sm opacity-80">
+									<FormattedDate date={post.data.pubDate} format="YYYY-MM-DD" />
+								</div>
+							</a>
+						</div>
+					))
+				) : (
+					<div class="flex flex-col gap-1 pt-2 text-lg md:gap-3">
+						<p class="p-1.5 select-none">無</p>
+					</div>
+				)
+			}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,47 @@
+---
+import { Icon } from 'astro-icon/components'
+const { class: className } = Astro.props
+---
+
+<div
+	class:list={[
+		className,
+		'border border-foreground dark:border-foreground-dark rounded-full flex justify-center items-center text-foreground dark:text-foreground-dark md:opacity-80 *:cursor-pointer',
+	]}
+>
+	<button
+		data-theme="theme-auto"
+		aria-label="跟隨系統設定"
+		title="跟隨系統設定"
+		class="theme-button theme-auto"
+	>
+		<Icon name="mdi:brightness-auto" class:list="text-2xl md:text-xl" aria-hidden />
+	</button>
+	<button
+		data-theme="theme-light"
+		aria-label="淺色主題"
+		title="淺色"
+		class="theme-button theme-light"
+	>
+		<Icon name="mdi:white-balance-sunny" class:list="text-2xl md:text-xl" aria-hidden />
+	</button>
+	<button
+		data-theme="theme-dark"
+		aria-label="深色主題"
+		title="深色"
+		class="theme-button theme-dark"
+	>
+		<Icon name="mdi:moon-and-stars" class:list="text-2xl md:text-xl" aria-hidden />
+	</button>
+</div>
+
+<style>
+	@reference "../styles/global.css";
+
+	button.theme-button {
+		@apply p-1 rounded-full transition-all;
+	}
+	:global(button.active) {
+		@apply text-background bg-foreground/90 dark:text-background-dark dark:bg-foreground-dark/90;
+	}
+</style>
