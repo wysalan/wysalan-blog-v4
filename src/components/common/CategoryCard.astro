@@ -1,8 +1,9 @@
 ---
 import { getPostsByCategory } from '@Utils/postUtils'
 import { getChiCategoryName } from '@Utils/categoryUtils'
-import FormattedDate from './FormattedDate.astro'
 import dayjs from 'dayjs'
+import { siteConfig } from '@SiteConfig'
+import FormattedDate from './FormattedDate.astro'
 
 const { category } = Astro.props
 
@@ -26,7 +27,7 @@ const filteredPosts = allCategoryPosts.filter((post) => dayjs(post.data.pubDate)
 					filteredPosts.map((post) => (
 						<div class="flex flex-col gap-1 pt-2 text-lg md:gap-3">
 							<a
-								href={`./posts/${post.id}`}
+								href={`${siteConfig.base}/posts/${post.id}`}
 								title={post.data.title}
 								aria-label={post.data.title}
 								class="rounded-lg p-1.5 transition-all hover:bg-zinc-200/50 dark:hover:bg-zinc-200/15"
