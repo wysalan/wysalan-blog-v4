@@ -1,6 +1,7 @@
 ---
 import { ClientRouter } from 'astro:transitions'
 import { siteConfig } from '@/site.config'
+import LoadingIndicator from 'astro-loading-indicator/component'
 import BaseHead from '@Components/BaseHead.astro'
 import Navbar from '@Components/Navbar.astro'
 import Footer from '@Components/Footer.astro'
@@ -23,6 +24,7 @@ import '@fontsource-variable/noto-sans-tc'
 	<head>
 		<BaseHead title={title || siteConfig.title} description={description || siteConfig.description} image={image} />
 		<ClientRouter />
+		<LoadingIndicator color="#1369a2" height="3px" />
 		<script src="../utils/mediumZoom.ts"></script>
 		<script is:inline>
 			const storedTheme = localStorage.getItem('theme')
