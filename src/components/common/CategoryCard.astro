@@ -13,10 +13,10 @@ const filteredPosts = allCategoryPosts.filter((post) => dayjs(post.data.pubDate)
 
 <div class="categoryCard group">
 	<div class="text-center">
-		<a href=`/categories/${category.name}` class="group-hover:text-primary dark:group-hover:text-primary-dark text-2xl font-medium">
-			{getChiCategoryName(category.name)}
-		</a>
-		<p class="text-lg opacity-70 select-none">{`（共 ${category.frequency} 篇）`}</p>
+		<a href=`/categories/${category.name}` class="group-hover:text-primary dark:group-hover:text-primary-dark text-2xl font-medium"
+			>{getChiCategoryName(category.name)}</a
+		>
+		<p class="text-lg opacity-70">{`（共 ${category.frequency} 篇）`}</p>
 	</div>
 	<div class="border-t border-neutral-500/25 pt-2 dark:border-neutral-500">
 		<h2 class="text-md pt-1.75 text-gray-500 select-none dark:text-gray-200">近一個月內文章</h2>

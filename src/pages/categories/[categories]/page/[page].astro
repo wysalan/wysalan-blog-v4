@@ -33,7 +33,7 @@ const { categories } = Astro.params
 		</div>
 		<div class="mt-14">
 			<div class='postList"'>
-				{data.map((post, index) => <PostBlock post={post} showCategory={false} />)}
+				{data.map((post, index) => <PostBlock post={post} />)}
 			</div>
 		</div>
 		<div class="my-8">

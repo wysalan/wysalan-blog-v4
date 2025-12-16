@@ -108,7 +108,7 @@ html {
 
 /* Common Components */
 .postBlock {
-	@apply relative flex flex-col gap-5 rounded-lg py-5 transition-all hover:scale-[1.025] hover:bg-white hover:shadow-2xl hover:ring-3 md:px-5 lg:flex-row lg:gap-7 hover:dark:bg-white/10;
+	@apply relative flex flex-col gap-3 rounded-lg py-5 transition-all hover:bg-white md:px-5 md:hover:scale-[1.025] md:hover:shadow-2xl md:hover:ring-3 lg:flex-row lg:gap-7 hover:dark:bg-white/10;
 }
 
 .categoryCard {
