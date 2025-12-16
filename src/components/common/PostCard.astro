@@ -30,7 +30,7 @@ const { post } = Astro.props
 			<FormattedDate date={post.data.pubDate} format="YYYY-MM-DD" />
 		</span>
 		<span class="ml-2 flex items-center">
-			<Icon name="lucide:folder" class="mr-1.25 inline-block" size="20px" />
+			<Icon name="lucide:folder-open" class="mr-1.25 inline-block" size="20px" />
 			<span>{getChiCategoryName(post.data.categories)}</span>
 		</span>
 	</div>

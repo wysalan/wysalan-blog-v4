@@ -36,7 +36,7 @@ const { title, description, pubDate, updatedDate, categories, tags, coverImage }
 						title={`更新日期：${dayjs(updatedDate).format('YYYY-MM-DD HH:mm:ss')}`}
 						aria-label={`更新日期：${dayjs(updatedDate).format('YYYY-MM-DD HH:mm:ss')}`}
 					>
-						<Icon name="lucide:calendar-arrow-up" class="mr-1" size={20} />
+						<Icon name="lucide:edit" class="mr-1" size={20} />
 						<FormattedDate date={updatedDate} format="YYYY-MM-DD HH:mm" />
 					</span>
 				)
@@ -45,7 +45,7 @@ const { title, description, pubDate, updatedDate, categories, tags, coverImage }
 				showCategory && (
 					<span class="flex">
 						<a href={`${siteConfig.base}/categories/${categories}/`} class="text-md flex items-center text-balance">
-							<Icon name="lucide:folder" class="mr-1" size={20} />
+							<Icon name="lucide:folder-open" class="mr-1" size={20} />
 							<span>{getChiCategoryName(categories)}</span>
 						</a>
 					</span>
