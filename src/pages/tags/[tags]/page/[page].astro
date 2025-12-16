@@ -29,15 +29,15 @@ const { data } = page
 <BaseLayout title=`標籤：${origTagName} | ${siteConfig.title}`>
 	<main class="main-container">
 		<div class="flex flex-wrap items-center">
-			<Icon name="material-symbols:tag-rounded" class="mr-3 inline-block" size="48px" />
+			<Icon name="material-symbols:tag-rounded" class="mr-3" size={38} />
 			<h1 class="page-title">{origTagName}</h1>
 		</div>
-		<div class="mt-14">
+		<section class="main-section">
 			<div class="postList">
 				{data.map((post, index) => <PostBlock post={post} />)}
 			</div>
-		</div>
-		<div class="my-8">
+		</section>
+		<div class="my-10">
 			<Pagination page={page} firstPageUrl={`/tags/${tags}`} urlPattern={`/tags/${tags}/page/{}`} />
 		</div>
 	</main>

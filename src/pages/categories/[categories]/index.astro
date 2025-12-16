@@ -48,15 +48,15 @@ const page = {
 <BaseLayout title=`分類：${getChiCategoryName(categories)} | ${siteConfig.title}`>
 	<main class="main-container">
 		<div class="flex flex-wrap items-center">
-			<Icon name="lucide:folder" class="mr-3" size={48} />
+			<Icon name="lucide:folder-open" class="mr-3" size={38} />
 			<h1 class="page-title">{getChiCategoryName(categories)}</h1>
 		</div>
-		<div class="mt-14">
+		<section class="main-section">
 			<div class='postList"'>
 				{data.map((post, index) => <PostBlock post={post} />)}
 			</div>
-		</div>
-		<div class="my-8">
+		</section>
+		<div class="my-10">
 			<Pagination page={page} firstPageUrl={`/categories/${categories}`} urlPattern={`/categories/${categories}/page/{}`} />
 		</div>
 	</main>

@@ -15,8 +15,8 @@ const allCategories = await getAllCategories(allPosts, 'postCount')
 		<div class="flex flex-wrap items-center">
 			<h1 class="page-title">文章分類</h1>
 		</div>
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 my-14">
+		<section class="mt-10 mb-14 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 			{allCategories.map((category) => <CategoryCard category={category} />)}
-		</div>
+		</section>
 	</main>
 </BaseLayout>

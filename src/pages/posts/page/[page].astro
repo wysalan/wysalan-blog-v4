@@ -27,12 +27,12 @@ const { data } = page
 				>
 			</a>
 		</div>
-		<div class="mt-14">
+		<section class="main-section">
 			<div class="postList">
 				{data.map((post, index) => <PostBlock post={post} />)}
 			</div>
-		</div>
-		<div class="my-8">
+		</section>
+		<div class="my-10">
 			<Pagination page={page} firstPageUrl={'/posts'} urlPattern={'/posts/page/{}'} />
 		</div>
 	</main>

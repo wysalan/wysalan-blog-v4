@@ -15,7 +15,7 @@ const allTags = await getAllTags(allPosts, 'tagCount')
 		<div class="flex flex-wrap items-center">
 			<h1 class="page-title">文章標籤</h1>
 		</div>
-		<div class="py-14">
+		<section class="mt-10 mb-14">
 			<ul class="flex flex-wrap justify-center gap-6">
 				{
 					allTags.map((tag) => (
@@ -25,6 +25,6 @@ const allTags = await getAllTags(allPosts, 'tagCount')
 					))
 				}
 			</ul>
-		</div>
+		</section>
 	</main>
 </BaseLayout>
