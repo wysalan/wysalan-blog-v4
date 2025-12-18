@@ -149,3 +149,9 @@ html {
 .link-folded {
 	@apply hover:text-primary flex items-center rounded-lg transition-[max-width] duration-250 ease-in-out;
 }
+
+.prose img,
+.prose iframe {
+	max-inline-size: 100%;
+	block-size: auto;
+}

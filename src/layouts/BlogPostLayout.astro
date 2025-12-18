@@ -71,6 +71,8 @@ const { title, description, categories, pubDate, updatedDate, coverImage, coverI
 										alt={title}
 										class={coverImageCredit ? 'rounded-sm shadow-lg/30' : 'mb-10 rounded-sm shadow-lg/30'}
 										inferSize={true}
+										fetchpriority="high"
+										loading="eager"
 									/>
 									{coverImageCredit && <p class="mt-2 mb-10 text-sm opacity-80">圖片來源：{coverImageCredit}</p>}
 								</>
