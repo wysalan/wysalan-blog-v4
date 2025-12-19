@@ -83,12 +83,20 @@ export async function getAllCategories(allPosts: CollectionEntry<'blogPosts'>[],
 
 ### 單段內容
 
-<Aside type="note" title="提示">
-	Astro 必須在本地安裝，而非全域安裝。請確保你沒有執行 `npm install -g astro`、`pnpm add -g astro` 或 `yarn add global astro`。
+<Aside type="info" title="提示">
+	有關其他功能，例如在 Markdown 中包含元件和 JSX 表達式，請新增 `@astrojs/mdx` 以使用 MDX 編寫 Markdown 內容。
+</Aside>
+
+<Aside type="note" title="注意">
+	新的 Astro 專案只能建立在一個完全空白的資料夾中，因此請為您的資料夾選擇一個尚不存在的名稱！
+</Aside>
+
+<Aside type="caution" title="警告">
+	任何檔案都記得要做好備份，而且不要將`太過私密或重要的檔案`上傳到網路上，因為網路是個`公開環境`。
 </Aside>
 
 <Aside type="danger" title="危險">
-	任何檔案都記得要做好備份，而且不要將太過私密或重要的檔案上傳到網路上，因為網路是個公開環境。
+	任何檔案都記得要做好備份，而且不要將`太過私密或重要的檔案`上傳到網路上，因為網路是個`公開環境`。
 </Aside>
 
 ### 多段內容
@@ -137,3 +145,5 @@ export function remarkReadingTime() {
 ![AMD Ryzen 7 5800X 包裝盒](https://i.imgur.com/2lokGoR.jpg)
 
 456
+
+First, let’s create the `Aside.astro` component.
