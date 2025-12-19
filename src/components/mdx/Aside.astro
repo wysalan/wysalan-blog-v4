@@ -8,18 +8,20 @@ interface Props {
 }
 
 const defaultTitle = {
+	info: '提示',
 	note: '注意',
 	caution: '警告',
 	danger: '危險',
 } as const
 
 const icons = {
+	info: 'lucide:lightbulb',
 	note: 'lucide:circle-alert',
 	caution: 'lucide:triangle-alert',
 	danger: 'lucide:octagon-alert',
 } as const
 
-const types = ['note', 'caution', 'danger'] as const
+const types = ['info', 'note', 'caution', 'danger'] as const
 
 const { type = 'note', title = defaultTitle[type] } = Astro.props
 
@@ -46,23 +48,34 @@ if (!types.includes(type)) {
 <style>
 	@reference "../../styles/global.css";
 
+	:root {
+		--bg-green: #d6efdf;
+	}
+
 	.aside {
 		@apply my-5 rounded-lg p-5;
 		* {
 			@apply dark:text-foreground/70;
 		}
 	}
+
+	.aside-info {
+		@apply bg-(--bg-green);
+	}
+
 	.aside-note {
-		@apply bg-blue-100 dark:opacity-85;
+		@apply bg-blue-100;
 	}
+
 	.aside-caution {
-		@apply bg-orange-100 dark:opacity-85;
+		@apply bg-orange-100;
 	}
+
 	.aside-danger {
-		@apply bg-red-100 dark:opacity-85;
+		@apply bg-red-100;
 	}
+
 	.aside-content {
-		@apply mt-3;
 		*:first-child {
 			@apply mt-3;
 		}
@@ -71,6 +84,9 @@ if (!types.includes(type)) {
 		}
 		* {
 			@apply my-3;
+		}
+		p code {
+			@apply bg-gray-100 dark:bg-gray-100 dark:ring-black/5;
 		}
 	}
 </style>
