@@ -5,7 +5,7 @@
 
 @theme {
 	/* Fonts */
-	--font-sans: 'Inter Variable', 'Noto Sans TC Variable', system-ui, sans-serif;
+	--font-sans: 'Inter Variable', 'Noto Sans TC Variable', sans-serif;
 	--font-mono: 'JetBrains Mono Variable', 'Noto Sans TC Variable', monospace;
 
 	--color-foreground: #0c0c0c;
@@ -124,7 +124,7 @@ html {
 /* Plugin Modifies */
 .medium-zoom-overlay,
 .medium-zoom-image--opened {
-	@apply bg-background/80! dark:bg-background-dark/80! z-999 backdrop-blur-lg;
+	@apply bg-background/90! dark:bg-background-dark/90! z-999 backdrop-blur-lg;
 }
 
 .astro-code,
@@ -134,7 +134,7 @@ html {
 
 /* TailwindCSS Typography Modifies */
 .prose-element-modify {
-	@apply prose-figure:my-5 prose-figure:text-center prose-img:rounded-sm prose-img:mx-auto prose-table:my-5 prose-p:my-5;
+	@apply prose-headings:first:mt-0 prose-headings:mt-[1.2em] prose-headings:mb-0 prose-p:my-5 prose-ul:mt-[1.2em] prose-table:my-5 prose-pre:mt-[2em] prose-figure:my-5 prose-figure:text-center prose-img:rounded-sm prose-img:mx-auto;
 }
 
 .prose blockquote > p::before {
@@ -152,7 +152,7 @@ html {
 }
 
 .prose code:not(pre > code) {
-	@apply mx-0.5 rounded-sm bg-gray-200/80 px-1 py-0.5 ring ring-black/5 dark:bg-gray-200/20 dark:ring-white/20;
+	@apply mx-0.5 rounded-md bg-gray-200/80 px-1 py-0.5 ring ring-black/5 dark:bg-gray-200/20 dark:ring-white/20;
 }
 
 /* Other */
