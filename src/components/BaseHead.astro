@@ -24,7 +24,7 @@ const { title, description, author = `${siteConfig.author}`, image = `${siteConf
 <link rel="icon" type="image/svg+xml" href={`${siteConfig.base}/favicon.svg`} />
 <link rel="shortcut icon" href={`${siteConfig.base}/favicon.ico`} />
 <link rel="apple-touch-icon" sizes="180x180" href={`${siteConfig.base}/apple-touch-icon.png`} />
-<meta name="apple-mobile-web-app-title" content="Saral Theme" />
+<meta name="apple-mobile-web-app-title" content={`${siteConfig.title}`} />
 <link rel="manifest" href={`${siteConfig.base}/site.webmanifest`} />
 
 <!-- Canonical URL -->
@@ -51,4 +51,4 @@ const { title, description, author = `${siteConfig.author}`, image = `${siteConf
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
 <!-- RSS Auto-discovery -->
-<link rel="alternate" type="application/rss+xml" title="沙連四坊 RSS Feed" href={new URL('rss.xml', Astro.site)} />
+<link rel="alternate" type="application/rss+xml" title={`${siteConfig.title} RSS Feed`} href={new URL('rss.xml', Astro.site)} />
