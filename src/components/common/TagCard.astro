@@ -3,7 +3,7 @@ import { Icon } from 'astro-icon/components'
 import { tagNameSlugify } from '@Utils/tagUtils'
 
 const { tag } = Astro.props
-const largeTaFrequency: boolean = tag.frequecny >= 100
+const largeTagFrequency: boolean = tag.frequecny >= 100
 ---
 
 <a href=`/tags/${tagNameSlugify(tag.name)}` class="tagCard group">
@@ -12,7 +12,7 @@ const largeTaFrequency: boolean = tag.frequecny >= 100
 	<span
 		class:list={[
 			'ml-0.75 flex h-8 items-center justify-center rounded-lg bg-gray-200/75 dark:bg-gray-200/20',
-			{ 'w-10': largeTaFrequency, 'w-8': !largeTaFrequency },
+			{ 'w-10': largeTagFrequency, 'w-8': !largeTagFrequency },
 		]}>{tag.frequency}</span
 	>
 </a>
