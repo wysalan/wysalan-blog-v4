@@ -51,7 +51,7 @@ const pageNumbers = getPageNumbers(page)
 const firstPageNumber = pageNumbers[0]
 const lastPageNumber = pageNumbers[pageNumbers.length - 1]
 const currentPage = page.currentPage
-const prevUrl = firstPageUrl && currentPage == 2 ? firstPageUrl : page.url.prev
+const prevUrl = firstPageUrl && currentPage === 2 ? firstPageUrl : page.url.prev
 const nextUrl = page.url.next
 const showFirstPage = pageNumbers[0] !== 1
 const showLastPage = lastPageNumber !== page.lastPage
@@ -62,7 +62,11 @@ const showLastPage = lastPageNumber !== page.lastPage
 		<li>
 			{
 				(
-					<a href={prevUrl ? prevUrl : ''} class={`btn-pagination-arrow ${!prevUrl ? `pointer-events-none opacity-40` : ''}`} aria-label="返回上一頁">
+					<a
+						href={prevUrl ? prevUrl : ''}
+						class:list={['btn-pagination-arrow', { 'pointer-events-none opacity-40': !prevUrl }]}
+						aria-label="返回上一頁"
+					>
 						<Icon size={24} name="mdi:chevron-left" />
 					</a>
 				)
@@ -85,21 +89,19 @@ const showLastPage = lastPageNumber !== page.lastPage
 			)
 		}
 		{
-			pageNumbers.map((pageNumber) => {
-				return (
-					<li>
-						{pageNumber === page.currentPage ? (
-							<span class="btn-pagination-active" aria-label={`目前頁面為第 ${pageNumber} 頁`}>
-								{pageNumber}
-							</span>
-						) : (
-							<a href={patternToUrl(urlPattern, pageNumber, firstPageUrl)} class="btn-pagination" aria-label={`前往第 ${pageNumber} 頁`}>
-								{pageNumber}
-							</a>
-						)}
-					</li>
-				)
-			})
+			pageNumbers.map((pageNumber) => (
+				<li>
+					{pageNumber === page.currentPage ? (
+						<span class="btn-pagination-active" aria-label={`目前頁面為第 ${pageNumber} 頁`}>
+							{pageNumber}
+						</span>
+					) : (
+						<a href={patternToUrl(urlPattern, pageNumber, firstPageUrl)} class="btn-pagination" aria-label={`前往第 ${pageNumber} 頁`}>
+							{pageNumber}
+						</a>
+					)}
+				</li>
+			))
 		}
 		{
 			lastPageNumber < page.lastPage - 1 && (
@@ -120,7 +122,11 @@ const showLastPage = lastPageNumber !== page.lastPage
 		<li>
 			{
 				(
-					<a href={nextUrl ? nextUrl : ''} class={`btn-pagination-arrow ${!nextUrl ? `pointer-events-none opacity-40` : ''}`} aria-label="前往下一頁">
+					<a
+						href={nextUrl ? nextUrl : ''}
+						class:list={['btn-pagination-arrow', { 'pointer-events-none opacity-40': !nextUrl }]}
+						aria-label="前往下一頁"
+					>
 						<Icon size={24} name="mdi:chevron-right" />
 					</a>
 				)

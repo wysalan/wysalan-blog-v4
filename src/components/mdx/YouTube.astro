@@ -13,7 +13,7 @@ interface Props {
 
 const { src, title = 'YouTube 影片播放器', start, noCookie, className } = Astro.props
 
-const embedUrl = start ? getYoutubeEmbedUrl(src, noCookie) + `&start=${start}` : getYoutubeEmbedUrl(src, noCookie)
+const embedUrl = start ? `${getYoutubeEmbedUrl(src, noCookie)}&start=${start}` : getYoutubeEmbedUrl(src, noCookie)
 const thumbnail = await getYoutubeThumbnail(src)
 const isPlayable = Boolean(embedUrl)
 const ariaLabel = isPlayable ? '播放 YouTube 影片' : 'YouTube 影片（無法播放）'
@@ -50,16 +50,22 @@ const ariaLabel = isPlayable ? '播放 YouTube 影片' : 'YouTube 影片（無�
 			const title = this.dataset.videoTitle
 			const isPlayable = this.dataset.playable === 'true'
 
-			if (!embedUrl || !isPlayable) return
+			if (!embedUrl || !isPlayable) {
+				return
+			}
 
 			const trigger = this.querySelector('[data-youtube-trigger]')
-			if (!(trigger instanceof HTMLButtonElement)) return
+			if (!(trigger instanceof HTMLButtonElement)) {
+				return
+			}
 
 			trigger.addEventListener('click', () => this.activate(embedUrl, title), { once: true })
 		}
 
 		private activate(embedUrl: string, title?: string) {
-			if (this.activated) return
+			if (this.activated) {
+				return
+			}
 			this.activated = true
 
 			const container = document.createElement('div')

@@ -1,19 +1,11 @@
 ---
-interface headings {
-	length: number
-	depth: number
-	slug: string
-	text: string
-	children: headings
-}
-
 const { headings } = Astro.props
 ---
 
 {
 	(
 		<ul class="mt-1 ml-2 space-y-1 pl-2">
-			{headings.map((children: headings) => (
+			{headings.map((children: typeof headings) => (
 				<li>
 					<a
 						class="toc-link hover:text-primary dark:hover:text-primary-dark line-clamp-2 max-w-max rounded-md rounded-l-none px-2 py-1 transition-all"

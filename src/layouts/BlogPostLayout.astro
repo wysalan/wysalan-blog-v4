@@ -17,7 +17,7 @@ type Props = CollectionEntry<'blogPosts'>['data'] & {
 const { title, description, categories, pubDate, updatedDate, coverImage, coverImageCredit, headings } = Astro.props
 ---
 
-<BaseLayout title={title + ' | ' + siteConfig.title} description={description} image={coverImage}>
+<BaseLayout title=`${title} | ${siteConfig.title}` description={description} image={coverImage}>
 	<main>
 		<article>
 			<div class="app-container relative flex flex-col justify-around gap-8 pt-20 pb-10 lg:flex-row-reverse">
@@ -27,7 +27,7 @@ const { title, description, categories, pubDate, updatedDate, coverImage, coverI
 					</div>
 				</aside>
 				<div class="w-full grow md:max-w-[105ch]">
-					<div class={!coverImage ? 'mb-5' : null}>
+					<div class:list={[{ 'mb-5': !coverImage }]}>
 						<h1 class="pt-0 text-2xl leading-snug font-bold md:pt-14 md:text-4xl">{title}</h1>
 						<div class="flex flex-wrap items-center gap-4 py-4 text-lg">
 							<span
@@ -69,7 +69,7 @@ const { title, description, categories, pubDate, updatedDate, coverImage, coverI
 									<Image
 										src={coverImage}
 										alt={title}
-										class={coverImageCredit ? 'rounded-sm shadow-lg/30' : 'mb-10 rounded-sm shadow-lg/30'}
+										class:list={[{ 'rounded-sm shadow-lg/30': coverImageCredit }, { 'mb-10 rounded-sm shadow-lg/30': !coverImageCredit }]}
 										inferSize={true}
 										fetchpriority="high"
 										loading="eager"

@@ -5,17 +5,15 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 
 <BaseLayout>
 	<div>
-		<main class="app-container h-[70vh] flex flex-col gap-6 justify-center py-56 items-center">
+		<main class="app-container flex h-[70vh] flex-col items-center justify-center gap-6 py-56">
 			<h1
 				id="emoji"
-				class="text-6xl md:text-[72px] text-center leading-none z-10 px-4 pt-6 pb-6 rounded-lg transition-all hover:bg-gray-200/70 hover:dark:bg-gray-300/30"
+				class="z-10 rounded-lg px-4 pt-6 pb-6 text-center text-6xl leading-none transition-all hover:bg-gray-200/70 md:text-[72px] hover:dark:bg-gray-300/30"
 			>
 				Σ(*ﾟдﾟﾉ)ﾉ
 			</h1>
-			<p class="text-xl text-center max-w-[480px]">抱歉，找不到此頁面</p>
-			<a class="btn-primary text-lg shadow-lg hover:shadow-xl active:shadow-lg" href=`${siteConfig.base}/`
-				>返回首頁</a
-			>
+			<p class="max-w-120 text-center text-xl">抱歉，找不到此頁面</p>
+			<a class="btn-primary text-lg shadow-lg hover:shadow-xl active:shadow-lg" href=`${siteConfig.base}/`>返回首頁</a>
 		</main>
 	</div>
 </BaseLayout>

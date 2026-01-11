@@ -22,7 +22,7 @@ const today = new Date()
 			<div class="mt-4 flex flex-wrap items-center gap-4">
 				{
 					WebsiteLinks.map((link) => (
-						<a class="text-lg hover:text-sky-700" href={'/' + link.url} rel="noopener noreferrer">
+						<a class="text-lg hover:text-sky-700" href={`${siteConfig.base}/${link.url}`} rel="noopener noreferrer">
 							{link.name}
 						</a>
 					))

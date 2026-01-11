@@ -33,7 +33,7 @@ if (!types.includes(type)) {
 }
 ---
 
-<aside class={`aside aside-${type}`}>
+<aside class:list={`aside aside-${type}`}>
 	<div class="aside-container">
 		<div class="not-prose flex items-center font-semibold">
 			<Icon name={`${icons[type]}`} size={22} />

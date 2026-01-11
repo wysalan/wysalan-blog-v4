@@ -59,7 +59,7 @@ const { title, description, pubDate, updatedDate, categories, tags, coverImage }
 		<div class="group flex items-center gap-2">
 			{
 				tags &&
-					tags.flat() != '' &&
+					tags.flat()[0] !== '' &&
 					tags.flat().map((tag: string) => (
 						<a
 							href={`${siteConfig.base}/tags/${tagNameSlugify(tag)}`}

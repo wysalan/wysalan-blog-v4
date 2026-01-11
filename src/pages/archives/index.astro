@@ -1,14 +1,9 @@
 ---
-import { type CollectionEntry } from 'astro:content'
 import { siteConfig } from '@SiteConfig'
 import { getAllPosts } from '@Utils/postUtils'
 import dayjs from 'dayjs'
 import BaseLayout from '@Layouts/BaseLayout.astro'
 import FormattedDate from '@Components/common/FormattedDate.astro'
-
-type Props = {
-	posts: CollectionEntry<'blogPosts'>[]
-}
 
 const allPosts = await getAllPosts()
 const allYears = [...new Set(allPosts.flatMap((post) => dayjs(post.data.pubDate).year()))]
