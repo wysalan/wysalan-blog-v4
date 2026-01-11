@@ -6,6 +6,7 @@ import partytown from '@astrojs/partytown'
 import icon from 'astro-icon'
 import rehypeFigureTitle from 'rehype-figure-title'
 import { rehypeAccessibleEmojis } from 'rehype-accessible-emojis'
+import rehypeTableWrapper from './src/plugins/rehypeTableWrapper.ts'
 import { siteConfig } from './src/site.config.ts'
 
 // https://astro.build/config
@@ -27,7 +28,7 @@ export default defineConfig({
 		plugins: [tailwindcss()],
 	},
 	markdown: {
-		rehypePlugins: [rehypeFigureTitle, rehypeAccessibleEmojis],
+		rehypePlugins: [rehypeFigureTitle, rehypeAccessibleEmojis, rehypeTableWrapper],
 		shikiConfig: {
 			themes: {
 				light: 'github-dark',
