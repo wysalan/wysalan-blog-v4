@@ -8,12 +8,12 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 		<main class="app-container flex h-[70vh] flex-col items-center justify-center gap-6 py-56">
 			<h1
 				id="emoji"
-				class="z-10 rounded-lg px-4 pt-6 pb-6 text-center text-6xl leading-none transition-all hover:bg-gray-200/70 md:text-[72px] hover:dark:bg-gray-300/30"
+				class="cursor-pointer rounded-lg px-4 pt-6 pb-6 text-center text-6xl leading-none transition-all select-none hover:bg-gray-200/70 md:text-[72px] hover:dark:bg-gray-300/30"
 			>
 				Σ(*ﾟдﾟﾉ)ﾉ
 			</h1>
-			<p class="max-w-120 text-center text-xl">抱歉，找不到此頁面</p>
-			<a class="btn-primary text-lg shadow-lg hover:shadow-xl active:shadow-lg" href=`${siteConfig.base}/`>返回首頁</a>
+			<p class="text-center text-xl">抱歉，找不到此頁面</p>
+			<a class="btn-primary text-lg" href=`${siteConfig.base}/`>返回首頁</a>
 		</main>
 	</div>
 </BaseLayout>
@@ -27,14 +27,17 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 	const emojiText: HTMLElement | null = document.getElementById('emoji')
 	let currentRndNum: number = 0
 	let previousRndNum: number = 0
-	const emoji: string[] = ['Σ(*ﾟдﾟﾉ)ﾉ', '(|||ﾟдﾟ)', 'ಠ╭╮ಠ', '∑(￣□￣;)', 'Σ( ° △ °)', 'ε=ε=ヾ(;ﾟдﾟ)/']
-	document.getElementById('emoji')?.addEventListener('mouseenter', () => {
-		do {
-			currentRndNum = getRandomInt(0, emoji.length)
-		} while (currentRndNum === previousRndNum)
-		previousRndNum = currentRndNum
-		if (emojiText) {
-			emojiText.innerHTML = emoji[currentRndNum]
-		}
-	})
+	const emoji: string[] = ['Σ(*ﾟдﾟﾉ)ﾉ', '(|||ﾟдﾟ)', 'ಠ╭╮ಠ', 'Σ( ° △ °)', '(#`Д´)ﾉ', '(´ﾟдﾟ`)']
+	const eventType: string[] = ['mouseenter', 'click']
+	if (emojiText) {
+		eventType.forEach((event: string) => {
+			emojiText.addEventListener(event, () => {
+				do {
+					currentRndNum = getRandomInt(0, emoji.length)
+				} while (currentRndNum === previousRndNum)
+				previousRndNum = currentRndNum
+				emojiText.innerHTML = emoji[currentRndNum]
+			})
+		})
+	}
 </script>
