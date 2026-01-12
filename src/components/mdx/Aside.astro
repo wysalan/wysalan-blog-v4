@@ -47,34 +47,39 @@ if (!types.includes(type)) {
 
 <style>
 	@reference "../../styles/global.css";
-
 	:root {
 		--bg-green: #d6efdf;
 	}
-
 	.aside {
 		@apply my-5 rounded-lg p-5;
 		* {
 			@apply dark:text-foreground/70;
 		}
 	}
-
 	.aside-info {
 		@apply bg-(--bg-green);
+		p code {
+			@apply bg-green-50 dark:bg-green-50 dark:ring-black/10;
+		}
 	}
-
 	.aside-note {
 		@apply bg-blue-100;
+		p code {
+			@apply bg-blue-50 dark:bg-blue-50 dark:ring-black/5;
+		}
 	}
-
 	.aside-caution {
 		@apply bg-orange-100;
+		p code {
+			@apply bg-orange-50 dark:bg-orange-50 dark:ring-black/5;
+		}
 	}
-
 	.aside-danger {
 		@apply bg-red-100;
+		p code {
+			@apply bg-red-50 dark:bg-red-50 dark:ring-black/5;
+		}
 	}
-
 	.aside-content {
 		*:first-child {
 			@apply mt-3;
@@ -84,9 +89,6 @@ if (!types.includes(type)) {
 		}
 		* {
 			@apply my-3;
-		}
-		p code {
-			@apply bg-gray-100 dark:bg-gray-100 dark:ring-black/5;
 		}
 	}
 </style>
