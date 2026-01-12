@@ -67,7 +67,7 @@ html {
 
 /* Button */
 .btn-primary {
-	@apply bg-foreground text-background dark:bg-foreground-dark dark:text-background-dark mt-4 flex w-fit items-center gap-2 rounded-lg px-5 py-3 shadow transition-opacity hover:opacity-75 md:px-4 md:py-2;
+	@apply bg-foreground hover:bg-foreground/75 text-background dark:bg-foreground-dark hover:dark:bg-foreground-dark/85 dark:text-background-dark flex w-fit items-center gap-2 rounded-lg px-3 py-2 hover:shadow-lg active:shadow-none transition-all;
 }
 
 .btn-secondary {
@@ -114,11 +114,11 @@ html {
 }
 
 .categoryCard {
-	@apply flex h-full flex-col gap-3 rounded-lg bg-zinc-100/80 px-5 py-4 shadow transition-all hover:-translate-y-1.5 hover:scale-[1.025] hover:bg-zinc-100/40 hover:shadow-xl hover:ring-3 dark:bg-zinc-100/10 hover:dark:bg-zinc-100/15;
+	@apply flex h-full flex-col gap-3 rounded-lg bg-zinc-100/50 px-5 py-4 shadow transition-all hover:-translate-y-1.5 hover:scale-[1.025] hover:bg-zinc-100/40 hover:shadow-xl hover:ring-3 dark:bg-zinc-100/10 hover:dark:bg-zinc-100/15;
 }
 
 .tagCard {
-	@apply line-clamp-1 flex h-full flex-row items-center gap-1 rounded-lg bg-zinc-100/80 p-2.5 text-center text-lg shadow transition-all hover:scale-[1.075] hover:shadow-xl hover:ring-3 dark:bg-zinc-100/10;
+	@apply line-clamp-1 flex h-full flex-row items-center gap-1 rounded-lg bg-zinc-100/50 p-2.5 text-center text-lg shadow transition-all hover:scale-[1.075] hover:shadow-xl hover:ring-3 dark:bg-zinc-100/10;
 }
 
 /* Plugin Modifies */
