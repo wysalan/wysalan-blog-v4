@@ -3,11 +3,42 @@ import { siteConfig } from '@SiteConfig'
 import BaseLayout from '@Layouts/BaseLayout.astro'
 ---
 
-<BaseLayout title=`關於本站 | ${siteConfig.title}`>
+<BaseLayout title=`關於 | ${siteConfig.title}`>
 	<main class="main-container">
-		<h1 class="page-title">關於本站</h1>
+		<section class="pb-10">
+			<div class="prose prose-zinc prose-lg md:prose-xl dark:prose-invert prose-element-modify w-full md:max-w-[110ch]">
+				<h2>關於本站</h2>
+				<p>原本是因為巴哈姆特小屋的文章編輯器不好用，因此想要尋找其他發文平台當作備份站</p>
+				<p>不過自從買了域名後就想要打造一個屬於自己的網站，於是這裡就誕生了</p>
+				<h3>網站內容</h3>
+				<p>這裡以各種開箱及心得文為主，偶爾還會有教學和其他類型的文章</p>
+				<p>站內所有文章的內容皆是主觀感受，但我不希望這裡充滿負面情緒，因此在審稿的時候會修改部分用詞及表達方式，盡量讓文章讀起來不會像是在吐苦水</p>
+				<h3>基本資料</h3>
+				<p>框架：Astro</p>
+				<p>樣式：Tailwind CSS</p>
+				<p>主題：以 <a href="https://github.com/yashjawale/saral-theme-astro">Saral Theme</a> 為基礎進行修改</p>
+				<p>分析：Umami Analytics</p>
+				<p>部署：AWS Amplify</p>
+				<p>圖床：AWS S3 + AWS CloudFront</p>
+				<p>字體：
+					<ul>
+						<li>中文：Noto Sans TC Variable</li>
+						<li>英文：Inter Variable</li>
+					</ul>
+				<p>備註：網站最終顯示效果請以 Firefox 為準</p>
+				<h2>關於我</h2>
+				<p>大家好，我是沙連</p>
+				<h3>興趣</h3>
+				<p>主要的興趣為玩遊戲，目前比較常玩手機遊戲，現階段偏好開放世界遊戲</p>
+				<p>其次為看動畫，除了比較關注原創作品外沒有特別偏好的題材，只要角色外觀或個性符合我胃口，且劇情精彩有邏輯就都能接受</p>
+				<h2>關於站名</h2>
+				<p>目前還沒想到正式的站名，因此暫時以「我的名字 + 第幾代 + 與據點有關的字」的方式來命名：</p>
+				<ul>
+					<li><a href="https://salantom.blogspot.com/">沙連的第二個家</a></li>
+					<li><a href="https://old.wysalan.com/">沙連三棧</a></li>
+					<li>沙連四坊 ← 目前在這</li>
+				</ul>
+			</div>
+		</section>
 	</main>
-	<section class="app-container mb-8 flex justify-center py-12">
-		<div class="prose prose-zinc prose-lg md:prose-xl dark:prose-invert prose-element-modify w-full md:max-w-[110ch]"></div>
-	</section>
 </BaseLayout>
