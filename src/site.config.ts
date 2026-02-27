@@ -15,10 +15,10 @@ interface siteSetting {
 }
 
 export const siteConfig: siteConfig = {
-	url: 'https://wysalan.com/',
+	url: 'https://blog.wysalan.com/',
 	base: '',
 	title: '沙連四坊',
-	description: '沙連的個人網站，主要以心得、開箱、教學及 ACG 相關文章為主',
+	description: '沙連的個人網站，任何想分享和記錄的內容都在這裡',
 	author: 'Tom Liu',
 	// The language of this website.
 	language: 'zh-TW',
@@ -27,7 +27,7 @@ export const siteConfig: siteConfig = {
 }
 
 export const siteSetting: siteSetting = {
-	homePageDescription: '主要以 ACG、心得、開箱及教學相關文章為主',
+	homePageDescription: '沙連的個人網站邁入第四代，歡迎參觀',
 	footerTitle: '',
 	footerDescription: '不只是分享，也是為了記錄',
 }
