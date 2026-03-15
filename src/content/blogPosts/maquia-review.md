@@ -5,7 +5,7 @@ categories: '動畫心得'
 tags: ['Anime Movie']
 pubDate: '2018-08-05 20:58:24'
 updatedDate: '2025-11-20 13:16:20'
-coverImage: 'https://storage.googleapis.com/salan_blog/maquia_review.webp'
+coverImage: 'https://storage.wysalan.com/img/maquia-review/cover.webp'
 coverImageCredit: '《道別的早晨就用約定之花點綴吧》官方網站封面圖（©PROJECT MAQUIA）'
 ---
 
@@ -19,7 +19,7 @@ coverImageCredit: '《道別的早晨就用約定之花點綴吧》官方網站�
 
 這也是岡媽第一次擔任導演的作品，雖然說是第一次，但是她之前擔任編劇時的表現也為這部奠定良好的基石，喜歡岡媽之前作品的千萬不能錯過
 
-![《道別的早晨就用約定之花點綴吧》票根](https://1.bp.blogspot.com/-lO2UZY88l2U/XxlUc2WTHKI/AAAAAAAASjg/lWz5_O0TAtoucfTQ_68YrpA3tEwS3cDsQCPcBGAsYHg/s1600/IMG_20180805_133219.jpg)
+![《道別的早晨就用約定之花點綴吧》票根](https://storage.wysalan.com/img/maquia-review/maquia-ticket-stub.webp)
 
 ## 完整心得
 

@@ -5,15 +5,15 @@ categories: '動畫心得'
 tags: ['Anime Movie']
 pubDate: '2020-05-08 23:44:32'
 updatedDate: '2025-11-27 20:41:40'
-coverImage: 'https://storage.googleapis.com/salan_blog/shirobako_movie_review.webp'
-coverImageCredit: 'くえる @kuerun（原推文 ID: 1233614897952354305）'
+coverImage: 'https://storage.wysalan.com/img/shirobako-movie-review/cover.webp'
+coverImageCredit: 'くえる @kuerun［X（原 Twitter）推文 ID: 1233614897952354305］'
 ---
 
 ## 前言
 
 今天是 SHIROBAKO 劇場版的首映日，閒人如我就跑去看了
 
-![《SHIROBAKO 劇場版》票根和特典海報](https://1.bp.blogspot.com/-ffVlvUbtZ-Q/XrV7zgosmvI/AAAAAAAARY4/Ygw008YPT4sLMl7KaMNw4_RovQM33jRkgCPcBGAsYHg/s1600/IMG_20200508_142649.jpg)
+![《SHIROBAKO 劇場版》票根和特典海報](https://storage.wysalan.com/img/shirobako-movie-review/shirobako-movie-bonus-and-ticket-stub.webp)
 
 ## 心得
 

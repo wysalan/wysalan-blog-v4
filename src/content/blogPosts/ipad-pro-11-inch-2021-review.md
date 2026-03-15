@@ -5,7 +5,7 @@ categories: '使用心得'
 tags: ['iPad']
 pubDate: '2022-02-13 00:45:10'
 updatedDate: '2025-10-08 23:10:30'
-coverImage: 'https://storage.googleapis.com/salan_blog/ipad_pro_11_inch_2021.webp'
+coverImage: 'https://storage.wysalan.com/img/ipad-pro-11-inch-2021-review/cover.webp'
 coverImageCredit: ''
 ---
 
@@ -31,7 +31,7 @@ iPad Pro 的螢幕相比 iPad 7th 變化非常大，不論是色彩表現、螢�
 
 螢幕更新率升級到 120 Hz，不論是看網頁、滑 PTT 還是寫字繪畫都非常順滑；比較可惜的一點是並非所有遊戲都支援 120 Hz，例如我目前在玩的幾款手遊都只支援 60 Hz
 
-![不支援 120 Hz 的手遊們](https://i.imgur.com/xpH1Itt.jpg "不支援 120 Hz 的手遊們")
+![不支援 120 Hz 的手遊們](https://storage.wysalan.com/img/ipad-pro-11-inch-2021-review/games-that-do-not-supported-120hz-frame-rate.webp "不支援 120 Hz 的手遊們")
 
 ## 喇叭
 
@@ -46,8 +46,6 @@ iPad Pro 的螢幕相比 iPad 7th 變化非常大，不論是色彩表現、螢�
 iPad Pro 的鏡頭組合為廣角（29 mm）加超廣角（14 mm）以及 LiDAR 的輔助。照片品質可以確定的是比 iPhone 8 好一點點，但是 iPad 並不是能夠隨時拿出來拍照的大小，所以平常還是拿手機拍照居多
 
 另外切換這兩顆鏡頭的時候畫面會有很明顯的位移感，可能是鏡頭排列方式導致的問題
-
-![鏡頭位移範例畫面](https://i.imgur.com/m83XmHD.gif)
 
 ## 生物辨識
 
@@ -71,23 +69,23 @@ Apple Pencil 2 還多了連點兩下切換工具的手勢，不過有時候點�
 
 直接從最樸實無華的跑分來看，跟搭載相同處理器的 MacBook Pro 幾乎沒有差別，這個效能已經能夠讓我用好久了
 
-![GeekBench 5 CPU 跑分](https://i.imgur.com/3qOxzEC.png)
+![GeekBench 5 CPU 跑分](https://storage.wysalan.com/img/ipad-pro-11-inch-2021-review/ipad-pro-geekbench5-benchmark-1.webp)
 
-![GeekBench 5 GPU 跑分](https://i.imgur.com/lWAfHMx.png)
+![GeekBench 5 GPU 跑分](https://storage.wysalan.com/img/ipad-pro-11-inch-2021-review/ipad-pro-geekbench5-benchmark-2.webp)
 
 記憶體則是升級到 8 GB，就算有 App 在背景中也不太會被系統清掉，甚至遊戲放到隔天再開啟都不會冷啟動（Cold start）。不過 iPadOS 有對單個 App 祭出最多使用 6 GB 的限制（16 GB RAM 則是 12 GB），在執行一些吃效能的 App 可能會受到影響
 
 至於 128 GB ROM 對我來說已經很夠用了，即使裝了一些用不太到的 App 和幾個大容量遊戲都還有 60 GB 左右可以使用。但也因為 iPad 能裝的東西變多，所以我的 iCloud 已經被整機備份塞到不夠用了
 
-![iPad 儲存空間截圖](https://i.imgur.com/vzhVsiO.png)
+![iPad 儲存空間截圖](https://storage.wysalan.com/img/ipad-pro-11-inch-2021-review/ipad-pro-storage-usage.webp)
 
 ## 電池
 
 說到續航，這可能是 iPad Pro 全身上下最不「Pro」的地方了。電池容量只有 7,680 mAh，就連 iPad 7th 都有 8,827 mAh，並且還有 Apple M1 和 600 nits 螢幕這兩個耗電大戶，導致只要使用 5~7 小時（非連續使用）就要沒電了，比起 iPad 7th 連續使用將近 9 小時的成績是非常有感的退步
 
-![有玩遊戲的螢幕使用時間](https://i.imgur.com/pzU4FBI.jpg)
+![有玩遊戲的螢幕使用時間](https://storage.wysalan.com/img/ipad-pro-11-inch-2021-review/ipad-pro-battery-usage-1.webp)
 
-![單純觀看影片的螢幕使用時間](https://i.imgur.com/owUfP8i.jpg)
+![單純觀看影片的螢幕使用時間](https://storage.wysalan.com/img/ipad-pro-11-inch-2021-review/ipad-pro-battery-usage-2.webp)
 
 不過充電支援 35 W 的功率，使用 65 W 充電器可以在 1 小時 32 分鐘就從 15% 充到 100%，若是使用原廠充電器則是在 2 小時內（1 小時 53 分鐘）能夠充滿。慢速充電（使用不支援 PD 協定的充電器）可以在 5 小時 40 分鐘左右從 25% 充到 100%
 
@@ -105,9 +103,9 @@ Apple Pencil 2 還多了連點兩下切換工具的手勢，不過有時候點�
 
 利用遠端桌面 App 再加上鍵盤滑鼠，iPad Pro 就搖身一變成為了真正的「電腦」，除了不能連接實體裝置之外什麼事都能做。但要特別注意的就是網速決定你能獲得多好的體驗，如果電腦或平板有一邊的網路很慢，都會讓整個體驗大打折扣
 
-![使用 Splashtop 操作 Unity](https://i.imgur.com/WbhIAwb.jpg)
+![使用 Splashtop 操作 Unity](https://storage.wysalan.com/img/ipad-pro-11-inch-2021-review/using-ipad-like-a-pc-1.webp)
 
-![使用 Jump Desktop 進行文書處理](https://i.imgur.com/yZjxmdT.jpg)
+![使用 Jump Desktop 進行文書處理](https://storage.wysalan.com/img/ipad-pro-11-inch-2021-review/using-ipad-like-a-pc-2.webp)
 
 ## 總結
 

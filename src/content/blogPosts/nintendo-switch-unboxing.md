@@ -1,11 +1,11 @@
 ---
-title: '人生首台遊戲主機：Nintendo Switch'
-description: '首次購入遊戲主機'
+title: '人生首台遊戲主機：Nintendo Switch 簡易開箱'
+description: '被朋友推坑加上原本就有興趣，於是就購入了'
 categories: '開箱'
 tags: ['Console']
 pubDate: '2021-03-14 12:23:00'
 updatedDate: '2025-11-22 21:07:30'
-coverImage: 'https://storage.googleapis.com/salan_blog/nintendo_switch_unboxing.webp'
+coverImage: 'https://storage.wysalan.com/img/nintendo-switch-unboxing/cover.webp'
 coverImageCredit: ''
 ---
 
@@ -26,9 +26,9 @@ coverImageCredit: ''
 
 雖然剛下訂的時候覺得灰灰配色沒有藍紅配色好看，但是實際看起來灰灰配色也是挺不錯的
 
-![本體、遊戲以及贈品](https://1.bp.blogspot.com/-6FoN9CQQMd0/YEwPjuXslYI/AAAAAAAAYXs/9FndUJmb8fElYPL0VAjCcJnE3GJSboVSwCPcBGAsYHg/s2288/P_20210215_144814.jpg)
+![本體、遊戲以及贈品](https://storage.wysalan.com/img/nintendo-switch-unboxing/nintendo-switch-01.webp)
 
-![遊戲和配件](https://1.bp.blogspot.com/-r84r02csuQE/YEwPjmrd2SI/AAAAAAAAYXs/hkPXPPSbA0MP9T9TYOq_qxplx_HNCPgXQCPcBGAsYHg/s2288/P_20210215_145041.jpg)
+![遊戲和配件](https://storage.wysalan.com/img/nintendo-switch-unboxing/nintendo-switch-02.webp)
 
 ## 心得
 

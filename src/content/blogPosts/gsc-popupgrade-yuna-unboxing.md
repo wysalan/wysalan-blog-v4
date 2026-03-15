@@ -5,7 +5,7 @@ categories: '開箱'
 tags: ['Figure']
 pubDate: '2021-04-03 23:58:00'
 updatedDate: '2025-11-26 21:20:30'
-coverImage: 'https://storage.googleapis.com/salan_blog/gsc_popupgrade_yuna_unboxing.webp'
+coverImage: 'https://storage.wysalan.com/img/gsc-popupgrade-yuna-unboxing/cover.webp'
 coverImageCredit: ''
 ---
 
@@ -19,34 +19,35 @@ coverImageCredit: ''
 
 人生第一次開箱 Figure，感覺有點興奮 XD
 
-![包裝盒正面](https://i.imgur.com/AfQwkMG.jpg)
+![包裝盒正面](https://storage.wysalan.com/img/gsc-popupgrade-yuna-unboxing/gsc-popupgrade-yuna-01.webp)
 
-![包裝盒背面](https://i.imgur.com/9HlBWm5.jpg)
+![包裝盒背面](https://storage.wysalan.com/img/gsc-popupgrade-yuna-unboxing/gsc-popupgrade-yuna-02.webp)
 
 正面和背面
 
-![Figure 正面](https://1.bp.blogspot.com/-6GiLInV1Y6U/YGaG4LycdaI/AAAAAAAAY4c/CvQguVI8hMworTkrP37Gpc2TJC-JIq94QCPcBGAsYHg/s2288/IMG_20210329_195423.jpg)
+![Figure 正面](https://storage.wysalan.com/img/gsc-popupgrade-yuna-unboxing/gsc-popupgrade-yuna-03.webp)
 
-![Figure 背面](https://1.bp.blogspot.com/-4jy1WFSdce0/YGaG4Gd659I/AAAAAAAAY4c/gblCo4JXqlcEdvwswCWpnCWFntAMLgShwCPcBGAsYHg/s2288/P_20210401_101322.jpg)
+![Figure 背面](https://storage.wysalan.com/img/gsc-popupgrade-yuna-unboxing/gsc-popupgrade-yuna-04.webp)
 
 熊急和熊緩
 
-![熊急特寫](https://1.bp.blogspot.com/-m8j_eRjd8Kk/YGcD06EAZXI/AAAAAAAAY4w/X3ik9Yug2LsWHLQH9Ghf9BYBDJoydleUwCPcBGAsYHg/s2288/IMG_20210401_100324.jpg)
+![熊急特寫](https://storage.wysalan.com/img/gsc-popupgrade-yuna-unboxing/gsc-popupgrade-yuna-05.webp)
 
-![熊緩特寫](https://1.bp.blogspot.com/-bnAgBlrYwiY/YGcD01sg4lI/AAAAAAAAY4w/XBs7kewmaogoHu37rIZaQGNgzIi6WWd1QCPcBGAsYHg/s2288/IMG_20210401_100334.jpg)
+![熊緩特寫](https://storage.wysalan.com/img/gsc-popupgrade-yuna-unboxing/gsc-popupgrade-yuna-06.webp)
 
 腳掌
 
-![腳掌特寫](https://1.bp.blogspot.com/-NP9EAXvRvbc/YGaG4DoITFI/AAAAAAAAY4c/o1IEKp29Qd4W3Zdtm0zEh-8ETWMoxhP-gCPcBGAsYHg/s2288/IMG_20210401_100439.jpg)
+![腳掌特寫](https://storage.wysalan.com/img/gsc-popupgrade-yuna-unboxing/gsc-popupgrade-yuna-07.webp)
 
 再來是幾張圖
-![正面](https://1.bp.blogspot.com/-W5sO_nZkGE0/YGaG4EmW1UI/AAAAAAAAY4c/XQIN7dp5TAQgSiUOsOeWOFRiaZwxKkcRACPcBGAsYHg/s2288/P_20210401_101424.jpg)
 
-![左方](https://1.bp.blogspot.com/-OLmY7l8elUI/YGaG4DQFyGI/AAAAAAAAY4c/xOToBqKxMzMnCw1v1z0lkIp-QvBJx4HOwCPcBGAsYHg/s2288/P_20210401_100923.jpg)
+![正面](https://storage.wysalan.com/img/gsc-popupgrade-yuna-unboxing/gsc-popupgrade-yuna-08.webp)
 
-![正面](https://1.bp.blogspot.com/-PHYglLSBDeI/YGaG4Cf1uCI/AAAAAAAAY4c/4bPG5ejpGtUjUdLTXbY69Mgqik3VGXeLgCPcBGAsYHg/s2288/IMG_20210401_100222.jpg)
+![左方](https://storage.wysalan.com/img/gsc-popupgrade-yuna-unboxing/gsc-popupgrade-yuna-09.webp)
 
-![正面](https://1.bp.blogspot.com/-fs-bgvNZtSQ/YGaG4HpCi-I/AAAAAAAAY4c/Of4jKOCi0wEtVStuxWk_hP9a4VDp_276ACPcBGAsYHg/s2288/P_20210401_101157.jpg)
+![正面](https://storage.wysalan.com/img/gsc-popupgrade-yuna-unboxing/gsc-popupgrade-yuna-10.webp)
+
+![正面](https://storage.wysalan.com/img/gsc-popupgrade-yuna-unboxing/gsc-popupgrade-yuna-11.webp)
 
 ## 結論
 

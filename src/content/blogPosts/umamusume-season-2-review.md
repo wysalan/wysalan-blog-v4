@@ -5,7 +5,7 @@ categories: '動畫心得'
 tags: ['Seasonal Anime']
 pubDate: '2021-04-09 22:27:30'
 updatedDate: '2025-11-20 17:00:30'
-coverImage: 'https://storage.googleapis.com/salan_blog/umamusume_season2_review.webp'
+coverImage: 'https://storage.wysalan.com/img/umamusume-season-2-review/cover.webp'
 coverImageCredit: '《賽馬娘 Pretty Derby》第二季動畫第 13 集截圖（© 2021 アニメ「ウマ娘 プリティーダービー Season 2」製作委員会）'
 ---
 
@@ -19,24 +19,24 @@ coverImageCredit: '《賽馬娘 Pretty Derby》第二季動畫第 13 集截圖�
 
 一般的賽馬骨折一次基本上就是要面臨退役的命運了，而帝王要是只有骨折一次就算了，接二連三的骨折不但葬送了三冠、無敗賽馬娘的稱號，就連賽馬最引以為傲的速度也隨著不斷地骨折而喪失，最後就是變成第九集最後帝王和觀眾（？的雙重崩潰了
 
-![截自第 9 集](https://i.imgur.com/WdEpShE.jpg)
+![《賽馬娘 Pretty Derby》第二季動畫第 9 集截圖](https://storage.wysalan.com/img/umamusume-season-2-review/umamusume-season-2-01.webp)
 
-![截自第 10 集](https://i.imgur.com/KbuUaTs.jpg)
+![《賽馬娘 Pretty Derby》第二季動畫第 10 集截圖 1](https://storage.wysalan.com/img/umamusume-season-2-review/umamusume-season-2-02.webp)
 
 要是你以為跟第一季一樣只有幾集充滿低潮的話那你就錯了，第二季最特別的就是除了第一集、十一和最後一集之外，幾乎每一集都是專門來騙你淚水的，雖然我是蠻享受在這個過程裡，但有時候我也會覺得不要再虐馬娘啦，該給她們一個美好的故事了吧？
 
 但是很遺憾的，這些劇情都是根據史實改編，如果有看這些賽馬的生涯過程的話，帝王和麥昆在 1993 年後也就相繼引退了。但是現實無法改變，動畫卻可以改編，第一季的無聲鈴鹿被改編成去美國遠征、第二季則是創造了一個全新的世界線，在那裡的是最強的賽馬娘：東海帝王，合理的魔改也是動畫會受到馬迷喜愛的原因之一
 
-![截自第 13 集](https://i.imgur.com/XT4174J.jpg)
+![《賽馬娘 Pretty Derby》第二季動畫第 13 集截圖 1](https://storage.wysalan.com/img/umamusume-season-2-review/umamusume-season-2-03.webp)
 
-![截自第 13 集](https://i.imgur.com/eulS5Aq.jpg)
+![《賽馬娘 Pretty Derby》第二季動畫第 13 集截圖 2](https://storage.wysalan.com/img/umamusume-season-2-review/umamusume-season-2-04.webp)
 
 第二季的動畫製作雖然從 P.A.WORKS 變成了 Studio KAI，不過實際上這兩家都有同時參與動畫製作，像是一部分的文戲（像是第 7 、 9 和 11 集）是由擅長感情戲的 P.A.WORKS 製作，涉及比賽以及重要的部分則是由作畫能力更強的 Studio KAI 負責。當然我不是要分高下，只是想說在這兩家各有專長的動畫公司所製作出的《賽馬娘》確實更能引起觀眾的共鳴
 
 再來就是一點比較有趣的地方，因為手遊是在動畫播出期間推出，所以自然而然會想要吸乾玩家的錢包。比如說第十集是雙渦輪的主場，結果手遊同步推出雙渦輪的支援卡、最後一集結束後也是同步推出新服裝的帝王、麥昆還有兩隻蘿莉（長大版）的支援卡，我也受不了誘惑跑去抽，結果...還是不要說好了
 
-![截自第 10 集](https://i.imgur.com/9Lg6pme.jpg)
+![《賽馬娘 Pretty Derby》第二季動畫第 10 集截圖 2](https://storage.wysalan.com/img/umamusume-season-2-review/umamusume-season-2-05.webp)
 
-![截自第 13 集](https://i.imgur.com/rHGWsTK.jpg)
+![《賽馬娘 Pretty Derby》第二季動畫第 13 集截圖 3](https://storage.wysalan.com/img/umamusume-season-2-review/umamusume-season-2-06.webp)
 
 最後私心希望，如果有第三季的話好想看小栗帽的故事啊！

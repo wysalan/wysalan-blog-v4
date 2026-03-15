@@ -1,17 +1,17 @@
 ---
 title: '在 2022 年末升級主力電腦硬體'
-description: '升級目前正在使用的電腦硬體'
+description: '五年前用二手零件組裝了一台電腦，現在是時候升級了'
 categories: '開箱'
 tags: ['PC Upgrade']
 pubDate: '2022-12-31 22:37:00'
 updatedDate: '2025-11-21 00:24:00'
-coverImage: 'https://storage.googleapis.com/salan_blog/upgrade_my_pc_spec_2022.webp'
+coverImage: 'https://storage.wysalan.com/img/upgrade-my-pc-hardware/cover.webp'
 coverImageCredit: ''
 ---
 
 ## 前言
 
-最近接連看到 AMD RX6000 系列顯卡和 Ryzen 5 3600 在特價，就突然萌生出升級電腦的想法
+最近接連看到 AMD RX6600 和 Ryzen 5 3600 在特價，就突然萌生出升級電腦的想法
 
 ## 目前電腦規格
 
@@ -55,89 +55,89 @@ coverImageCredit: ''
 
 不過要買的時候價格已經回漲了，因此改選另一個礦渣、規格還能接受的 B550M-DS3H ~~（買完之後就發現原賣場偷漲價）~~
 
-![零組件合照](https://i.imgur.com/yqLDflT.jpg)
+![零組件合照](https://storage.wysalan.com/img/upgrade-my-pc-hardware/P1100568.webp)
 
 CPU 是 MPK 版，雖然有附散熱器不過我還是用原本的塔散，畢竟那個水泥膏嘛...
 
-![AMD Ryzen 5 3600 正面特寫](https://i.imgur.com/CJS02cM.jpg)
+![AMD Ryzen 5 3600 正面特寫](https://storage.wysalan.com/img/upgrade-my-pc-hardware/P1100570.webp)
 
 從包裝上的貼紙就能知道這張主機板一定是礦渣，但至少是全新的
 
-![技嘉 B550M-DS3H 包裝正面](https://i.imgur.com/PNGVdjw.jpg)
+![技嘉 B550M-DS3H 包裝正面](https://storage.wysalan.com/img/upgrade-my-pc-hardware/P1100572.webp)
 
 技嘉的 B550M-DS3H 在這個價位算比較好的那個，有 5 + 3 項電源和四組記憶體插槽
 
 其他價位相似的不是只有 4 + 2 項電源，就是只有兩組記憶體插槽
 
-![技嘉 B550M-DS3H 正面](https://i.imgur.com/KAo5jop.jpg)
+![技嘉 B550M-DS3H 正面](https://storage.wysalan.com/img/upgrade-my-pc-hardware/P1100573.webp)
 
 記憶體就不多說了，以後有機會再插滿
 
-![Kingston 記憶體包裝特寫](https://i.imgur.com/b59WcvO.jpg)
+![Kingston 記憶體包裝特寫](https://storage.wysalan.com/img/upgrade-my-pc-hardware/P1100571.webp)
 
 組裝完就是這個樣子（整線已經放棄，線不要折到就好）
 
-![電腦組裝完畢後的內部圖](https://i.imgur.com/47clnG7.jpg)
+![電腦組裝完畢後的內部圖](https://storage.wysalan.com/img/upgrade-my-pc-hardware/P1100582.webp)
 
 ## 效能測試
 
 ### CPU-Z
 
-![CPU-Z 測試分數 i7-3770 vs R5-3600](https://i.imgur.com/txl7Knu.png)
+![CPU-Z 測試分數 i7-3770 vs R5-3600](https://storage.wysalan.com/img/upgrade-my-pc-hardware/i7-3770-and-r5-3600-cpuz-benchmark.webp)
 
 ### Cinebench R23
 
 **Intel Core i7 3770**
 
-![Cinebench R23 i7-3770 分數](https://i.imgur.com/VSsXUDD.png)
+![Cinebench R23 i7-3770 分數](https://storage.wysalan.com/img/upgrade-my-pc-hardware/i7-3770-cinebench-r23.webp)
 
 **AMD Ryzen 5 3600**
 
-![Cinebench R23 R5-3600 分數](https://i.imgur.com/Kfw8skZ.png)
+![Cinebench R23 R5-3600 分數](https://storage.wysalan.com/img/upgrade-my-pc-hardware/r5-3600-cinebench-r23.webp)
 
 ### 3DMark CPU Profile
 
 **Intel Core i7 3770**
 
-![3DMark CPU Profile i7-3770 分數](https://i.imgur.com/7EdsWva.png)
+![3DMark CPU Profile i7-3770 分數](https://storage.wysalan.com/img/upgrade-my-pc-hardware/i7-3700-3dmark-cpu-profile.webp)
 
 **AMD Ryzen 5 3600**
 
-![3DMark CPU Profile R5-3600 分數](https://i.imgur.com/ESXYrKr.png)
+![3DMark CPU Profile R5-3600 分數](https://storage.wysalan.com/img/upgrade-my-pc-hardware/r5-3600-3dmark-cpu-profile.webp)
 
 ### 3DMark Time Spy
 
 **Intel Core i7 3770**
 
-![3DMark Time Spy i7-3770 分數](https://i.imgur.com/zZSNINg.png)
+![3DMark Time Spy i7-3770 分數](https://storage.wysalan.com/img/upgrade-my-pc-hardware/i7-3770-3dmark-time-spy.webp)
 
 **AMD Ryzen 5 3600**
 
-![3DMark Time Spy R5-3600 分數](https://i.imgur.com/sNE8TyD.png)
+![3DMark Time Spy R5-3600 分數](https://storage.wysalan.com/img/upgrade-my-pc-hardware/r5-3600-3dmark-time-spy.webp)
 
 ### 3DMark Fire Strike Extreme
 
 **Intel Core i7 3770**
 
-![3DMark Fire Strike Extreme i7-3770 分數](https://i.imgur.com/BfPr3RR.png)
+![3DMark Fire Strike Extreme i7-3770 分數](https://storage.wysalan.com/img/upgrade-my-pc-hardware/i7-3770-3dmark-fire-strike-extreme.webp)
 
 **AMD Ryzen 5 3600**
 
-![3DMark Fire Strike Extreme R5-3600 分數](https://i.imgur.com/jWlxphB.png)
+![3DMark Fire Strike Extreme R5-3600 分數](https://storage.wysalan.com/img/upgrade-my-pc-hardware/r5-3600-3dmark-fire-strike-extreme.webp)
 
 ### Cyberpunk  2077
 
 **Intel Core i7 3770**
 
-![Cyberpunk  2077 1080p i7-3770 幀數](https://i.imgur.com/O5w2NEk.png)
+![Cyberpunk 2077 1080p i7-3770 幀數](https://storage.wysalan.com/img/upgrade-my-pc-hardware/i7-3770-cyberpunk-2700-benchmark-1080p.webp)
 
-![Cyberpunk  2077 1440p i7-3770 幀數](https://i.imgur.com/y00YtZ9.png)
+![Cyberpunk 2077 1440p i7-3770 幀數](https://storage.wysalan.com/img/upgrade-my-pc-hardware/i7-3770-cyberpunk-2700-benchmark-1440p.webp)
 
 **AMD Ryzen 5 3600**
 
-![Cyberpunk  2077 1080p R5-3600 幀數](https://i.imgur.com/vVEKbl8.png)
+![Cyberpunk 2077 1080p R5-3600 幀數](https://storage.wysalan.com/img/upgrade-my-pc-hardware/r5-3600-cyberpunk-2700-benchmark-1080p.webp)
 
-![Cyberpunk  2077 1440p R5-3600 幀數](https://i.imgur.com/zt3bA1c.png)
+![Cyberpunk 2077 1440p R5-3600 幀數](https://storage.wysalan.com/img/upgrade-my-pc-hardware/r5-3600-cyberpunk-2700-benchmark-1440p.webp)
 
 ## 總結
 

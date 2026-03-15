@@ -5,7 +5,7 @@ categories: '動畫心得'
 tags: ['Anime Movie']
 pubDate: '2020-03-14 11:32:27'
 updatedDate: '2025-11-20 15:40:00'
-coverImage: 'https://storage.googleapis.com/salan_blog/saekano_fine_review.webp'
+coverImage: 'https://storage.wysalan.com/img/saekano-fine-review/cover.webp'
 coverImageCredit: '《不起眼女主角培育法 Fine》Blu-ray Aniplex+ 購入特典（©2019 映画も冴えない製作委員会）'
 ---
 
@@ -15,7 +15,7 @@ coverImageCredit: '《不起眼女主角培育法 Fine》Blu-ray Aniplex+ 購入
 
 直到今天（3/13）劇場版上映，我才找回了當初看第一季時的感動。
 
-![《不起眼女主角培育法 Fine》票根和特典](https://1.bp.blogspot.com/-BKsEO8-GRzY/XmxQTestGHI/AAAAAAAAQek/FVUe61lCO8k29klW1Nni9rVEvZUbo8JbgCKgBGAsYHg/s1600/IMG_20200313_141217.jpg)
+![《不起眼女主角培育法 Fine》票根和特典](https://storage.wysalan.com/img/saekano-fine-review/saekano-fine-ticket-stub-and-bonus.webp)
 
 劇場版所改編的範圍是小說第八集到第十三集（含 Girls Side 2、3），名副其實的完結篇。故事以我的看法大致上有三個方向：起初由 blessing software 製作《不起眼女主角培育法》作為開端描繪成員中的關係。再由突如其來的變卦導致男女主角的關係稍微動搖。最後則是確認彼此心意，完成主角內心所期望的「不起眼女主角」
 
@@ -31,15 +31,15 @@ coverImageCredit: '《不起眼女主角培育法 Fine》Blu-ray Aniplex+ 購入
 
 而這個突如其來的事件切斷了他們兩位之間唯一的羈絆：「遊戲」，惠只能傷心的說出：「我果然還是不能成為你的第一女主角」後離去。
 
-![《不起眼女主角培育法 Fine》預告片截圖](https://i.imgur.com/UEclnk7.png)
+![《不起眼女主角培育法 Fine》預告片截圖](https://storage.wysalan.com/img/saekano-fine-review/saekano-fine-move-stills-01.webp)
 
 確定接棒後，倫也馬上就和馬爾茲談好了條件：延長兩週且刪除兩位不重要的角色，而在這兩週內，倫也同時在進行他的劇本撰寫。他發現只要將寄給惠的信（情書）裡的「惠」改成「巡璃」後，便可成為他心目中的完美劇本，也因此能夠在這段時間內完成。這邊的工作結束之後，詩羽和英梨梨就如同她們先前所說好的來幫忙倫也的遊戲製作，最後也順利在冬 Comiket 前製作完畢。
 
 倫也與惠的感情部分也是劇場版一大看點。劇場版的後半段中倫也與惠的感情發展真的是讓我看得很激動啊，尤其是在美智留和出海的逼問之下，惠說了一句話「倫也本來就是我的啊」，讓我整個人都どきどき了起來。還有在確認彼此的心意後，惠閉上眼睛示意倫也親上去，但是倫也內心卻演起了小劇場，當倫也做好準備並親上去的時候惠卻張開了眼睛，兩人就像青澀的情侶般漲紅了臉，接著惠又主動親了上去，說道「你並沒有錯，錯了是我們兩人的時機」，最後兩人十指交扣並同時倒數，同時將臉靠近對方，完成了一次對的時機的吻。這段也是讓我的內心直呼「喔喔喔喔喔！」並且持續嘴角上揚的片段。
 
-![《不起眼女主角培育法 Fine》預告片截圖](https://i.imgur.com/DBknzyq.jpg)
+![《不起眼女主角培育法 Fine》預告片截圖](https://storage.wysalan.com/img/saekano-fine-review/saekano-fine-move-stills-02.webp)
 
-![《不起眼女主角培育法 Fine》預告片截圖](https://i.imgur.com/kh084ep.jpg)
+![《不起眼女主角培育法 Fine》預告片截圖](https://storage.wysalan.com/img/saekano-fine-review/saekano-fine-move-stills-03.webp)
 
 最後是英梨梨對於倫也的感情，最早是由詩羽發現倫也和惠疑似在交往，因此在決定請倫也來幫忙時訂了兩條規矩：第一條是在她們的進度完成後要去幫忙《不起眼》的製作工作，第二條則是要全力協助倫也與惠的戀情。
 

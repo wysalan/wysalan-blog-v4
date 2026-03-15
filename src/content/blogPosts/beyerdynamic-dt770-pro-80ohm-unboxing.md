@@ -5,7 +5,7 @@ categories: '開箱'
 tags: ['Headphone']
 pubDate: '2020-02-10 14:48:00'
 updatedDate: '2025-11-26 18:34:00'
-coverImage: 'https://storage.googleapis.com/salan_blog/beyerdynamic_dt770_pro_80ohm_unboxing.webp'
+coverImage: 'https://storage.wysalan.com/img/beyerdynamic-dt770-pro-80ohm-unboxing/cover.webp'
 coverImageCredit: ''
 ---
 
@@ -36,17 +36,17 @@ coverImageCredit: ''
 
 我很喜歡之前可以像書一樣打開看介紹的盒子，可惜現在沒有了
 
-![Beyerdynamic DT770 Pro 盒裝圖 1](https://i.meee.com.tw/2mn4qlp.jpg)
+![Beyerdynamic DT770 Pro 盒裝圖 1](https://storage.wysalan.com/img/beyerdynamic-dt770-pro-80ohm-unboxing/beyerdynamic-dt770-pro-80ohm-unboxing-01.webp)
 
-![Beyerdynamic DT770 Pro 盒裝圖 2](https://i.meee.com.tw/1lEqt6a.jpeg)
+![Beyerdynamic DT770 Pro 盒裝圖 2](https://storage.wysalan.com/img/beyerdynamic-dt770-pro-80ohm-unboxing/beyerdynamic-dt770-pro-80ohm-unboxing-02.webp)
 
 內容物，除了耳機本身，還有兩個說明書和一個旅行袋
 
-![Beyerdynamic DT770 Pro 包裝內容物](https://i.meee.com.tw/dWExdr6.jpg)
+![Beyerdynamic DT770 Pro 包裝內容物](https://storage.wysalan.com/img/beyerdynamic-dt770-pro-80ohm-unboxing/beyerdynamic-dt770-pro-80ohm-unboxing-03.webp)
 
 驗明正身，80 歐姆是三個歐姆中相對均衡的版本
 
-![Beyerdynamic DT770 Pro 耳機本體](https://i.meee.com.tw/BH5GeAs.jpg)
+![Beyerdynamic DT770 Pro 耳機本體](https://storage.wysalan.com/img/beyerdynamic-dt770-pro-80ohm-unboxing/beyerdynamic-dt770-pro-80ohm-unboxing-04.webp)
 
 ## 初聽心得
 

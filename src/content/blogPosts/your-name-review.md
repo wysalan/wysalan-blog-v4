@@ -5,7 +5,7 @@ categories: '動畫心得'
 tags: ['Anime Movie']
 pubDate: '2016-11-07 22:08:49'
 updatedDate: '2025-11-27 12:10:30'
-coverImage: 'https://storage.googleapis.com/salan_blog/your-name-review.webp'
+coverImage: 'https://storage.wysalan.com/img/your-name-review/cover.webp'
 coverImageCredit: '《你的名字》電影海報圖（©2016「君の名は。」製作委員会）'
 ---
 

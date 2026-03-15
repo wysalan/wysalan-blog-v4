@@ -5,7 +5,7 @@ categories: '開箱'
 tags: ['Blu-ray Disc']
 pubDate: '2020-06-27 13:54:13'
 updatedDate: '2025-11-26 21:10:30'
-coverImage: 'https://storage.googleapis.com/salan_blog/kaguya_season_2_bd_vol_1_unboxing.webp'
+coverImage: 'https://storage.wysalan.com/img/kaguya-sama-season-2-blu-ray-vol-1-unboxing/cover.webp'
 coverImageCredit: ''
 ---
 
@@ -19,41 +19,41 @@ coverImageCredit: ''
 
 ## 開箱
 
-![BD 本體和特典](https://1.bp.blogspot.com/-Tsjw0sqBFQ8/XvbUgGD6oGI/AAAAAAAASKg/01PWMvXtMNoEo9HitFAPjNPTzLANyoS6QCPcBGAsYHg/s1600/DSC02792_edited.jpg)
+![BD 本體和特典](https://storage.wysalan.com/img/kaguya-sama-season-2-blu-ray-vol-1-unboxing/kaguya-sama-season-2-blu-ray-vol-1-01.webp)
 
 各卷特典是每一位角色的吊飾
 
-![特典特寫](https://1.bp.blogspot.com/-M8MBtd_UUA4/XvbUgM5nsvI/AAAAAAAASKg/U04F2Ff-NBkh1oz0EP5QRbcMxLqIsAwggCPcBGAsYHg/s1600/DSC02794_edited.jpg)
+![特典特寫](https://storage.wysalan.com/img/kaguya-sama-season-2-blu-ray-vol-1-unboxing/kaguya-sama-season-2-blu-ray-vol-1-02.webp)
 
 正面與背面
 
-![BD 本體正面](https://1.bp.blogspot.com/-WOOLrj9NmIc/XvbUgCbc1WI/AAAAAAAASKg/v19aDov2M7cKKEO4O0uAr14DFr64nZqYQCPcBGAsYHg/s1600/DSC02797_edited.jpg)
+![BD 本體正面](https://storage.wysalan.com/img/kaguya-sama-season-2-blu-ray-vol-1-unboxing/kaguya-sama-season-2-blu-ray-vol-1-03.webp)
 
-![BD 本體背面](https://1.bp.blogspot.com/-NCcRoDKnNi4/XvbUgMViLYI/AAAAAAAASKg/qUExLMsz57EwZZUKPAuuY9n4jUSaDiK4wCPcBGAsYHg/s1600/DSC02798_edited.jpg)
+![BD 本體背面](https://storage.wysalan.com/img/kaguya-sama-season-2-blu-ray-vol-1-unboxing/kaguya-sama-season-2-blu-ray-vol-1-04.webp)
 
 跟第一季一樣有雙封面
 
-![BD 光碟盒外部](https://1.bp.blogspot.com/-HvsgVovJmU8/XvbUgInfa9I/AAAAAAAASKg/oa7LrIhdt2UOFluK6TAcOFUeCQ5CkJdBwCPcBGAsYHg/s1600/DSC02812.JPG)
+![BD 光碟盒外部](https://storage.wysalan.com/img/kaguya-sama-season-2-blu-ray-vol-1-unboxing/kaguya-sama-season-2-blu-ray-vol-1-05.webp)
 
-![BD 光碟盒內部](https://1.bp.blogspot.com/-XV7QDIaBMaM/XvbUgMd4tqI/AAAAAAAASKg/jdr0EUq7yf8RKhOCEd1FrrYoIRqjAVCUgCPcBGAsYHg/s1600/DSC02813.JPG)
+![BD 光碟盒內部](https://storage.wysalan.com/img/kaguya-sama-season-2-blu-ray-vol-1-unboxing/kaguya-sama-season-2-blu-ray-vol-1-06.webp)
 
 有一本設定集
 
-![BD 光碟盒內容物](https://1.bp.blogspot.com/-K09IYxA09Cs/XvbUgFt9DVI/AAAAAAAASKg/ihg-Ji9sXYwfmPlOW2rlRbV-A1jdCXJogCPcBGAsYHg/s1600/DSC02800_edited.jpg)
+![BD 光碟盒內容物](https://storage.wysalan.com/img/kaguya-sama-season-2-blu-ray-vol-1-unboxing/kaguya-sama-season-2-blu-ray-vol-1-07.webp)
 
-![設定集特寫](https://1.bp.blogspot.com/-rmusthxtu0Q/XvbUgO3QOrI/AAAAAAAASKg/aTs51GOvLUQ6GVWMElyhusXVYQ7ezwR-wCPcBGAsYHg/s1600/DSC02803.JPG)
+![設定集特寫](https://storage.wysalan.com/img/kaguya-sama-season-2-blu-ray-vol-1-unboxing/kaguya-sama-season-2-blu-ray-vol-1-08.webp)
 
 和一整面的貼紙
 
-![貼紙特寫](https://1.bp.blogspot.com/-SSEnphEA6fg/XvbUgDTkzwI/AAAAAAAASKg/2dPS4vA_2JYhTLErdGXEtytOnPIy_MhVwCPcBGAsYHg/s1600/DSC02802_edited.jpg)
+![貼紙特寫](https://storage.wysalan.com/img/kaguya-sama-season-2-blu-ray-vol-1-unboxing/kaguya-sama-season-2-blu-ray-vol-1-09.webp)
 
 然後這是 OST 的曲目，共有 14 首
 
-![OST 曲目表](https://1.bp.blogspot.com/-wZZtj2ShVp0/XvbUgAetU3I/AAAAAAAASKg/WUq-qNfRXXg_IOPXEP2PlwRbnWWo6eg3QCPcBGAsYHg/s1600/DSC02806_edited.jpg)
+![OST 曲目表](https://storage.wysalan.com/img/kaguya-sama-season-2-blu-ray-vol-1-unboxing/kaguya-sama-season-2-blu-ray-vol-1-10.webp)
 
 再來就是每一卷都會有的 SP 漫畫
 
-![SP 漫畫部分內容特寫](https://1.bp.blogspot.com/-XUVW9t_6ziY/XvbUgPkP2tI/AAAAAAAASKg/T4T8j-QqgVsZnJB_6LhKtqcexHl5hvDdwCPcBGAsYHg/s1600/DSC02809.JPG)
+![SP 漫畫部分內容特寫](https://storage.wysalan.com/img/kaguya-sama-season-2-blu-ray-vol-1-unboxing/kaguya-sama-season-2-blu-ray-vol-1-11.webp)
 
 ## 總結
 

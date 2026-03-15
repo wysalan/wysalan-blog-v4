@@ -5,7 +5,7 @@ categories: '動畫心得'
 tags: ['Anime Movie']
 pubDate: '2020-10-17 23:01:38'
 updatedDate: '2025-11-26 21:30:30'
-coverImage: 'https://storage.googleapis.com/salan_blog/girls_und_panzer_das_finale_part_1_and_2_review.webp'
+coverImage: 'https://storage.wysalan.com/img/girls-und-panzer-das-finale-part-1-and-2-review/cover.webp'
 coverImageCredit: ''
 ---
 
@@ -37,6 +37,6 @@ coverImageCredit: ''
 
 如果沒看過的，推薦大家去看，光是 4DX 的效果就很值得去看。
 
-![《少女與戰車最終章》第 1 + 2 話票根](https://1.bp.blogspot.com/-eCnYbljUEJA/X4qjkf4crkI/AAAAAAAAUHo/-YPGT6uGN9M2T-8h-dxeF3sJyKxVAmlTQCPcBGAsYHg/s2000/IMG_20201017_122055.jpg)
+![《少女與戰車最終章》第 1 + 2 話》票根](https://storage.wysalan.com/img/girls-und-panzer-das-finale-part-1-and-2-review/girls-und-panzer-das-finale-part-1-and-2-ticket-stub.webp)
 
-![《少女與戰車最終章》第 1 + 2 話底片特典](https://1.bp.blogspot.com/-BWjy_OFg0IU/X4qjkSeLBmI/AAAAAAAAUHo/dut1yePkeokvjMnR0VFe4HHw0ugTAXhrwCPcBGAsYHg/s2000/IMG_20201017_153024.jpg)
+![《少女與戰車最終章》第 1 + 2 話》底片特典](https://storage.wysalan.com/img/girls-und-panzer-das-finale-part-1-and-2-review/girls-und-panzer-das-finale-part-1-and-2-bonus.webp)

@@ -5,7 +5,7 @@ categories: '動畫心得'
 tags: ['Seasonal Anime']
 pubDate: '2021-04-07 22:30:00'
 updatedDate: '2025-11-20 23:23:30'
-coverImage: 'https://storage.googleapis.com/salan_blog/idoly_pride_review.webp'
+coverImage: 'https://storage.wysalan.com/img/idoly-pride-review/cover.webp'
 coverImageCredit: '《IDOLY PRIDE》官方網站封面圖（© 2019 Project IDOLY PRIDE）'
 ---
 
@@ -17,37 +17,37 @@ coverImageCredit: '《IDOLY PRIDE》官方網站封面圖（© 2019 Project IDOL
 
 回到動畫本身，因為我是先聽到「song for you(サニーピースver.)」才知道這部動畫，接著再發現到這是第九集的插曲，於是我就先看第九集音樂出現的片段後再回來看第一集
 
-![《IDOLY PRIDE》第 10 集動畫截圖](https://i.imgur.com/FGGccNm.jpg)
+![《IDOLY PRIDE》第 10 集動畫截圖](https://storage.wysalan.com/img/idoly-pride-review/idoly-pride-01.webp)
 
-![《IDOLY PRIDE》第 9 集動畫截圖](https://i.imgur.com/nUZdIVt.jpg)
+![《IDOLY PRIDE》第 9 集動畫截圖](https://storage.wysalan.com/img/idoly-pride-review/idoly-pride-02.webp)
 
 說真的，把第九集那一段看完的時候，我腦內猜想的大致劇情是：「團內有位成員因故去世，而川咲櫻是先動了心臟手術將那位成員的心臟移植到她身上後才加入團體內；結果真相被揭穿」這種感覺很狗血的劇情
 
 然後再從第一集開始看，牧野被麻奈拉著加入事務所，接著麻奈也很順利的成為知名偶像；但就在某次趕往表演現場的時候出車禍過世了。過了幾年後，當牧野重返校園時卻遇到了成為幽靈的麻奈。不得不說，剛看完的我整個人都很震撼，因為跟我想的完全不一樣 XD
 
-![《IDOLY PRIDE》第 4 集動畫截圖 (1)](https://i.imgur.com/mstZLgY.jpg)
+![《IDOLY PRIDE》第 4 集動畫截圖 (1)](https://storage.wysalan.com/img/idoly-pride-review/idoly-pride-03.webp)
 
-![《IDOLY PRIDE》第 1 集動畫截圖 (1)](https://i.imgur.com/mKkTUm9.jpg)
+![《IDOLY PRIDE》第 1 集動畫截圖 (1)](https://storage.wysalan.com/img/idoly-pride-review/idoly-pride-04.webp)
 
 之後的劇情就是牧野籌備了新的偶像團體，並且還有麻奈的妹妹琴乃以及接受了麻奈心臟移植的櫻加入，之後劇情基本上都是離不開麻奈了。團內絕大多數人都崇拜著麻奈，而且就連作為對手的 LizNoir 和 TRINITYAiLE 都多多少少受到麻奈的影響
 
-![《IDOLY PRIDE》第 4 集動畫截圖：TRINITYAiLE 片段](https://i.imgur.com/6wZBt35.jpg)
+![《IDOLY PRIDE》第 4 集動畫截圖：TRINITYAiLE 片段](https://storage.wysalan.com/img/idoly-pride-review/idoly-pride-05.webp)
 
-![《IDOLY PRIDE》第 11 集動畫截圖：LizNoir 片段](https://i.imgur.com/5UdZfwY.jpg)
+![《IDOLY PRIDE》第 11 集動畫截圖：LizNoir 片段](https://storage.wysalan.com/img/idoly-pride-review/idoly-pride-06.webp)
 
 《IDOLY PRIDE》雖然類型是偶像番，但其實還有參雜著戀愛的部分。因為當初麻奈會選擇牧野作為她的經紀人有很大的原因就是對他有好感。而在故事進行當中也不時會有以牧野視角為主和麻奈互動~~調戲~~的劇情，說真的除了一般的劇情之外，我最期待的就是這一部分了，因為實在是好甜啊
 
-![《IDOLY PRIDE》第 1 集動畫截圖 (2)](https://i.imgur.com/UzHnSMA.jpg)
+![《IDOLY PRIDE》第 1 集動畫截圖 (2)](https://storage.wysalan.com/img/idoly-pride-review/idoly-pride-07.webp)
 
-![《IDOLY PRIDE》第 4 集動畫截圖 (2)](https://i.imgur.com/XQJjLPX.jpg)
+![《IDOLY PRIDE》第 4 集動畫截圖 (2)](https://storage.wysalan.com/img/idoly-pride-review/idoly-pride-08.webp)
 
-![《IDOLY PRIDE》第 4 集動畫截圖 (3)](https://i.imgur.com/elHYnCS.jpg)
+![《IDOLY PRIDE》第 4 集動畫截圖 (3)](https://storage.wysalan.com/img/idoly-pride-review/idoly-pride-09.webp)
 
 不過中間發的糖越多，最後的刀就越大把。在最後一集中，在麻奈即將消失之際，牧野在高中教室內發現了她，麻奈則是坦白了她的願望就是讓牧野成為一名頂尖偶像的經紀人，雖然現在已經無法達成了，但是她也讓牧野帶領著大家來幫她實現夢想了。之後麻奈則是說了一句「要是能吻你一下就好了」，接著琴乃演唱的「Song for you」後半段響起
 
-![《IDOLY PRIDE》第 12 集動畫截圖 (1)](https://i.imgur.com/TCex7LT.jpg)
+![《IDOLY PRIDE》第 12 集動畫截圖 (1)](https://storage.wysalan.com/img/idoly-pride-review/idoly-pride-10.webp)
 
-![《IDOLY PRIDE》第 12 集動畫截圖 (2)](https://i.imgur.com/jCLe3fH.jpg)
+![《IDOLY PRIDE》第 12 集動畫截圖 (2)](https://storage.wysalan.com/img/idoly-pride-review/idoly-pride-11.webp)
 
 剛看完的感受真的只有滿滿的不捨啊，一開始像是捉弄般的消失後又出現，結果這次再一次消失之後就是真正的永別了，難怪大家會說這是「人鬼情未了」
 

@@ -5,7 +5,7 @@ categories: '動畫心得'
 tags: ['Anime Movie']
 pubDate: '2021-01-20 21:25:00'
 updatedDate: '2025-11-26 22:25:00'
-coverImage: 'https://storage.googleapis.com/salan_blog/joseetora_review.webp'
+coverImage: 'https://storage.wysalan.com/img/joseetora-review/cover.webp'
 coverImageCredit: '《喬瑟與虎與魚群》電影海報圖（©2020 Seiko Tanabe/ KADOKAWA/ Josee Project）'
 ---
 
@@ -13,15 +13,15 @@ coverImageCredit: '《喬瑟與虎與魚群》電影海報圖（©2020 Seiko Tan
 
 無意間看到這一部即將要上映，稍微看了其他人的評論覺得還可以，於是就決定來看一下
 
-![《喬瑟與虎與魚群》票根](https://i.imgur.com/SMYPzd0.jpg)
+![《喬瑟與虎與魚群》票根](https://storage.wysalan.com/img/joseetora-review/joseetora-ticket-stub.webp)
 
 為了一次拿到兩個特典，我決定穿過桃園來到台北大直美麗華來看，美麗華的獨家特典是一張海報，而且不是一般的海報而是高磅數的 A3 紙，摸起來、看起來都很棒
 
-![特典：海報](https://i.imgur.com/L6n2ndi.jpg)
+![特典：海報](https://storage.wysalan.com/img/joseetora-review/joseetora-bonus-1-poster.webp)
 
 還有每一間都會送的特典，是兩張明信片
 
-![另一個特典：明信片](https://i.imgur.com/vkUnUQT.jpg)
+![另一個特典：明信片](https://storage.wysalan.com/img/joseetora-review/joseetora-bonus-2-postcard.webp)
 
 ## 心得
 

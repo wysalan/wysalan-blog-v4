@@ -5,7 +5,7 @@ categories: '使用心得'
 tags: ['Phone']
 pubDate: '2021-10-24 18:09:40'
 updatedDate: '2025-11-20 21:04:00'
-coverImage: 'https://storage.googleapis.com/salan_blog/google_pixel_3_review.webp'
+coverImage: 'https://storage.wysalan.com/img/google-pixel-3-review/cover.webp'
 coverImageCredit: ''
 ---
 
@@ -31,7 +31,7 @@ coverImageCredit: ''
 
 長期使用 200g 以上的手機後，再拿回 148g 的手機簡直就是如釋重負，就算拿得再久也不容易手痠；而且 5.5 吋的機身單手就能掌握，在操作的時候比之前方便太多了
 
-![使用單手也能輕鬆操作](https://i.imgur.com/JoDd2s1.jpg)
+![使用單手也能輕鬆操作](https://storage.wysalan.com/img/google-pixel-3-review/P_20210812_092528.webp)
 
 ## 螢幕
 
@@ -51,13 +51,13 @@ coverImageCredit: ''
 
 效能方面，就算是旗艦機也已經是三年前的規格了，Snapdragon 845 和 4GB 記憶體的組合在日常使用上沒有問題，但是玩遊戲就有點力不從心，玩公連的時候就偶有 LAG 的情況發生；不過我已經改成在 iPad 上面玩遊戲了，所以問題不大
 
-![Geekbench 5 CPU 跑分](https://i.imgur.com/P4TcyKC.png)
+![Geekbench 5 CPU 跑分](https://storage.wysalan.com/img/google-pixel-3-review/pixel3-geekbench.webp)
 
-![儲存空間測速結果](https://i.imgur.com/KXoD8KE.png)
+![儲存空間測速結果](https://storage.wysalan.com/img/google-pixel-3-review/pixel3-androbench.webp)
 
 而且這支手機只有 64GB 的儲存空間，裝一兩個遊戲就快滿了，所以其實也沒什麼機會在這上面玩遊戲啦
 
-![裝完常用 App 後剩餘 17 GB](https://i.imgur.com/hJkTd84.png)
+![裝完常用 App 後剩餘 17 GB](https://storage.wysalan.com/img/google-pixel-3-review/pixel3-storage.webp)
 
 ## 續航與充電速度
 

@@ -5,7 +5,7 @@ categories: '開箱'
 tags: ['Monitor']
 pubDate: '2020-08-15 16:51:18'
 updatedDate: '2025-11-22 17:06:30'
-coverImage: 'https://storage.googleapis.com/salan_blog/benq_ew2770qz_unboxing.webp'
+coverImage: 'https://storage.wysalan.com/img/benq-ew2770qz-unboxing/cover.webp'
 coverImageCredit: ''
 ---
 
@@ -27,35 +27,35 @@ coverImageCredit: ''
 
 總之先來看外箱，右上角有官網沒標示的TUV認證
 
-![包裝正面](https://1.bp.blogspot.com/-uDuSP0tuCXE/XzaPBz37HcI/AAAAAAAATA4/5z18v45cC1khhRfopzSTomdbT1W0R9ygQCPcBGAsYHg/s1600/DSC02864.JPG)
+![包裝正面](https://storage.wysalan.com/img/benq-ew2770qz-unboxing/benq-ew2770qz-unboxing-01.webp)
 
 製造日期是今年五月，還蠻新的
 
-![產品資訊](https://i.imgur.com/jsRQnqp.jpg)
+![產品資訊](https://storage.wysalan.com/img/benq-ew2770qz-unboxing/benq-ew2770qz-unboxing-02.webp)
 
 隨附配件有附一個 HDMI 線
 
-![隨附配件](https://1.bp.blogspot.com/-flcZ6-XGcY0/XzaPB2N6ifI/AAAAAAAATA4/CEgxNW-rHRQgMsX-FEdwXUJBynm1ZDFjgCPcBGAsYHg/s1600/DSC02866.JPG)
+![隨附配件](https://storage.wysalan.com/img/benq-ew2770qz-unboxing/benq-ew2770qz-unboxing-03.webp)
 
 螢幕現身，BenQ 近期不論中階或高階機種都有下巴，這款沒有就挺讚的
 
-![螢幕正面](https://1.bp.blogspot.com/-KDVVGi-X6DI/XzaPB-Tsz2I/AAAAAAAATA4/bSr7gzsjhCIyAqXl_g_fembq6bNHU8s_gCPcBGAsYHg/s1600/DSC02867.JPG)
+![螢幕正面](https://storage.wysalan.com/img/benq-ew2770qz-unboxing/benq-ew2770qz-unboxing-04.webp)
 
 接口有 2 個 HDMI + 1 個 DisplayPort + 1 個耳機孔
 
-![I/O 接口](https://i.imgur.com/1ClgkEh.jpg)
+![I/O 接口](https://storage.wysalan.com/img/benq-ew2770qz-unboxing/benq-ew2770qz-unboxing-05.webp)
 
 組裝完成
 
-![螢幕顯示畫面的狀態](https://1.bp.blogspot.com/-pmn4DDOgIIk/XzaPB5NVk4I/AAAAAAAATA4/uNHwcf3LEUIgNRR0qyO49QId3JlWVoZLACPcBGAsYHg/s1600/IMG_20200814_140810.jpg)
+![螢幕顯示畫面的狀態](https://storage.wysalan.com/img/benq-ew2770qz-unboxing/benq-ew2770qz-unboxing-06.webp)
 
 現在終於有雙螢幕可以用了
 
-![和舊螢幕一同入鏡](https://1.bp.blogspot.com/-jma9aU_4vXY/XzaPB7NmTAI/AAAAAAAATA4/0NmclnFfgpUVRMXZRdC5kuJYgKc1lrq8ACPcBGAsYHg/s1600/DSC02870.JPG)
+![和舊螢幕一同入鏡](https://storage.wysalan.com/img/benq-ew2770qz-unboxing/benq-ew2770qz-unboxing-07.webp)
 
 看一下工程模式
 
-![工程模式資訊](https://i.imgur.com/6853Kbs.jpg)
+![工程模式資訊](https://storage.wysalan.com/img/benq-ew2770qz-unboxing/benq-ew2770qz-unboxing-08.webp)
 
 ## 心得
 
@@ -65,17 +65,17 @@ coverImageCredit: ''
 
 色彩表現好上不少
 
-![色彩表現比較](https://1.bp.blogspot.com/-CawtjsIMw6s/XzeTkuTnW4I/AAAAAAAATDU/vqsBffUKHPUyBh2w5Ce6mCzJBeJVzIMUwCPcBGAsYHg/s1600/P_20200815_105157.jpg)
+![色彩表現比較](https://storage.wysalan.com/img/benq-ew2770qz-unboxing/benq-ew2770qz-unboxing-09.webp)
 
 解析度從 1080P 升級到 1440P，也是很有感的一個升級
 
 1080p
 
-![1080p 細節（LG 22EA53T-P）](https://1.bp.blogspot.com/-TAPTrTpyu7A/XzaPBzVGkVI/AAAAAAAATA4/80Ohwt_aByocEd7G6IaU4RsXozszAoxFgCPcBGAsYHg/s1600/IMG_20200814_132858.jpg)
+![1080p 細節（LG 22EA53T-P）](https://storage.wysalan.com/img/benq-ew2770qz-unboxing/benq-ew2770qz-unboxing-10.webp)
 
 1440p
 
-![1440p 細節（BenQ EW2770QZ）](https://1.bp.blogspot.com/-g7wj_lZPGkE/XzaPB4X3cPI/AAAAAAAATA4/wpq2A0PRdoI0mWIIrF7I9KucyqWZ-wRFACPcBGAsYHg/s1600/IMG_20200814_132842.jpg)
+![1440p 細節（BenQ EW2770QZ）](https://storage.wysalan.com/img/benq-ew2770qz-unboxing/benq-ew2770qz-unboxing-11.webp)
 
 然後原本還擔心 RX460 會不會跑不動 1440P，結果意外地還可以
 
@@ -83,10 +83,10 @@ coverImageCredit: ''
 
 還有亮度真的跟傳說中的一樣超亮，EW2770QZ 的標準模式是 100% 亮度，跟原本 LG 螢幕的 90% 亮度比起來還是亮許多
 
-![BenQ EW2770QZ 100% 亮度](https://1.bp.blogspot.com/-htnXO4ClIzw/Xzam6Hd4j3I/AAAAAAAATBo/U4A6eqXE0Gk-dEzCudfKDa5O4TKBPfEYACPcBGAsYHg/s1600/P_20200814_220654.jpg)
+![BenQ EW2770QZ 100% 亮度](https://storage.wysalan.com/img/benq-ew2770qz-unboxing/benq-ew2770qz-unboxing-12.webp)
 
 最後是主打的不閃爍跟低藍光，不閃爍的部分用相機的手動模式拍了一下，能感覺出明顯的差異
 
-![螢幕閃爍比較](https://imgur.com/5e1nzQ6.gif)
+![螢幕閃爍比較](https://storage.wysalan.com/img/benq-ew2770qz-unboxing/benq-ew2770qz-unboxing-13.webp)
 
 總之就是這樣啦，目前用起來還挺滿意的。

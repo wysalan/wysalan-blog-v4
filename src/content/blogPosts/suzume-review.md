@@ -5,7 +5,7 @@ categories: '動畫心得'
 tags: ['Anime Movie']
 pubDate: '2023-03-14 00:25:00'
 updatedDate: '2025-11-20 21:59:30'
-coverImage: 'https://storage.googleapis.com/salan_blog/suzume_review.webp'
+coverImage: 'https://storage.wysalan.com/img/suzume-review/cover.webp'
 coverImageCredit: '《鈴芽之旅》電影海報圖（©2022「すずめの戸締まり」製作委員会）'
 ---
 
@@ -13,7 +13,7 @@ coverImageCredit: '《鈴芽之旅》電影海報圖（©2022「すずめの戸�
 
 聽說《鈴芽之旅》的特別版只到 15 號為止，因此趕在之前來看大家很推薦的 Dolby Cinema 版
 
-![一+二刷票根](https://i.imgur.com/mBBwNPv.png)
+![一 + 二刷票根](https://storage.wysalan.com/img/suzume-review/suzume-digital-ticket-stub.webp)
 
 （嘿對已經二刷了）
 
@@ -81,9 +81,9 @@ Dolby Cinema 其實就是 Dolby Vision 和 Dolby Atoms 的結合體，主打亮�
 
 我想說的只有一個，就是鈴芽的某些髮型其實有戳到我的點
 
-![鈴芽的其中一個髮型](https://i.imgur.com/eOXzGEx.jpg)
+![鈴芽的其中一個髮型](https://storage.wysalan.com/img/suzume-review/suzume-movie-stills-01.webp)
 
-![鈴芽的另一個髮型](https://i.imgur.com/ssi38lT.jpg)
+![鈴芽的另一個髮型](https://storage.wysalan.com/img/suzume-review/suzume-movie-stills-02.webp)
 
 ## 災難三部曲的主觀排名
 

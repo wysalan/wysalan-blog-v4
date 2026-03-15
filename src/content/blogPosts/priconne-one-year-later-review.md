@@ -5,7 +5,7 @@ categories: '遊戲心得'
 tags: ['Mobile Game']
 pubDate: '2019-08-24 23:08:00'
 updatedDate: '2025-11-27 21:21:00'
-coverImage: 'https://storage.googleapis.com/salan_blog/priconne-one-year-later-review.webp'
+coverImage: 'https://storage.wysalan.com/img/priconne-one-year-later-review/cover.webp'
 coverImageCredit: ''
 ---
 
@@ -41,4 +41,4 @@ coverImageCredit: ''
 
 照慣例，目前進度：
 
-![《超異域公主連結 Re:Dive》遊玩一週年後遊戲進度](https://i.imgur.com/QJpbKMK.png)
+![《超異域公主連結 Re:Dive》遊玩一週年後遊戲進度](https://storage.wysalan.com/img/priconne-one-year-later-review/priconne-profile.webp)

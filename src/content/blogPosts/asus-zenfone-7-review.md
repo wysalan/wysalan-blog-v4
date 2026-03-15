@@ -5,7 +5,7 @@ categories: '使用心得'
 tags: ['Phone']
 pubDate: '2020-12-26 16:52:00'
 updatedDate: '2025-11-20 16:08:00'
-coverImage: 'https://storage.googleapis.com/salan_blog/asus_zenfone_7_review.webp'
+coverImage: 'https://storage.wysalan.com/img/asus-zenfone-7-unboxing/cover.webp'
 coverImageCredit: ''
 ---
 
@@ -19,32 +19,32 @@ coverImageCredit: ''
 
 盒子從長方形變成跟 ZenFone 4 Pro 一樣的方形便當盒
 
-![包裝盒正面](https://1.bp.blogspot.com/-EUE9KIFpF1g/X8J5fAD5A5I/AAAAAAAAWN8/sEmELvz0x6UUNs0-kVjUE_Os4XYesmFxwCPcBGAsYHg/s2288/P_20201113_173745.jpg)
+![包裝盒正面](https://storage.wysalan.com/img/asus-zenfone-7-unboxing/asus-zenfone-7-review-01.webp)
 
 盒裝內有：
 
 1. 手機本體
-2. 30W充電器
-3. USB-C to USB-C充電線
+2. 30W 充電器
+3. USB-C to USB-C 充電線
 4. 兩個保護殼
 5. 退卡針
 6. 說明書
 
 這次的充電瓦數增加到 30W，充電速度有感提升
 
-![隨附充電器規格](https://1.bp.blogspot.com/-HwvkSJ3ihdc/X8J5fLCCFoI/AAAAAAAAWN8/7t6KZyJRFj0J-lpsSDUSB6JvVsk7jNOYACPcBGAsYHg/s2288/P_20201113_180829.jpg)
+![隨附充電器規格](https://storage.wysalan.com/img/asus-zenfone-7-unboxing/asus-zenfone-7-review-02.webp)
 
 內附的保護殼多了一個能鎖住鏡頭的殼
 
-![隨附的兩個保護殼](https://1.bp.blogspot.com/-dFTBJw_icBo/X8Y9_nprhaI/AAAAAAAAWVI/HY_W-udjva4Rs7bBP6HOcXt2idiMRIEmgCPcBGAsYHg/s2288/P_20201128_142515.jpg)
+![隨附的兩個保護殼](https://storage.wysalan.com/img/asus-zenfone-7-unboxing/asus-zenfone-7-review-03.webp)
 
 透明殼比 ZenFone 6 附的還要厚和硬
 
-![隨附的透明保護殼（左側：ZenFone 6／右側：ZenFone 7）](https://1.bp.blogspot.com/-YCjWCCS-hlI/X8ZBOJex3oI/AAAAAAAAWVU/VnSBd3voBA0PIwwh6BI2h8f0Na0mCnGOwCPcBGAsYHg/s2288/IMG_20201114_142201.jpg)
+![隨附的透明保護殼（左側：ZenFone 6／右側：ZenFone 7）](https://storage.wysalan.com/img/asus-zenfone-7-unboxing/asus-zenfone-7-review-04.webp)
 
 手機本體。本來想換白色，不過只有 8G RAM 以上版本才有，略為可惜。但是黑色其實也是蠻不錯的啦
 
-![黑色款的背面](https://1.bp.blogspot.com/-TOtZXhyistc/X8J5fF-w-BI/AAAAAAAAWN8/aL4kd8oeioAGzSb7JjEJYrBJVWKhAWtvQCPcBGAsYHg/s2288/IMG_20201115_113404.jpg)
+![黑色款的背面](https://storage.wysalan.com/img/asus-zenfone-7-unboxing/asus-zenfone-7-review-05.webp)
 
 ## 心得
 
@@ -56,15 +56,15 @@ coverImageCredit: ''
 
 ### 效能
 
-從 S855 換到 S865，說實在還真的感覺不出有什麼差別。而且就算是用了 UFS 3.1，App 的啟動速度感覺也沒快多少，大概就是跟 SATA SSD換到 PCIE SSD 一樣無感
+從 S855 換到 S865，說實在還真的感覺不出有什麼差別。而且就算是用了 UFS 3.1，App 的啟動速度感覺也沒快多少，大概就是跟 SATA SSD 換到 PCIE SSD 一樣無感
 
 但是 90Hz 的螢幕更新率就真的是很有感了，就算我這支的螢幕有點問題（後面再說），但還是會忍不住開常駐 90Hz，就算是無聊上下滑應用程式抽屜也是很賞心悅目（？
 
 6GB 的記憶體也只能算是堪用，開 5~7 個 App 勉強能夠不 LAG 和不重開 App
 
-![GeekBench 5 CPU 跑分](https://i.imgur.com/lE8WNvz.png)
+![GeekBench 5 CPU 跑分](https://storage.wysalan.com/img/asus-zenfone-7-unboxing/asus-zenfone-7-review-06.webp)
 
-![儲存空間測速結果](https://i.imgur.com/MbPFqYm.png)
+![儲存空間測速結果](https://storage.wysalan.com/img/asus-zenfone-7-unboxing/asus-zenfone-7-review-07.webp)
 
 ### 螢幕
 
@@ -82,45 +82,39 @@ coverImageCredit: ''
 
 #### 廣角實拍
 
-![夜間](https://1.bp.blogspot.com/-NDhwp4xc588/X-bF6W8kB3I/AAAAAAAAXDQ/kh097eT2lFM9itGpcaZlVu0IVdHjFodaACPcBGAsYHg/s2288/P_20201116_173448.jpg)
+![夜間](https://storage.wysalan.com/img/asus-zenfone-7-unboxing/asus-zenfone-7-camera-wide-01.webp)
 
-![極暗環境](https://1.bp.blogspot.com/-n5-0OkkUjgY/X-bF6Zx1m2I/AAAAAAAAXDQ/q2j1MX9pWGw3cprweNmDZQb2fPLiFOfiACPcBGAsYHg/s2288/P_20201117_180510.jpg)
+![夕陽](https://storage.wysalan.com/img/asus-zenfone-7-unboxing/asus-zenfone-7-camera-wide-02.webp)
 
-![夕陽](https://1.bp.blogspot.com/-KzmsNS1DRuk/X-bF6QYjKdI/AAAAAAAAXDQ/fb44pFKTwagmQx_OMawQdHka6DpV1btpwCPcBGAsYHg/s2288/P_20201118_163907.jpg)
+![早晨](https://storage.wysalan.com/img/asus-zenfone-7-unboxing/asus-zenfone-7-camera-wide-03.webp)
 
-![早晨](https://1.bp.blogspot.com/-TTC6kpWOC38/X-bF6eoQmNI/AAAAAAAAXDQ/0VI10HxtyEo6hOerymIHhEZ7D8FkvUoVACPcBGAsYHg/s2288/P_20201119_063427.jpg)
+![天空](https://storage.wysalan.com/img/asus-zenfone-7-unboxing/asus-zenfone-7-camera-wide-04.webp)
 
-![天空](https://1.bp.blogspot.com/-Lp4oQGtbe-Q/X-bF6RZLzHI/AAAAAAAAXDQ/TXzuzmoI9o8Uvevo3S5vuRl16jKkHFibwCPcBGAsYHg/s1716/P_20201124_155344.jpg)
-
-![水平拍攝](https://1.bp.blogspot.com/-4Y5bu7XFQiE/X-bF6QWAOPI/AAAAAAAAXDQ/XfpQWl7VxHU_kYKWLV7xkeGJx_BEI5upwCPcBGAsYHg/s1716/P_20201201_154822.jpg)
+![水平拍攝](https://storage.wysalan.com/img/asus-zenfone-7-unboxing/asus-zenfone-7-camera-wide-05.webp)
 
 #### 超廣角實拍
 
-![天空](https://1.bp.blogspot.com/-ajzgG-GfXrk/X-bImJwrO1I/AAAAAAAAXDo/4bNjekpyULQIDUcEGgm-ddx5D9PAtdiBQCPcBGAsYHg/s2016/P_20201114_091518.jpg)
+![日間](https://storage.wysalan.com/img/asus-zenfone-7-unboxing/asus-zenfone-7-camera-ultrawide-01.webp)
 
-![天空](https://1.bp.blogspot.com/-b5-kGpNVO-M/X-bF6VwK9lI/AAAAAAAAXDQ/UMdeN6tdkfoixwAbdLVJ-ZTItTZAW9Y2gCPcBGAsYHg/s2016/P_20201116_064234.jpg)
+![微距](https://storage.wysalan.com/img/asus-zenfone-7-unboxing/asus-zenfone-7-camera-ultrawide-02.webp)
 
-![日間](https://1.bp.blogspot.com/-vtBP7Juc3sA/X-bLR0UjeKI/AAAAAAAAXD0/jlFm1mWeX0Qx2dMJA8866EZUsqamkh5dwCPcBGAsYHg/s2016/P_20201210_161106.jpg)
+![日間](https://storage.wysalan.com/img/asus-zenfone-7-unboxing/asus-zenfone-7-camera-ultrawide-03.webp)
 
-![微距](https://1.bp.blogspot.com/-ZNBcPScviyU/X-bM15WuUfI/AAAAAAAAXEA/gIPT__1C1ekWdtJL3dfFN3fD9qJ7fquqQCPcBGAsYHg/s2016/P_20201128_140243.jpg)
-
-![日間](https://1.bp.blogspot.com/-A46K_oM2tY8/X-bF6UEix8I/AAAAAAAAXDQ/0CRux-iaxxM-ZucFqrgKFU-KnvJG4e4WACPcBGAsYHg/s2016/P_20201117_081246.jpg)
-
-![建築](https://1.bp.blogspot.com/-Pu8FNs6EkgY/X-bF6VdTt2I/AAAAAAAAXDQ/oMcTP9F-0pExavyzxJYubEW6LJVTOGUQACPcBGAsYHg/s2016/P_20201130_125623.jpg)
+![建築](https://storage.wysalan.com/img/asus-zenfone-7-unboxing/asus-zenfone-7-camera-ultrawide-04.webp)
 
 #### 長焦實拍
 
-![第一張：三倍](https://1.bp.blogspot.com/-4KpYZ9LdXfg/X-bF6XpNK3I/AAAAAAAAXDQ/sVAJ8TheRmg3wIuA7YoXwpFtC2IRAsgjQCPcBGAsYHg/s1632/P_20201117_163417.jpg)
+![第一張：三倍](https://storage.wysalan.com/img/asus-zenfone-7-unboxing/asus-zenfone-7-camera-telephoto-a-01.webp)
 
-![第一張：十二倍](https://1.bp.blogspot.com/--mqmrlsY9MA/X-bF6SDDwyI/AAAAAAAAXDQ/I9pOQBbsbzUjJRl5psViHZFmaS46qOOZQCPcBGAsYHg/s1632/P_20201117_163421.jpg)
+![第一張：十二倍](https://storage.wysalan.com/img/asus-zenfone-7-unboxing/asus-zenfone-7-camera-telephoto-a-02.webp)
 
-![第二張：三倍](https://1.bp.blogspot.com/-_a0f_lqVh3E/X-bF6ZjJUqI/AAAAAAAAXDQ/1_rVEa73eM8s7OXCsqTonw2t84lIoK1aACPcBGAsYHg/s1632/P_20201127_071517.jpg)
+![第二張：三倍](https://storage.wysalan.com/img/asus-zenfone-7-unboxing/asus-zenfone-7-camera-telephoto-b-01.webp)
 
-![第二張：十二倍](https://1.bp.blogspot.com/-HC38oVa-4mg/X-bF6X6VZCI/AAAAAAAAXDQ/j1Hvc-UK9O0QKx9fXtwOKeaT1LI6MOM_gCPcBGAsYHg/s1632/P_20201127_071521.jpg)
+![第二張：十二倍](https://storage.wysalan.com/img/asus-zenfone-7-unboxing/asus-zenfone-7-camera-telephoto-b-02.webp)
 
-![第三張：三倍](https://1.bp.blogspot.com/-8EcoXrv6l8Y/X-bF6bCyd6I/AAAAAAAAXDQ/gl7TMXnJou0V3I5Ls4EK5T8CrYdBU53rwCPcBGAsYHg/s1632/P_20201129_103112.jpg)
+![第三張：三倍](https://storage.wysalan.com/img/asus-zenfone-7-unboxing/asus-zenfone-7-camera-telephoto-c-01.webp)
 
-![第三張：十二倍](https://1.bp.blogspot.com/-0VrADHDIsCE/X-bF6TThHJI/AAAAAAAAXDQ/Hq_uzJz-7C0wZztMpSfUjhrfcS48Z4ziQCPcBGAsYHg/s1632/P_20201129_103124.jpg)
+![第三張：十二倍](https://storage.wysalan.com/img/asus-zenfone-7-unboxing/asus-zenfone-7-camera-telephoto-c-02.webp)
 
 ### 充電&續航
 
@@ -128,9 +122,9 @@ coverImageCredit: ''
 
 續航的話，之前 ZenFome 6 最差和最好的 SOT 成績分別是 5 個半小時和 8 個半小時；但是 ZenFome 7 最差只有 3~4 個小時，極限差不多就是 6 個半小時
 
-![續航表現一](https://i.imgur.com/wq5TcE2.png)
+![續航表現一](https://storage.wysalan.com/img/asus-zenfone-7-unboxing/asus-zenfone-7-review-08.webp)
 
-![續航表現二](https://i.imgur.com/F6MxhEc.png)
+![續航表現二](https://storage.wysalan.com/img/asus-zenfone-7-unboxing/asus-zenfone-7-review-09.webp)
 
 ### 其他
 
@@ -140,13 +134,11 @@ coverImageCredit: ''
 
 ## 總結
 
-說真的，這次遇到螢幕偏色的問題就已經很不爽了，更何況還搞出了 ROG & holo 工商事件？
-
-不過說回手機本身，雖然優點很多但是缺點也不少
+雖然遇到螢幕偏色的問題很不爽，但其實這支手機還是有許多優點的（不過缺點也不少就是了）
 
 優點：
 
-1. 舊換新只要 9,990 就有（現在只要 8,990）
+1. 舊換新只要 9,990 元
 2. 三鏡頭不湊數，且超廣角畫質很棒
 3. 遊戲精靈很好用，尤其是巨集
 4. 翻轉鏡頭比想像中方便很多
@@ -156,13 +148,13 @@ coverImageCredit: ''
 缺點或不滿意：
 
 1. 沒有 IP68 防水
-2. 雖然有 5000mAh，但實際上卻只能用五～六小時左右
+2. 雖然有 5000 mAh，但實際上卻只能用五～六小時左右
 3. 230g 的重量太重
 4. 螢幕邊緣觸控常常感應不到
 5. 系統調教不太優
-6. 沒有光學防手震
+6. 標準版沒有光學防手震
 7. 相機啟動速度有時候很慢
-8. 只開相機，Apps 全軍覆沒（6GB RAM）
-9. 遊戲精靈沒有掛機模式（有 APP 能做到，但內建比較方便）
+8. 只開相機就能讓背景程式全軍覆沒
+9. 遊戲精靈沒有掛機模式（雖然有 App 能做到，但內建比較方便）
 
 總之，雖然 ZenFone 很好用，但是下一次應該會嘗試其他廠牌的手機了。倒也不全是因為那件事，而是我要的功能它沒有（防水、輕薄）或做不好（拍照、續航、系統調效）而已。

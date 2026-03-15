@@ -5,7 +5,7 @@ categories: '動畫心得'
 tags: ['Anime Movie']
 pubDate: '2019-09-28 02:34:00'
 updatedDate: '2025-11-27 11:49:30'
-coverImage: 'https://storage.googleapis.com/salan_blog/rascal_does_not_dream_of_a_dreaming_girl_review_v2.webp'
+coverImage: 'https://storage.wysalan.com/img/rascal-does-not-dream-of-a-dreaming-girl-review/cover.webp'
 coverImageCredit: '《青春豬頭少年不會夢到懷夢美少女》電影海報圖（©2018 青ブタ Project）'
 ---
 
@@ -15,9 +15,9 @@ coverImageCredit: '《青春豬頭少年不會夢到懷夢美少女》電影海�
 
 然後即使是在這麼多人買票的情況下，我還是拿到了特典海報
 
-![電影票根](https://i.meee.com.tw/c6GBS4L.jpg)
+![電影票根](https://storage.wysalan.com/img/rascal-does-not-dream-of-a-dreaming-girl-review/rascal-does-not-dream-of-a-dreaming-girl-ticket-stub.webp)
 
-![電影特典海報](https://i.meee.com.tw/npvF1OZ.jpg)
+![電影特典海報](https://storage.wysalan.com/img/rascal-does-not-dream-of-a-dreaming-girl-review/rascal-does-not-dream-of-a-dreaming-girl-bonus.webp)
 
 ## 心得
 
