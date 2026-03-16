@@ -27,13 +27,13 @@ const { data } = page
 ---
 
 <BaseLayout title=`標籤：${origTagName} | ${siteConfig.title}`>
-	<main class="main-container">
+	<main class="page-container">
 		<div class="flex flex-wrap items-center">
 			<Icon name="material-symbols:tag-rounded" class="mr-3" size={38} />
 			<h1 class="page-title">{origTagName}</h1>
 		</div>
-		<section class="main-section">
-			<div class="postList">
+		<section class="page-section">
+			<div class="post-list">
 				{data.map((post) => <PostBlock post={post} />)}
 			</div>
 		</section>

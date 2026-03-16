@@ -17,7 +17,7 @@ const { data } = page
 ---
 
 <BaseLayout title=`所有文章 | ${siteConfig.title}`>
-	<main class="main-container">
+	<main class="page-container">
 		<div class="flex flex-wrap items-center">
 			<h1 class="page-title">所有文章</h1>
 			<a href="/archives" class="group btn-folded ml-3">
@@ -27,8 +27,8 @@ const { data } = page
 				>
 			</a>
 		</div>
-		<section class="main-section">
-			<div class="postList">
+		<section class="page-section">
+			<div class="post-list">
 				{data.map((post) => <PostBlock post={post} />)}
 			</div>
 		</section>

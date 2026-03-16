@@ -11,11 +11,11 @@ const allCategories = await getAllCategories(allPosts, 'postCount')
 ---
 
 <BaseLayout title=`文章分類 | ${siteConfig.title}`>
-	<main class="main-container">
+	<main class="page-container">
 		<div class="flex flex-wrap items-center">
 			<h1 class="page-title">文章分類</h1>
 		</div>
-		<section class="mt-10 mb-14 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+		<section class="mt-10 mb-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 			{allCategories.map((category) => <CategoryCard category={category} />)}
 		</section>
 	</main>

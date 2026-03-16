@@ -26,13 +26,13 @@ const { categories } = Astro.params
 ---
 
 <BaseLayout title=`分類：${getChiCategoryName(categories)} | ${siteConfig.title}`>
-	<main class="main-container">
+	<main class="page-container">
 		<div class="flex flex-wrap items-center">
 			<Icon name="lucide:folder-open" class="mr-3" size={38} />
 			<h1 class="page-title">{getChiCategoryName(categories)}</h1>
 		</div>
-		<section class="main-section">
-			<div class='postList"'>
+		<section class="page-section">
+			<div class='post-list"'>
 				{data.map((post) => <PostBlock post={post} />)}
 			</div>
 		</section>
