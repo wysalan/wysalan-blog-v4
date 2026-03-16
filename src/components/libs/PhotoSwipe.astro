@@ -1,0 +1,15 @@
+---
+import { inferRemoteSize } from 'astro:assets'
+
+interface Props {
+	src: string
+	alt: string
+}
+
+const { src, alt } = Astro.props
+const { width, height } = await inferRemoteSize(src)
+---
+
+<a href={src} data-pswp-width={width} data-pswp-height={height} class="pswp-container cursor-zoom-in">
+	<img src={src} alt={alt} width={width} height={height} loading="lazy" />
+</a>

@@ -25,7 +25,6 @@ import '@fontsource-variable/noto-sans-tc'
 		<BaseHead title={title || siteConfig.title} description={description || siteConfig.description} image={image} />
 		<ClientRouter />
 		<LoadingIndicator color="#1369a2" height="3px" />
-		<script src="../utils/mediumZoom.ts"></script>
 		<script is:inline>
 			const storedTheme = localStorage.getItem('theme')
 			const userPreferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches

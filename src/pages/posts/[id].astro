@@ -2,6 +2,7 @@
 import { type CollectionEntry, render } from 'astro:content'
 import { getAllPosts } from '@Utils/postUtils'
 import BlogPostLayout from '@Layouts/BlogPostLayout.astro'
+import PhotoSwipe from '@Components/libs/PhotoSwipe.astro'
 
 export async function getStaticPaths() {
 	const posts = await getAllPosts()
@@ -20,5 +21,5 @@ const { Content, headings } = await render(post)
 ---
 
 <BlogPostLayout {...post.data} headings={headings}>
-	<Content />
+	<Content components={{ img: PhotoSwipe }} />
 </BlogPostLayout>
