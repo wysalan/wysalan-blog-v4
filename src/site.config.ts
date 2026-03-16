@@ -53,6 +53,11 @@ export const SocialLinks = [
 		url: 'https://home.gamer.com.tw/lewopa47894',
 		icon: 'material-symbols:web',
 	},
+	{
+		name: 'RSS Feed',
+		url: `${siteConfig.base}/rss.xml`,
+		icon: 'material-symbols:rss-feed-rounded',
+	},
 ]
 
 export const WebsiteLinks = [
