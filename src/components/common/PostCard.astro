@@ -8,7 +8,7 @@ import { getChiCategoryName } from '@Utils/categoryUtils'
 const { post } = Astro.props
 ---
 
-<a href={`${siteConfig.base}/posts/${post.id}/`} class="postCard group transition-colors">
+<a href={`${siteConfig.base}/posts/${post.id}/`} class="post-card group transition-colors">
 	<div class="w-full overflow-hidden rounded-xl transition-all group-hover:shadow-md">
 		{
 			post.data.coverImage && (
@@ -16,9 +16,10 @@ const { post } = Astro.props
 					src={post.data.coverImage}
 					alt={post.data.title}
 					class="aspect-video object-cover"
-					inferSize={true}
 					fetchpriority="high"
 					loading="eager"
+					layout="constrained"
+					inferSize
 				/>
 			)
 		}

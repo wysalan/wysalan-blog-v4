@@ -6,16 +6,23 @@ import dayjs from 'dayjs'
 import FormattedDate from './FormattedDate.astro'
 import { getChiCategoryName } from '@Utils/categoryUtils'
 import { tagNameSlugify } from '@Utils/tagUtils'
+import defaultPostImage from '../../../public/defaultOgImage.jpg'
 
 const { post, showCategory = true } = Astro.props
 
 const { title, description, pubDate, updatedDate, categories, tags, coverImage } = post.data
 ---
 
-<div class="postBlock group">
+<div class="post-block group">
 	{/* Cover Image */}
-	<a href={`${siteConfig.base}/posts/${post.id}/`} class="inline-flex w-full shrink-0 lg:h-36 lg:w-1/4 xl:w-1/5">
-		{coverImage && <Image src={coverImage} alt={title} class="inline-block aspect-video rounded-lg object-cover" inferSize={true} />}
+	<a href={`${siteConfig.base}/posts/${post.id}/`} class="inline-flex w-full shrink-0 md:h-36 md:w-1/4 lg:w-1/5">
+		{
+			coverImage && coverImage !== '' ? (
+				<Image src={coverImage} alt={title} class="inline-block aspect-video rounded-lg object-cover" layout="constrained" inferSize />
+			) : (
+				<Image src={defaultPostImage} alt={title} class="inline-block aspect-video rounded-lg object-cover" layout="constrained" inferSize />
+			)
+		}
 	</a>
 
 	{/* Post Content */}
@@ -44,7 +51,7 @@ const { title, description, pubDate, updatedDate, categories, tags, coverImage }
 			{
 				showCategory && (
 					<span class="flex">
-						<a href={`${siteConfig.base}/categories/${categories}/`} class="text-md flex items-center text-balance">
+						<a href={`${siteConfig.base}/categories/${categories}/`} class="text-md flex items-center">
 							<Icon name="lucide:folder-open" class="mr-1" size={20} />
 							<span>{getChiCategoryName(categories)}</span>
 						</a>
@@ -52,21 +59,20 @@ const { title, description, pubDate, updatedDate, categories, tags, coverImage }
 				)
 			}
 		</div>
-		<h2 class="group-hover:text-primary dark:group-hover:text-primary-dark text-xl font-semibold tracking-normal transition-colors md:text-2xl mt-1">
+		<h2 class="group-hover:text-primary dark:group-hover:text-primary-dark mt-1 text-xl font-semibold tracking-normal transition-colors lg:text-2xl">
 			<a href={`${siteConfig.base}/posts/${post.id}/`}>{title}</a>
 		</h2>
-		<p class="line-clamp-2 opacity-90 md:line-clamp-1 md:text-lg">{description}</p>
-		<div class="group flex items-center gap-2">
+		<p class="line-clamp-2 opacity-90 md:line-clamp-1 lg:text-lg">{description}</p>
+		<div class="group flex items-center gap-2 overflow-auto">
 			{
-				tags &&
-					tags.flat()[0] !== '' &&
+				tags.flat()[0] !== '' &&
 					tags.flat().map((tag: string) => (
 						<a
 							href={`${siteConfig.base}/tags/${tagNameSlugify(tag)}`}
-							class="inline-flex items-center justify-center rounded-lg bg-zinc-200/50 px-2 py-1 text-sm transition-all hover:bg-zinc-300/80 md:group-hover:shadow dark:bg-zinc-600/80 dark:hover:bg-zinc-500"
+							class="inline-flex min-w-fit items-center justify-center rounded-lg bg-zinc-200/50 px-2 py-1 text-sm transition-all hover:bg-zinc-300/80 md:group-hover:shadow dark:bg-zinc-600/80 dark:hover:bg-zinc-500"
 						>
 							<Icon name="material-symbols:tag-rounded" class="mr-0.5 inline-flex" size={18} />
-							<span>{tag}</span>
+							<span class="">{tag}</span>
 						</a>
 					))
 			}

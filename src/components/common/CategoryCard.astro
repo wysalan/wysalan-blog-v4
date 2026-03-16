@@ -12,7 +12,7 @@ const allCategoryPosts = await getPostsByCategory(category.name)
 const filteredPosts = allCategoryPosts.filter((post) => dayjs(post.data.pubDate).diff(dayjs(), 'month') >= 0)
 ---
 
-<div class="categoryCard group">
+<div class="category-card group">
 	<div class="text-center">
 		<a href=`/categories/${category.name}` class="group-hover:text-primary dark:group-hover:text-primary-dark text-2xl font-medium"
 			>{getChiCategoryName(category.name)}</a

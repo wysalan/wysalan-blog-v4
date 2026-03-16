@@ -6,7 +6,7 @@ const { tag } = Astro.props
 const largeTagFrequency: boolean = tag.frequecny >= 100
 ---
 
-<a href=`/tags/${tagNameSlugify(tag.name)}` class="tagCard group">
+<a href=`/tags/${tagNameSlugify(tag.name)}` class="tag-card group">
 	<Icon name="material-symbols:tag-rounded" size={25} />
 	<span>{tag.name}</span>
 	<span
