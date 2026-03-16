@@ -8,9 +8,9 @@ import { type CollectionEntry } from 'astro:content'
  */
 export async function getAllTags(allPosts: CollectionEntry<'blogPosts'>[], sortBy?: string) {
 	const allTags = [...new Set(allPosts.map((post) => post.data.tags).flat())]
-	const result: any[] = []
+	const result: { name: string, frequency: number }[] = []
 	allTags.flatMap((tag) => {
-		const item: any = { name: tag, frequency: 0 }
+		const item: { name: string, frequency: number } = { name: tag, frequency: 0 }
 		item.frequency = allPosts.filter((post) => post.data.tags?.flat().includes(tag || '')).length
 		result.push(item)
 	})
@@ -22,9 +22,8 @@ export async function getAllTags(allPosts: CollectionEntry<'blogPosts'>[], sortB
 			return a.name.localeCompare(b.name, 'en')
 		})
 	} else {
-		return result.sort((a, b) => {
-			return a.name.localeCompare(b.name, 'en')
-		})
+		return result.sort((a, b) => a.name.localeCompare(b.name, 'en')
+		)
 	}
 }
 

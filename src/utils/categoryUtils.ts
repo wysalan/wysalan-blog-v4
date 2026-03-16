@@ -25,7 +25,6 @@ export function getEngCategoryName(originalName: string): string {
 	if (originalName in categoryMap) {
 		return categoryMap[originalName as keyof typeof categoryMap]
 	} else {
-		console.error(`\x1b[31m[getEngCategoryName Error]\x1b[0m 找不到與 "${originalName}" 對應的英文分類名稱)`)
 		return originalName
 	}
 }
@@ -39,7 +38,6 @@ export function getChiCategoryName(convertedName: string): string {
 	if (convertedName in reversedCategoryMap) {
 		return reversedCategoryMap[convertedName as keyof typeof categoryMap]
 	} else {
-		console.error(`\x1b[31m[getChiCategoryName Error]\x1b[0m 找不到與 "${convertedName}" 對應的中文分類名稱)`)
 		return convertedName
 	}
 }
@@ -52,9 +50,9 @@ export function getChiCategoryName(convertedName: string): string {
  */
 export async function getAllCategories(allPosts: CollectionEntry<'blogPosts'>[], sortBy?: string) {
 	const allCategories = [...new Set(allPosts.map((post) => post.data.categories).flat())]
-	const result: any[] = []
+	const result: { name: string, frequency: number }[] = []
 	allCategories.flatMap((category) => {
-		const item: any = { name: category, frequency: 0 }
+		const item: { name: string, frequency: number } = { name: category, frequency: 0 }
 		item.frequency = allPosts.filter((post) => post.data.categories === category).length
 		result.push(item)
 	})
@@ -66,8 +64,8 @@ export async function getAllCategories(allPosts: CollectionEntry<'blogPosts'>[],
 			return getChiCategoryName(a.name).localeCompare(getChiCategoryName(b.name))
 		})
 	} else {
-		return result.sort((a, b) => {
-			return getChiCategoryName(a.name).localeCompare(getChiCategoryName(b.name), 'zh-TW')
-		})
+		return result.sort((a, b) =>
+			getChiCategoryName(a.name).localeCompare(getChiCategoryName(b.name), 'zh-TW')
+		)
 	}
 }
