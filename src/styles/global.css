@@ -36,27 +36,19 @@ html {
 }
 
 /* Container */
-.app-container {
+.basic-container {
 	@apply container mx-auto px-6 sm:px-12 2xl:px-16;
 }
 
-.main-container {
-	@apply container mx-auto px-6 pt-30 sm:px-12 2xl:px-16;
+.page-container {
+	@apply container mx-auto px-6 pt-10 sm:px-12 2xl:px-16;
 }
 
-.site-title-container {
-	@apply relative container mx-auto flex flex-col justify-center gap-12 px-6 py-24 pt-44 sm:px-12 md:py-36 md:pt-48 2xl:px-16;
-}
-
-.home-post-container {
-	@apply my-6 grid items-stretch gap-6 md:grid-cols-2 xl:grid-cols-4;
-}
-
-.main-section {
+.page-section {
 	@apply my-10;
 }
 
-.postList {
+.post-list {
 	@apply space-y-3;
 }
 
@@ -96,28 +88,28 @@ html {
 }
 
 /* Common Components */
-.postCard {
-	@apply flex h-full flex-col gap-3 pb-6;
+.post-card {
+	@apply flex h-full flex-col gap-3;
 }
 
-.postCard img {
+.post-card img {
 	transform: scale(1);
 	transition: transform 0.5s ease;
 }
 
-.postCard:hover img {
+.post-card:hover img {
 	transform: scale(1.1);
 }
 
-.postBlock {
-	@apply relative flex flex-col gap-3 rounded-lg py-5 transition-all hover:bg-white md:px-5 md:hover:scale-[1.025] md:hover:shadow-2xl md:hover:ring-3 lg:flex-row lg:gap-7 hover:dark:bg-white/10;
+.post-block {
+	@apply relative flex flex-col gap-3 rounded-lg py-5 transition-all md:flex-row md:gap-7 md:px-5 md:hover:scale-[1.025] md:hover:bg-white md:hover:shadow-2xl md:hover:ring-3 hover:dark:bg-white/10;
 }
 
-.categoryCard {
-	@apply flex h-full flex-col gap-3 rounded-lg bg-zinc-100/50 px-5 py-4 ring-1 ring-zinc-200 transition-all hover:-translate-y-1.5 hover:scale-[1.025] hover:shadow-lg dark:bg-zinc-100/15 dark:ring-zinc-100/20;
+.category-card {
+	@apply flex h-full flex-col gap-3 rounded-lg bg-zinc-100/50 px-5 py-4 ring-1 ring-zinc-200 transition-all hover:scale-[1.025] hover:shadow-lg dark:bg-zinc-100/15 dark:ring-zinc-100/20;
 }
 
-.tagCard {
+.tag-card {
 	@apply line-clamp-1 flex h-full flex-row items-center gap-1 rounded-lg bg-zinc-100 p-2.5 text-center text-lg ring-1 ring-zinc-200 transition-all hover:scale-[1.075] hover:shadow-lg dark:bg-zinc-100/15 dark:ring-zinc-100/20;
 }
 
@@ -132,9 +124,13 @@ html {
 	@apply dark:bg-(--shiki-dark-bg)! dark:text-(--shiki-dark)!;
 }
 
+.astro-code {
+	@apply ring-neutral-500/50 dark:ring-1;
+}
+
 /* TailwindCSS Typography Modifies */
 .prose-element-modify {
-	@apply prose-headings:first:mt-0 prose-headings:mt-[1.2em] prose-h2:mb-[0.8em] prose-p:my-5 prose-ul:mt-[1.2em] prose-table:my-5 prose-pre:mt-[2em] prose-figure:my-5 prose-figure:text-center prose-img:rounded-sm prose-img:mx-auto;
+	@apply prose-headings:first:mt-0 prose-headings:mt-[1.2em] prose-h2:mb-[0.8em] prose-p:my-5 prose-ul:mt-[1.2em] prose-table:my-5 prose-pre:mt-[2em] prose-img:rounded-sm prose-img:mx-auto prose-img:my-0;
 }
 
 .prose blockquote > p::before {
