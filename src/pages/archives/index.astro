@@ -14,7 +14,7 @@ const allYears = [...new Set(allPosts.flatMap((post) => dayjs(post.data.pubDate)
 		<div class="flex flex-wrap items-center">
 			<h1 class="page-title">文章歸檔</h1>
 		</div>
-		<section class="mt-10 mb-14">
+		<section class="mt-10 mb-15">
 			<ul class="grid gap-5 md:gap-10">
 				{
 					allYears.map((year) => (
