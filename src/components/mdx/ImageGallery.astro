@@ -19,33 +19,21 @@ const total: number = items.length
 /** 最後一行的顯示圖片數量 */
 const remainder: number = lastCols ? lastCols : total - baseCols
 
-/**
- * 中間行的顯示圖片數量
- * 需同時滿足以下條件，否則 middle 值為 0
- * 1. 設定了 lastCols
- * 2. 滿足以下任一條件
- *     1. 圖片總數和 baseCols + lastCols 的餘數不為 0
- *     2. lastCols 值小於 baseCols
- */
-const middle: number = lastCols && (total % (baseCols + lastCols) !== 0 || lastCols < baseCols) ? total - baseCols - remainder : 0
+/** 中間行的顯示圖片數量 */
+const middle: number | undefined = lastCols && total - baseCols - remainder
 
 /** 將 items 陣列轉換成三個陣列（分別對應第一、二、三行圖片） */
 const baseItems: string[] = items.filter((item, index) => index < baseCols)
 const middleItems: '' | string[] = middle ? items.filter((item, index) => index >= baseCols && index < total - remainder) : ''
 const remaindItems: '' | string[] = remainder ? items.filter((item, index) => index >= (middle ? total - remainder : baseCols)) : ''
 
-// console.log(
-// 	`total: ${total}, baseCols: ${baseCols}, middle: ${middle}, remainder: ${remainder}, lastCols: ${lastCols};
-// 	baseItems: ${baseItems.length}, middleItems: ${middleItems.length}, remainedItems: ${remaindItems.length}`
-// )
-
 /** 包裝元素 */
-const baseImgWrapper: string = `<div class="grid gap-5" style="grid-template-columns:repeat(${baseCols}, minmax(0, 1fr));">${baseItems.join('')}</div>`
+const baseImgWrapper: string = `<div class="gallery-item grid gap-5" style="grid-template-columns:repeat(${baseCols}, minmax(0, 1fr));">${baseItems.join('')}</div>`
 const middleImgWrapper: string = middleItems
-	? `<div class="grid gap-5" style="grid-template-columns:repeat(${middle}, minmax(0, 1fr));">${middleItems.join('')}</div>`
+	? `<div class="gallery-item grid gap-5" style="grid-template-columns:repeat(${baseCols === lastCols ? baseCols : middle}, minmax(0, 1fr));">${middleItems.join('')}</div>`
 	: ''
 const remaindImgWrapper: string = remaindItems
-	? `<div class="grid gap-5" style="grid-template-columns:repeat(${remainder}, minmax(0, 1fr));">${remaindItems.join('')}</div>`
+	? `<div class="gallery-item grid gap-5" style="grid-template-columns:repeat(${remainder}, minmax(0, 1fr));">${remaindItems.join('')}</div>`
 	: ''
 
 const processedHtml: string = baseImgWrapper + middleImgWrapper + remaindImgWrapper
@@ -54,3 +42,10 @@ const processedHtml: string = baseImgWrapper + middleImgWrapper + remaindImgWrap
 <div class="image-gallery my-5 grid gap-5">
 	<Fragment set:html={processedHtml} />
 </div>
+
+<style is:global>
+	@reference "../../styles/global.css";
+	.gallery-item {
+		@apply max-md:grid-cols-[1fr]!;
+	}
+</style>
