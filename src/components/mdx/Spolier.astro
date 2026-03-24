@@ -1,0 +1,37 @@
+---
+import { AstroError } from 'astro/errors'
+
+interface Props {
+	type?: (typeof types)[number]
+}
+
+const types = ['inline', 'block'] as const
+
+const { type = 'inline' } = Astro.props
+
+if (!types.includes(type)) {
+	throw new AstroError(
+		`Invalid \`type\` prop. (@Components/mdx/Spolier.astro) \n`,
+		`Input: ${JSON.stringify(type)}\nExpected: One of ${types.map((i) => JSON.stringify(i)).join(', ')}`
+	)
+}
+---
+
+{
+	type === 'inline' ? (
+		<span class="spolier">
+			<slot />
+		</span>
+	) : (
+		<div class="spolier">
+			<slot />
+		</div>
+	)
+}
+
+<style is:global>
+	@reference "../../styles/global.css";
+	.spolier {
+		@apply cursor-pointer blur-sm transition hover:blur-none;
+	}
+</style>
