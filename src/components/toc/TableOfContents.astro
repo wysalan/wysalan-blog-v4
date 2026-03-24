@@ -72,10 +72,7 @@ const nestedHeadings = generateNestedHeading(headings)
 				{/* H2 */}
 				{nestedHeadings.map((heading) => (
 					<li>
-						<a
-							class="toc-link hover:text-primary dark:hover:text-primary-dark line-clamp-2 max-w-max rounded-md rounded-l-none px-2 py-1 transition-all"
-							href={`#${heading.slug}`}
-						>
+						<a class="toc-item" href={`#${heading.slug}`}>
 							{heading.text}
 						</a>
 						{/* H3 and deeper heading */}
