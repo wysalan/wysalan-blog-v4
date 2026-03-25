@@ -119,6 +119,27 @@ html {
 	@apply bg-background/90! dark:bg-background-dark/90! z-999 backdrop-blur-lg;
 }
 
+.pswp__button {
+	@apply mr-0! flex! h-12! w-12! items-center! justify-center! rounded-xl! bg-zinc-900/80! hover:bg-zinc-700/80!;
+}
+
+.pswp__icn {
+	@apply relative! top-0! left-0!;
+}
+
+.pswp__button--zoom,
+.pswp__button--close {
+	@apply mt-5!;
+}
+
+.pswp__button--zoom {
+	@apply mr-2.5!;
+}
+
+.pswp__button--close {
+	@apply mr-7.5!;
+}
+
 .astro-code,
 .astro-code span {
 	@apply dark:bg-(--shiki-dark-bg)! dark:text-(--shiki-dark)!;
