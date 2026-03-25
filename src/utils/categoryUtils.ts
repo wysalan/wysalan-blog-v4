@@ -8,8 +8,7 @@ export const categoryMap: Record<string, string> = {
 	體驗心得: 'first-impression',
 	開箱: 'unboxing',
 	攝影: 'photography',
-	教學: 'guide',
-	紀錄: 'note',
+	網站開發: 'web-dev',
 	未分類: 'uncategorized',
 } as const
 
@@ -50,9 +49,9 @@ export function getChiCategoryName(convertedName: string): string {
  */
 export async function getAllCategories(allPosts: CollectionEntry<'blogPosts'>[], sortBy?: string) {
 	const allCategories = [...new Set(allPosts.map((post) => post.data.categories).flat())]
-	const result: { name: string, frequency: number }[] = []
+	const result: { name: string; frequency: number }[] = []
 	allCategories.flatMap((category) => {
-		const item: { name: string, frequency: number } = { name: category, frequency: 0 }
+		const item: { name: string; frequency: number } = { name: category, frequency: 0 }
 		item.frequency = allPosts.filter((post) => post.data.categories === category).length
 		result.push(item)
 	})
@@ -64,8 +63,6 @@ export async function getAllCategories(allPosts: CollectionEntry<'blogPosts'>[],
 			return getChiCategoryName(a.name).localeCompare(getChiCategoryName(b.name))
 		})
 	} else {
-		return result.sort((a, b) =>
-			getChiCategoryName(a.name).localeCompare(getChiCategoryName(b.name), 'zh-TW')
-		)
+		return result.sort((a, b) => getChiCategoryName(a.name).localeCompare(getChiCategoryName(b.name), 'zh-TW'))
 	}
 }
