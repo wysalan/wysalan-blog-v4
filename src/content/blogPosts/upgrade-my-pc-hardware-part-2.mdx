@@ -9,6 +9,9 @@ coverImage: 'https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/cover
 coverImageCredit: ''
 ---
 
+import Aside from '@Components/mdx/Aside.astro'
+import ImageGallery from "@Components/mdx/ImageGallery.astro"
+
 ## 前言
 
 繼上次更新硬體之後，最近又升級了 CPU 和散熱，寫篇文章記錄一下。
@@ -41,9 +44,10 @@ coverImageCredit: ''
 
 內容物一覽，有散熱器本體、兩個風扇、配件盒和說明書
 
-![利民 Peerless Assassin 120 包裝內容](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/20240509_143254.webp)
-
-![利民 Peerless Assassin 120 本體及配件](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/20240509_143536.webp)
+<ImageGallery baseCols={2}>
+  ![利民 Peerless Assassin 120 包裝內容](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/20240509_143254.webp)
+  ![利民 Peerless Assassin 120 本體及配件](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/20240509_143536.webp)
+</ImageGallery>
 
 跟原本的比一比，從單塔單扇升級成雙塔雙扇、風扇尺寸從 9 公分變成 12 公分，熱管也多了兩根
 
@@ -55,9 +59,10 @@ CPU 接觸面都是鍍鎳銅底
 
 更換前與更換後，PA120 真的很大顆
 
-![True Spirit 90M 實際上機](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/20240509_145646.webp)
-
-![Peerless Assassin 120 實際上機](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/20240509_160904.webp)
+<ImageGallery baseCols={2}>
+  ![True Spirit 90M 實際上機](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/20240509_145646.webp)
+  ![Peerless Assassin 120 實際上機](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/20240509_160904.webp)
+</ImageGallery>
 
 ## 溫度測試
 
@@ -69,15 +74,20 @@ CPU 接觸面都是鍍鎳銅底
 
 把 CPU 換成 R7 5800X 後，只要 20 秒溫度就會跑到 90 度以上，並且頻率也從 4.2 Ghz 降到 4.05 Ghz 左右
 
-![R7 5800X 燒機溫度測試 1（搭配 TS90M）](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/r7-5800x-ts90m-temp-test-1.webp)
-
-![R7 5800X 燒機溫度測試 2（搭配 TS90M）](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/r7-5800x-ts90m-temp-test-2.webp)
+<ImageGallery baseCols={2}>
+  ![R7 5800X 燒機溫度測試 1（搭配 TS90M）](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/r7-5800x-ts90m-temp-test-1.webp)
+  ![R7 5800X 燒機溫度測試 2（搭配 TS90M）](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/r7-5800x-ts90m-temp-test-2.webp)
+</ImageGallery>
 
 接著把散熱器換成 PA120，就算跑 20 分鐘也只有 83 度，並且頻率穩定在 4.3 Ghz
 
 ![R7 5800X 燒機溫度測試（搭配 PA120）](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/r7-5800x-pa120-temp-test.webp)
 
 ## 跑分測試
+
+<Aside type="note" title='圖片順序說明'>
+  左側或上方為 R5 3600，右側或下方為 R7 5800X
+</Aside>
 
 ### 體質分數
 
@@ -87,13 +97,10 @@ CPU 接觸面都是鍍鎳銅底
 
 ### CPU-Z
 
-AMD Ryzen 5 3600
-
-![R5 3600 CPU-Z 成績](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/r5-3600-cpuz-benchmark.webp)
-
-AMD Ryzen 7 5800X
-
-![R7 5800X CPU-Z 成績](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/r7-5800x-cpuz-benchmark.webp)
+<ImageGallery baseCols={2}>
+  ![R5 3600 CPU-Z 成績](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/r5-3600-cpuz-benchmark.webp)
+  ![R7 5800X CPU-Z 成績](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/r7-5800x-cpuz-benchmark.webp)
+</ImageGallery>
 
 #### 詳細測試
 
@@ -121,13 +128,10 @@ AMD Ryzen 7 5800X
 
 ### 3DMark CPU Profile
 
-AMD Ryzen 5 3600
-
-![R5 3600 3DMark CPU Profile 成績](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/r5-3600-3dmark-cpu-profile.webp)
-
-AMD Ryzen 7 5800X
-
-![R7 5800X 3DMark CPU Profile 成績](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/r7-5800x-3dmark-cpu-profile.webp)
+<ImageGallery baseCols={2}>
+  ![R5 3600 3DMark CPU Profile 成績](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/r5-3600-3dmark-cpu-profile.webp)
+  ![R7 5800X 3DMark CPU Profile 成績](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/r7-5800x-3dmark-cpu-profile.webp)
+</ImageGallery>
 
 #### 詳細測試
 
@@ -145,13 +149,10 @@ AMD Ryzen 7 5800X
 
 ### Cinebench R23
 
-AMD Ryzen 5 3600
-
-![R5 3600 Cinebench R23 成績](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/r5-3600-cinebench-r23.webp)
-
-AMD Ryzen 7 5800X
-
-![R7 5800X Cinebench R23 成績](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/r7-5800x-cinebench-r23.webp)
+<ImageGallery baseCols={2}>
+  ![R5 3600 Cinebench R23 成績](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/r5-3600-cinebench-r23.webp)
+  ![R7 5800X Cinebench R23 成績](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/r7-5800x-cinebench-r23.webp)
+</ImageGallery>
 
 #### 詳細測試
 
@@ -166,13 +167,10 @@ AMD Ryzen 7 5800X
 
 ### Cinebench 2024
 
-AMD Ryzen 5 3600
-
-![R5 3600 Cinebench 2024 成績](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/r5-3600-cinebench-2024.webp)
-
-AMD Ryzen 7 5800X
-
-![R7 5800X Cinebench 2024 成績](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/r7-5800x-cinebench-2024.webp)
+<ImageGallery baseCols={2}>
+  ![R5 3600 Cinebench 2024 成績](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/r5-3600-cinebench-2024.webp)
+  ![R7 5800X Cinebench 2024 成績](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/r7-5800x-cinebench-2024.webp)
+</ImageGallery>
 
 #### 詳細測試
 
@@ -188,13 +186,10 @@ AMD Ryzen 7 5800X
 
 ### Super PI
 
-AMD Ryzen 5 3600
-
-![R5 3600 Super PI 成績](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/r5-3600-super-pi.webp)
-
-AMD Ryzen 7 5800X
-
-![R7 5800X Super PI 成績](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/r7-5800x-super-pi.webp)
+<ImageGallery baseCols={2}>
+  ![R5 3600 Super PI 成績](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/r5-3600-super-pi.webp)
+  ![R7 5800X Super PI 成績](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/r7-5800x-super-pi.webp)
+</ImageGallery>
 
 #### 詳細測試
 
@@ -207,13 +202,10 @@ AMD Ryzen 7 5800X
 
 ### 7-Zip 效能測試
 
-AMD Ryzen 5 3600
-
-![R5 3600 7-Zip 效能測試成績](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/r5-3600-7zip-benchmark.webp)
-
-AMD Ryzen 7 5800X
-
-![R7 5800X 7-Zip 效能測試成績](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/r7-5800x-7zip-benchmark.webp)
+<ImageGallery baseCols={2}>
+  ![R5 3600 7-Zip 效能測試成績](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/r5-3600-7zip-benchmark.webp)
+  ![R7 5800X 7-Zip 效能測試成績](https://storage.wysalan.com/img/upgrade-my-pc-hardware-part-2/r7-5800x-7zip-benchmark.webp)
+</ImageGallery>
 
 ### 小結
 
