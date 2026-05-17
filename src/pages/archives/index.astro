@@ -38,7 +38,7 @@ const allYears = [...new Set(allPosts.flatMap((post) => dayjs(post.data.pubDate)
 										</span>
 										<a
 											href={`${siteConfig.base}/posts/${post.id}/`}
-											class="max-w-[95%] pl-4 text-lg md:max-w-fit md:pl-0 md:group-hover:font-semibold lg:text-xl"
+											class="max-w-[95%] pl-4 md:max-w-fit md:pl-0 md:group-hover:font-semibold lg:text-xl"
 										>
 											{post.data.title}
 										</a>

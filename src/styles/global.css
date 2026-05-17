@@ -41,11 +41,11 @@ html {
 
 /* Container */
 .basic-container {
-	@apply container mx-auto px-6 sm:px-12 2xl:px-16;
+	@apply container mx-auto px-6 2xl:px-16;
 }
 
 .page-container {
-	@apply container mx-auto px-6 pt-10 sm:px-12 2xl:px-16;
+	@apply container mx-auto px-6 pt-10 2xl:px-16;
 }
 
 .page-section {
@@ -106,7 +106,7 @@ html {
 }
 
 .post-block {
-	@apply relative flex flex-col gap-3 rounded-lg py-5 transition-all md:flex-row md:gap-7 md:px-5 md:hover:scale-[1.025] md:hover:bg-white md:hover:shadow-2xl md:hover:ring-3 hover:dark:bg-white/10;
+	@apply grid grid-cols-1 gap-3 rounded-lg py-5 transition-all sm:grid-cols-[208px_1fr] sm:gap-7 sm:px-5 sm:hover:scale-[1.0125] sm:hover:bg-white sm:hover:shadow-2xl sm:hover:ring-2 md:grid-cols-[224px_1fr] lg:grid-cols-[256px_1fr] hover:dark:bg-white/10;
 }
 
 .category-card {
@@ -155,7 +155,7 @@ html {
 
 /* TailwindCSS Typography Modifies */
 .prose-element-modify {
-	@apply prose-headings:first:mt-0 prose-headings:mt-[1.2em] prose-h2:mb-[0.8em] prose-p:my-5 prose-ul:mt-[1.2em] prose-table:my-5 prose-pre:mt-[2em] prose-img:rounded-sm prose-img:mx-auto prose-img:my-0;
+	@apply prose-headings:first:mt-0 prose-headings:mt-[1.2em] prose-h2:mb-[0.8em] prose-ul:mt-[1.2em] prose-table:my-5 prose-pre:mt-[2em] prose-img:rounded-sm prose-img:mx-auto prose-img:my-0;
 }
 
 .prose blockquote > p::before {

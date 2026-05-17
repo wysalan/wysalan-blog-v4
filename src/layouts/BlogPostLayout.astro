@@ -25,9 +25,9 @@ const { title, description, categories, pubDate, updatedDate, coverImage, coverI
 					<TableOfContents headings={headings} />
 				</div>
 			</aside>
-			<div class="w-full grow md:max-w-[105ch]">
+			<div class="w-full grow md:max-w-[95ch]">
 				<header class:list={['mt-5', 'md:mt-10', { 'mb-5': !coverImage }]}>
-					<h1 class="text-2xl leading-snug font-bold md:text-4xl">{title}</h1>
+					<h1 class="text-2xl leading-snug font-bold md:text-3xl">{title}</h1>
 					<div class="flex flex-wrap items-center gap-3 pt-3 pb-4 md:gap-4 md:text-lg">
 						<span
 							class="flex items-center"
@@ -62,18 +62,18 @@ const { title, description, categories, pubDate, updatedDate, coverImage, coverI
 								<Image
 									src={coverImage}
 									alt={title}
-									class:list={[{ 'rounded-sm shadow-sm': coverImageCredit }, { 'mb-10 rounded-sm shadow-sm': !coverImageCredit }]}
+									class:list={[{ 'rounded-sm shadow-sm': coverImageCredit }, { 'mb-8 rounded-sm shadow-sm': !coverImageCredit }]}
 									fetchpriority="high"
 									loading="eager"
 									layout="constrained"
 									inferSize
 								/>
-								{coverImageCredit && <p class="mt-2 mb-10 text-sm opacity-80">圖片來源：{coverImageCredit}</p>}
+								{coverImageCredit && <p class="mt-2 mb-8 text-sm opacity-80">圖片來源：{coverImageCredit}</p>}
 							</>
 						)
 					}
 				</header>
-				<div class="prose prose-zinc prose-lg md:prose-xl dark:prose-invert prose-element-modify max-w-none text-justify">
+				<div class="prose prose-zinc prose-base md:prose-lg dark:prose-invert prose-element-modify max-w-none text-justify">
 					<slot />
 				</div>
 			</div>

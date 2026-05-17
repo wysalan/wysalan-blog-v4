@@ -15,7 +15,7 @@ const { title, description, pubDate, updatedDate, categories, tags, coverImage }
 
 <div class="post-block group">
 	{/* Cover Image */}
-	<a href={`${siteConfig.base}/posts/${post.id}/`} class="inline-flex w-full shrink-0 md:h-36 md:w-1/4 lg:w-1/5">
+	<a href={`${siteConfig.base}/posts/${post.id}/`} class="inline-flex w-full shrink-0">
 		{
 			coverImage && coverImage !== '' ? (
 				<Image src={coverImage} alt={title} class="inline-block aspect-video rounded-lg object-cover" layout="constrained" inferSize />
@@ -27,7 +27,7 @@ const { title, description, pubDate, updatedDate, categories, tags, coverImage }
 
 	{/* Post Content */}
 	<div class="flex flex-col justify-evenly gap-y-2.25 md:gap-y-1.75">
-		<div class="flex items-center gap-4">
+		<div class="flex items-center gap-4 text-sm lg:text-base">
 			<span
 				class="flex items-center"
 				title={`發表日期：${dayjs(pubDate).format('YYYY-MM-DD HH:mm:ss')}`}
@@ -39,7 +39,7 @@ const { title, description, pubDate, updatedDate, categories, tags, coverImage }
 			{
 				updatedDate && !dayjs(dayjs(updatedDate)).isSame(dayjs(pubDate)) && (
 					<span
-						class="hidden items-center md:flex"
+						class="hidden items-center lg:flex"
 						title={`更新日期：${dayjs(updatedDate).format('YYYY-MM-DD HH:mm:ss')}`}
 						aria-label={`更新日期：${dayjs(updatedDate).format('YYYY-MM-DD HH:mm:ss')}`}
 					>
@@ -59,10 +59,12 @@ const { title, description, pubDate, updatedDate, categories, tags, coverImage }
 				)
 			}
 		</div>
-		<h2 class="group-hover:text-primary dark:group-hover:text-primary-dark mt-1 text-xl font-semibold tracking-normal transition-colors lg:text-2xl">
+		<h2
+			class="group-hover:text-primary dark:group-hover:text-primary-dark line-clamp-1 overflow-x-auto text-xl font-semibold tracking-normal transition-colors lg:text-2xl"
+		>
 			<a href={`${siteConfig.base}/posts/${post.id}/`}>{title}</a>
 		</h2>
-		<p class="line-clamp-2 opacity-90 md:line-clamp-1 lg:text-lg">{description}</p>
+		<p class="line-clamp-1 opacity-90 lg:text-lg">{description}</p>
 		<div class="group flex items-center gap-2 overflow-auto">
 			{
 				tags.flat()[0] !== '' &&
