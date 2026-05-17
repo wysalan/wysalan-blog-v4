@@ -10,12 +10,12 @@ import LogoSVG from '../assets/logo.svg'
 	<nav>
 		<div class="basic-container flex items-center justify-between py-4">
 			<a href=`${siteConfig.base}/` aria-label="首頁">
-				<LogoSVG height={36} width={36} />
+				<LogoSVG height={32} width={32} />
 			</a>
 			<div class="hidden items-center gap-8 md:flex">
 				{
 					WebsiteLinks.map((link) => (
-						<NavbarLink class="px-1 text-lg" href={`${siteConfig.base}/${link.url}`} target={link.url.charAt(0) === 'h' ? '_blank' : '_self'}>
+						<NavbarLink class="px-1" href={`${siteConfig.base}/${link.url}`} target={link.url.charAt(0) === 'h' ? '_blank' : '_self'}>
 							{link.name}
 						</NavbarLink>
 					))
@@ -43,21 +43,21 @@ import LogoSVG from '../assets/logo.svg'
 </header>
 
 <div
-	class="bg-background dark:bg-background-dark border-background fixed top-0 right-0 z-40 h-screen w-4/5 translate-x-full border-l px-8 py-6 transition-transform md:hidden"
+	class="bg-background/95 dark:bg-background-dark/95 fixed top-0 right-0 z-40 h-screen w-[65%] translate-x-full px-8 py-6 backdrop-blur-sm transition-transform md:hidden"
 	id="mobile-menu"
 >
 	<button id="nav-close-btn" class="ml-auto block cursor-pointer" aria-label="關閉導覽選單" title="關閉導覽選單">
 		<Icon aria-hidden name="mdi:close" size={32} />
 	</button>
-	<div class="flex h-full flex-col items-start gap-8 pt-16">
+	<div class="flex h-full flex-col items-start gap-6 overflow-y-auto pt-5 pb-10">
 		{
 			WebsiteLinks.map((link) => (
-				<NavbarLink class="text-4xl font-normal" href={`${siteConfig.base}/${link.url}`}>
+				<NavbarLink class="text-2xl font-normal" href={`${siteConfig.base}/${link.url}`}>
 					{link.name}
 				</NavbarLink>
 			))
 		}
-		<ThemeSelector class:list="mt-4" />
+		<ThemeSelector class:list="mt-5" />
 	</div>
 </div>
 
