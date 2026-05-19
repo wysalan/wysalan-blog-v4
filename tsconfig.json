@@ -11,6 +11,8 @@
 			"@Plugins/*": ["./src/plugins/*"],
 			"@Layouts/*": ["./src/layouts/*"],
 			"@SiteConfig": ["./src/site.config"]
-		}
+		},
+		"jsx": "preserve",
+		"jsxImportSource": "astro"
 	}
 }
