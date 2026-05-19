@@ -23,9 +23,9 @@ const remainder: number = lastCols ? lastCols : total - baseCols
 const middle: number | undefined = lastCols && total - baseCols - remainder
 
 /** 將 items 陣列轉換成三個陣列（分別對應第一、二、三行圖片） */
-const baseItems: string[] = items.filter((item, index) => index < baseCols)
-const middleItems: '' | string[] = middle ? items.filter((item, index) => index >= baseCols && index < total - remainder) : ''
-const remaindItems: '' | string[] = remainder ? items.filter((item, index) => index >= (middle ? total - remainder : baseCols)) : ''
+const baseItems: string[] = items.filter((_, index) => index < baseCols)
+const middleItems: '' | string[] = middle ? items.filter((_, index) => index >= baseCols && index < total - remainder) : ''
+const remaindItems: '' | string[] = remainder ? items.filter((_, index) => index >= (middle ? total - remainder : baseCols)) : ''
 
 /** 包裝元素 */
 const baseImgWrapper: string = `<div class="gallery-item grid gap-5" style="grid-template-columns:repeat(${baseCols}, minmax(0, 1fr));">${baseItems.join('')}</div>`
