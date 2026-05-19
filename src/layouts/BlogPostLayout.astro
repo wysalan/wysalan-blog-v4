@@ -28,7 +28,7 @@ const { title, description, categories, pubDate, updatedDate, coverImage, coverI
 			<div class="w-full grow md:max-w-[95ch]">
 				<header class:list={['mt-5', 'md:mt-10', { 'mb-5': !coverImage }]}>
 					<h1 class="text-2xl leading-snug font-bold md:text-3xl">{title}</h1>
-					<div class="flex flex-wrap items-center gap-3 pt-3 pb-4 md:gap-4 md:text-lg">
+					<div class="flex flex-wrap items-center gap-3 pt-3 pb-4 md:gap-4">
 						<span
 							class="flex items-center"
 							title={`發表日期：${dayjs(pubDate).format('YYYY-MM-DD HH:mm:ss')}`}
