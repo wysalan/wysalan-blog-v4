@@ -21,8 +21,7 @@
 
 ### 格式化
 
-+ ESLint
-+ Prettier
++ Biome
 
 ### 主題
 
@@ -61,6 +60,7 @@
 │  │  ├─ mdx/
 │  │  └─ toc/
 │  ├─ content/
+│  │  ├─ blogPages/
 │  │  └─ blogPosts/
 │  ├─ layouts/
 │  ├─ pages/
@@ -73,6 +73,10 @@
 
 ## 未來規劃
 
+### 已實現
+
+- [x] 格式化工具改用 Biome
+
 ### 頁面
 
 - [ ] 新增 `Uses` 頁面
@@ -83,5 +87,4 @@
 - [ ] 手機版顯示文章目錄（瀏覽文章時在側邊欄切換）
 - [ ] 動態產生 Open Graph 封面圖片
 - [ ] 轉移至 UnoCSS
-- [ ] 格式化工具改用 Biome
 - [ ] 新增搜尋功能
