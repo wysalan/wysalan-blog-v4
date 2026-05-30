@@ -30,7 +30,7 @@ const allYears = [...new Set(allPosts.flatMap((post) => dayjs(post.data.pubDate)
 								.map((post) => (
 									<div class="group ml-2.5 grid items-center rounded-md rounded-l-none border-l-3 py-2 transition-all hover:ring-3 md:grid-cols-[120px_1fr] md:gap-y-0 md:hover:scale-[1.025]">
 										<span
-											class="flex items-center pl-4 font-mono text-lg md:pl-5 lg:text-xl"
+											class="flex items-center pl-4 font-mono text-lg md:pl-5 lg:text-lg"
 											title={`發表日期：${dayjs(post.data.pubDate).format('YYYY-MM-DD HH:mm')}`}
 											aria-label="發表日期"
 										>
@@ -38,7 +38,7 @@ const allYears = [...new Set(allPosts.flatMap((post) => dayjs(post.data.pubDate)
 										</span>
 										<a
 											href={`${siteConfig.base}/posts/${post.id}/`}
-											class="max-w-[95%] pl-4 md:max-w-fit md:pl-0 md:group-hover:font-semibold lg:text-xl"
+											class="max-w-[95%] pl-4 md:max-w-fit md:pl-0 md:group-hover:font-semibold lg:text-lg"
 										>
 											{post.data.title}
 										</a>

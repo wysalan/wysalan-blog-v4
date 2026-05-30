@@ -20,10 +20,8 @@ const { title, description, categories, pubDate, updatedDate, coverImage, coverI
 <BaseLayout title=`${title} | ${siteConfig.title}` description={description} image={coverImage}>
 	<main>
 		<article class="basic-container flex flex-col justify-around gap-8 pb-10 lg:flex-row-reverse">
-			<aside class="relative hidden lg:block">
-				<div class="sticky top-35">
-					<TableOfContents headings={headings} />
-				</div>
+			<aside class="relative hidden lg:block lg:w-65">
+				<TableOfContents headings={headings} />
 			</aside>
 			<div class="w-full grow md:max-w-[95ch]">
 				<header class:list={['mt-5', 'md:mt-10', { 'mb-5': !coverImage }]}>
@@ -62,7 +60,7 @@ const { title, description, categories, pubDate, updatedDate, coverImage, coverI
 								<Image
 									src={coverImage}
 									alt={title}
-									class:list={[{ 'rounded-sm shadow-sm': coverImageCredit }, { 'mb-8 rounded-sm shadow-sm': !coverImageCredit }]}
+									class:list={[{ 'rounded-sm shadow': coverImageCredit }, { 'mb-8 rounded-sm shadow': !coverImageCredit }]}
 									fetchpriority="high"
 									loading="eager"
 									layout="constrained"
