@@ -1,13 +1,14 @@
-import 'dotenv/config'
+import { unified } from '@astrojs/markdown-remark';
 import { defineConfig } from 'astro/config'
-import tailwindcss from '@tailwindcss/vite'
-import mdx from '@astrojs/mdx'
-import sitemap from '@astrojs/sitemap'
-import icon from 'astro-icon'
-import yeskunallumami from '@yeskunall/astro-umami'
-import { rehypeAccessibleEmojis } from 'rehype-accessible-emojis'
 import rehypeTableWrapper from './src/plugins/rehypeTableWrapper.ts'
 import { siteConfig } from './src/site.config.ts'
+import 'dotenv/config'
+import mdx from '@astrojs/mdx'
+import sitemap from '@astrojs/sitemap'
+import tailwindcss from '@tailwindcss/vite'
+import yeskunallumami from '@yeskunall/astro-umami'
+import icon from 'astro-icon'
+import { rehypeAccessibleEmojis } from 'rehype-accessible-emojis'
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,7 +20,9 @@ export default defineConfig({
 		plugins: [tailwindcss()],
 	},
 	markdown: {
-		rehypePlugins: [rehypeAccessibleEmojis, rehypeTableWrapper],
+		processor: unified({
+			rehypePlugins: [rehypeAccessibleEmojis, rehypeTableWrapper],
+		}),
 		shikiConfig: {
 			themes: {
 				light: 'github-dark',
