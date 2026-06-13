@@ -28,9 +28,9 @@ const allYears = [...new Set(allPosts.flatMap((post) => dayjs(post.data.pubDate)
 							{allPosts
 								.filter((post) => dayjs(post.data.pubDate).year() === year)
 								.map((post) => (
-									<div class="group ml-2.5 grid items-center rounded-md rounded-l-none border-l-3 py-2 transition-all hover:ring-3 md:grid-cols-[120px_1fr] md:gap-y-0 md:hover:scale-[1.025]">
+									<div class="group ml-2.5 grid items-center rounded-md rounded-l-none border-l-3 py-2 transition-all hover:ring-3 md:grid-cols-[120px_1fr] md:gap-y-0 md:hover:scale-[1.0125]">
 										<span
-											class="flex items-center pl-4 font-mono text-lg md:pl-5 lg:text-lg"
+											class="flex items-center pl-4 font-mono text-lg md:pl-5 lg:text-lg w-fit"
 											title={`發表日期：${dayjs(post.data.pubDate).format('YYYY-MM-DD HH:mm')}`}
 											aria-label="發表日期"
 										>
