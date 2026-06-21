@@ -28,7 +28,7 @@ const allYears = [...new Set(allPosts.flatMap((post) => dayjs(post.data.pubDate)
 							{allPosts
 								.filter((post) => dayjs(post.data.pubDate).year() === year)
 								.map((post) => (
-									<div class="group ml-2.5 grid items-center rounded-md rounded-l-none border-l-3 py-2 transition-all hover:ring-3 md:grid-cols-[120px_1fr] md:gap-y-0 md:hover:scale-[1.0125]">
+									<div class="archive-post-item group">
 										<span
 											class="flex items-center pl-4 font-mono text-lg md:pl-5 lg:text-lg w-fit"
 											title={`發表日期：${dayjs(post.data.pubDate).format('YYYY-MM-DD HH:mm')}`}
@@ -38,7 +38,7 @@ const allYears = [...new Set(allPosts.flatMap((post) => dayjs(post.data.pubDate)
 										</span>
 										<a
 											href={`${siteConfig.base}/posts/${post.id}/`}
-											class="max-w-[95%] pl-4 md:max-w-fit md:pl-0 md:group-hover:font-semibold lg:text-lg"
+											class="max-w-[95%] pl-4 md:max-w-fit md:pl-0 lg:text-lg"
 										>
 											{post.data.title}
 										</a>

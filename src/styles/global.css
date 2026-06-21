@@ -52,7 +52,7 @@ html {
 }
 
 .post-list {
-	@apply space-y-3;
+	@apply flex flex-col sm:gap-3;
 }
 
 /* NavBar */
@@ -90,18 +90,13 @@ html {
 	@apply text-foreground dark:text-foreground-dark hover:bg-foreground/15 hover:dark:bg-foreground-dark/15 active:bg-foreground/35 active:dark:bg-foreground-dark/35 m-1 flex w-fit items-center gap-2 rounded-md px-1 py-2 transition-colors;
 }
 
-/* Common Components */
+/* Components */
 .post-card {
 	@apply flex h-full flex-col gap-3;
 }
 
 .post-card img {
-	transform: scale(1);
-	transition: transform 0.5s ease;
-}
-
-.post-card:hover img {
-	transform: scale(1.1);
+	@apply hover:scale-[1.1] transition-transform duration-500;
 }
 
 .post-block {
@@ -114,6 +109,10 @@ html {
 
 .tag-card {
 	@apply line-clamp-1 flex h-full flex-row items-center gap-1 rounded-lg bg-zinc-100 p-2.5 text-center text-lg ring-1 ring-zinc-200 transition-all hover:scale-[1.075] hover:shadow-lg dark:bg-zinc-100/15 dark:ring-zinc-100/20;
+}
+
+.archive-post-item {
+	@apply hover:bg-white ml-2.5 grid items-center rounded-md not-hover:rounded-l-none not-hover:border-l-2 py-2 transition-all hover:shadow-xl hover:ring-2 md:grid-cols-[120px_1fr] md:gap-y-0 md:hover:scale-[1.0125];
 }
 
 /* Plugin Modifies */
@@ -159,17 +158,12 @@ html {
 }
 
 .prose blockquote > p::before {
-	content: '';
+	@apply content-none;
 }
 
 .prose img,
 .prose iframe {
-	max-inline-size: 100%;
-}
-
-.prose code::before,
-.prose code::after {
-	content: '';
+	@apply max-inline-full;
 }
 
 .prose code:not(pre > code) {
