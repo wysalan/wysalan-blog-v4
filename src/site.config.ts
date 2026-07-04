@@ -15,14 +15,12 @@ interface siteSetting {
 }
 
 export const siteConfig: siteConfig = {
-	url: 'https://blog.wysalan.com/',
+	url: 'https://wysalan.com/',
 	base: '',
 	title: '沙連四坊',
 	description: '沙連的個人網站，任何想分享和記錄的內容都在這裡',
 	author: 'Tom Liu',
-	// The language of this website.
 	language: 'zh-TW',
-	// How many posts will display in single page.
 	pageSize: 10,
 }
 
