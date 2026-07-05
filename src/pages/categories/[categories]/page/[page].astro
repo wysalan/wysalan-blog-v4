@@ -32,7 +32,7 @@ const { categories } = Astro.params
 			<h1 class="page-title">{getChiCategoryName(categories)}</h1>
 		</div>
 		<section class="page-section">
-			<div class='post-list"'>
+			<div class="post-list">
 				{data.map((post) => <PostBlock post={post} />)}
 			</div>
 		</section>
