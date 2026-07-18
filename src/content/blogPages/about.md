@@ -1,10 +1,12 @@
 ---
 title: '關於'
 slug: 'about'
-updatedDate: '2026-05-15 10:24:00'
+updatedDate: '2026-07-18 10:33:00'
 ---
 
 ## 關於本站
+
+### 起源
 
 原本是因為巴哈姆特小屋的文章編輯器不好用，因此想要尋找其他發文平台當作備份站
 
@@ -51,4 +53,3 @@ updatedDate: '2026-05-15 10:24:00'
 - [巴哈姆特小屋](https://home.gamer.com.tw/profile/index.php?owner=lewopa47894)（2016 ~ Now）
 - [沙連的第二個家](https://salantom.blogspot.com)（2018 ~ 2020）
 - [沙連三棧](https://archives.wysalan.com)（2021 ~ 2025）
-- 沙連四坊（2026 ~ Now）
