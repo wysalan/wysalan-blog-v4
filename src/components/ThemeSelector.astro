@@ -1,37 +1,39 @@
 ---
 import { Icon } from 'astro-icon/components'
+
 const { class: className } = Astro.props
 ---
 
 <div
 	class:list={[
 		className,
-		'border border-foreground dark:border-foreground-dark rounded-full flex justify-center items-center text-foreground dark:text-foreground-dark md:opacity-80 *:cursor-pointer',
+		'theme-selector relative flex justify-center items-center border border-foreground dark:border-foreground-dark text-foreground dark:text-foreground-dark rounded-full md:opacity-80 *:cursor-pointer',
 	]}
 >
+	<span class="theme-thumb aria-hidden"></span>
 	<button
 		data-theme="theme-auto"
 		aria-label="跟隨系統設定"
 		title="跟隨系統設定"
-		class="theme-button theme-auto"
+		class="theme-button"
 	>
-		<Icon name="mdi:brightness-auto" class:list="text-2xl md:text-xl" aria-hidden />
+		<Icon name="lucide:monitor" class:list="p-px text-2xl md:text-xl" aria-hidden />
 	</button>
 	<button
 		data-theme="theme-light"
 		aria-label="淺色主題"
 		title="淺色"
-		class="theme-button theme-light"
+		class="theme-button"
 	>
-		<Icon name="mdi:white-balance-sunny" class:list="text-2xl md:text-xl" aria-hidden />
+		<Icon name="lucide:sun" class:list="p-px text-2xl md:text-xl" aria-hidden />
 	</button>
 	<button
 		data-theme="theme-dark"
 		aria-label="深色主題"
 		title="深色"
-		class="theme-button theme-dark"
+		class="theme-button"
 	>
-		<Icon name="mdi:moon-and-stars" class:list="text-2xl md:text-xl" aria-hidden />
+		<Icon name="lucide:moon" class:list="p-px text-2xl md:text-xl" aria-hidden />
 	</button>
 </div>
 
@@ -39,9 +41,17 @@ const { class: className } = Astro.props
 	@reference "../styles/global.css";
 
 	button.theme-button {
-		@apply p-1 rounded-full transition-all;
+		@apply relative z-10 p-1 rounded-full transition-colors;
 	}
+
+	.theme-thumb {
+		@apply absolute top-0 left-0 rounded-full bg-foreground/90 dark:bg-foreground-dark/90;
+		width: 0;
+		height: 100%;
+		transition: transform 0.25s ease;
+	}
+
 	:global(button.active) {
-		@apply text-background bg-foreground/90 dark:text-background-dark dark:bg-foreground-dark/90;
+		@apply text-background dark:text-background-dark;
 	}
 </style>

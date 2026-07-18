@@ -6,7 +6,7 @@ import { siteConfig, WebsiteLinks } from '@/site.config'
 import LogoSVG from '../assets/logo.svg'
 ---
 
-<header class="bg-background/80 dark:bg-background-dark/80 sticky top-0 left-0 z-10 w-full backdrop-blur-lg">
+<header class="bg-background/80 dark:bg-background-dark/80 sticky top-0 left-0 z-10 w-full backdrop-blur-lg transition-colors">
 	<nav>
 		<div class="basic-container flex items-center justify-between py-4">
 			<a href=`${siteConfig.base}/` aria-label="首頁">
@@ -62,7 +62,22 @@ import LogoSVG from '../assets/logo.svg'
 </div>
 
 <script is:inline>
-	function reComputeTheme() {
+	function moveThumbs(animate = true) {
+		document.querySelectorAll('.theme-selector').forEach((selector) => {
+			const thumb = selector.querySelector('.theme-thumb')
+			const active = selector.querySelector('.theme-button.active')
+			if (!thumb || !active) return
+			if (!animate) thumb.style.transition = 'none'
+			thumb.style.width = `${active.offsetWidth}px`
+			thumb.style.transform = `translateX(${active.offsetLeft}px)`
+			if (!animate) {
+				thumb.offsetHeight
+				thumb.style.transition = ''
+			}
+		})
+	}
+
+	function reComputeTheme(animate = false) {
 		if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
 			document.documentElement.classList.add('dark')
 		} else {
@@ -71,6 +86,7 @@ import LogoSVG from '../assets/logo.svg'
 
 		const theme = localStorage.theme || 'auto'
 		document.querySelectorAll(`[data-theme="theme-${theme}"]`).forEach((el) => el.classList.add('active'))
+		moveThumbs(animate)
 	}
 
 	function addThemeEventListeners() {
@@ -81,10 +97,11 @@ import LogoSVG from '../assets/logo.svg'
 				button.classList.add('active')
 				if (button.dataset.theme === 'theme-auto') {
 					localStorage.removeItem('theme')
-					reComputeTheme()
+					reComputeTheme(true)
 				} else {
 					localStorage.theme = button.dataset.theme.replace('theme-', '')
 					document.documentElement.classList.toggle('dark', button.dataset.theme === 'theme-dark')
+					moveThumbs(true)
 				}
 			})
 		})
