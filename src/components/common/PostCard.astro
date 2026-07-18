@@ -9,7 +9,7 @@ const { post } = Astro.props
 ---
 
 <a href={`${siteConfig.base}/posts/${post.id}/`} class="post-card group transition-colors">
-	<div class="w-full overflow-hidden rounded-xl transition-all group-hover:shadow-md">
+	<div class="w-full overflow-hidden rounded-xl group-hover:shadow-md transition">
 		{
 			post.data.coverImage && (
 				<Image
