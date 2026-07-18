@@ -96,7 +96,7 @@ html {
 }
 
 .post-card img {
-	@apply hover:scale-[1.1] transition-transform duration-500;
+	@apply group-hover:scale-[1.1] transition-transform duration-500;
 }
 
 .post-block {
