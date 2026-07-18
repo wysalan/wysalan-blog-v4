@@ -1,4 +1,4 @@
-import { type CollectionEntry } from 'astro:content'
+import type { CollectionEntry } from 'astro:content'
 
 /** 中英文分類名稱對應表 */
 export const categoryMap: Record<string, string> = {
@@ -48,13 +48,11 @@ export function getChiCategoryName(convertedName: string): string {
  * @returns 含有分類名稱及文章數量的陣列 (Promise)
  */
 export async function getAllCategories(allPosts: CollectionEntry<'blogPosts'>[], sortBy?: string) {
-	const allCategories = [...new Set(allPosts.map((post) => post.data.categories).flat())]
-	const result: { name: string; frequency: number }[] = []
-	allCategories.flatMap((category) => {
-		const item: { name: string; frequency: number } = { name: category, frequency: 0 }
-		item.frequency = allPosts.filter((post) => post.data.categories === category).length
-		result.push(item)
-	})
+	const allCategories = [...new Set(allPosts.flatMap((post) => post.data.categories))]
+	const result = allCategories.map((category) => ({
+		name: category,
+		frequency: allPosts.filter((post) => post.data.categories === category).length,
+	}))
 	if (sortBy === 'postCount') {
 		return result.sort((a, b) => {
 			if (a.frequency !== b.frequency) {

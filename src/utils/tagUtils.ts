@@ -1,4 +1,4 @@
-import { type CollectionEntry } from 'astro:content'
+import type { CollectionEntry } from 'astro:content'
 
 /**
  * 找出所有標籤及其出現次數，並進行排序處理
@@ -7,13 +7,11 @@ import { type CollectionEntry } from 'astro:content'
  * @returns 含有標籤名稱及出現次數的陣列 (Promise)
  */
 export async function getAllTags(allPosts: CollectionEntry<'blogPosts'>[], sortBy?: string) {
-	const allTags = [...new Set(allPosts.map((post) => post.data.tags).flat())]
-	const result: { name: string, frequency: number }[] = []
-	allTags.flatMap((tag) => {
-		const item: { name: string, frequency: number } = { name: tag, frequency: 0 }
-		item.frequency = allPosts.filter((post) => post.data.tags?.flat().includes(tag || '')).length
-		result.push(item)
-	})
+	const allTags = [...new Set(allPosts.flatMap((post) => post.data.tags))]
+	const result = allTags.map((tag) => ({
+		name: tag,
+		frequency: allPosts.filter((post) => post.data.tags?.flat().includes(tag || '')).length,
+	}))
 	if (sortBy === 'tagCount') {
 		return result.sort((a, b) => {
 			if (a.frequency !== b.frequency) {
@@ -22,8 +20,7 @@ export async function getAllTags(allPosts: CollectionEntry<'blogPosts'>[], sortB
 			return a.name.localeCompare(b.name, 'en')
 		})
 	} else {
-		return result.sort((a, b) => a.name.localeCompare(b.name, 'en')
-		)
+		return result.sort((a, b) => a.name.localeCompare(b.name, 'en'))
 	}
 }
 
