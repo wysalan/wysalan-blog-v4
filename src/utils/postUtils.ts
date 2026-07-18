@@ -1,4 +1,4 @@
-import { getCollection, type CollectionEntry } from 'astro:content'
+import { type CollectionEntry, getCollection } from 'astro:content'
 import { categoryMap } from './categoryUtils'
 
 /**
@@ -26,10 +26,7 @@ export async function getAllPosts(limit?: number): Promise<CollectionEntry<'blog
  * @param limit 限制取得的文章數量（可選，留空將擷取所有文章）
  * @returns 篩選後的文章陣列 (Promise)
  */
-export async function getPostsByCategory(
-	categoryName: string,
-	limit: number = 0
-): Promise<CollectionEntry<'blogPosts'>[]> {
+export async function getPostsByCategory(categoryName: string, limit: number = 0): Promise<CollectionEntry<'blogPosts'>[]> {
 	const allPosts = (await getCollection('blogPosts'))
 		.map((post) => ({
 			...post,

@@ -1,15 +1,15 @@
-@import '@fontsource-variable/noto-sans-tc/wght.css';
-@import '@fontsource-variable/inter/wght.css';
-@import '@fontsource-variable/jetbrains-mono/wght.css';
-@import 'tailwindcss';
-@plugin '@tailwindcss/typography';
+@import "@fontsource-variable/noto-sans-tc/wght.css";
+@import "@fontsource-variable/inter/wght.css";
+@import "@fontsource-variable/jetbrains-mono/wght.css";
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme {
 	/* Fonts */
-	--font-sans: 'Inter Variable', 'Noto Sans TC Variable', sans-serif;
-	--font-mono: 'JetBrains Mono Variable', 'Noto Sans TC Variable', monospace;
+	--font-sans: "Inter Variable", "Noto Sans TC Variable", sans-serif;
+	--font-mono: "JetBrains Mono Variable", "Noto Sans TC Variable", monospace;
 
 	--color-foreground: #0c0c0c;
 	--color-foreground-dark: #fbfbfb;

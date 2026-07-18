@@ -1,4 +1,4 @@
-import { unified } from '@astrojs/markdown-remark';
+import { unified } from '@astrojs/markdown-remark'
 import { defineConfig } from 'astro/config'
 import rehypeTableWrapper from './src/plugins/rehypeTableWrapper.ts'
 import { siteConfig } from './src/site.config.ts'

@@ -1,8 +1,8 @@
 ---
-import { type CollectionEntry, render } from 'astro:content'
-import { getAllPosts } from '@Utils/postUtils'
-import BlogPostLayout from '@Layouts/BlogPostLayout.astro'
 import PhotoSwipe from '@Components/libs/PhotoSwipe.astro'
+import BlogPostLayout from '@Layouts/BlogPostLayout.astro'
+import { getAllPosts } from '@Utils/postUtils'
+import { type CollectionEntry, render } from 'astro:content'
 
 export async function getStaticPaths() {
 	const posts = await getAllPosts()

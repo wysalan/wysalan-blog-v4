@@ -1,14 +1,14 @@
 ---
-import type { CollectionEntry } from 'astro:content'
-import type { MarkdownHeading } from 'astro'
-import { Image } from 'astro:assets'
-import { Icon } from 'astro-icon/components'
-import { siteConfig } from '@/site.config'
-import dayjs from 'dayjs'
-import BaseLayout from './BaseLayout.astro'
 import FormattedDate from '@Components/common/FormattedDate.astro'
 import TableOfContents from '@Components/toc/TableOfContents.astro'
 import { getChiCategoryName } from '@Utils/categoryUtils'
+import { Image } from 'astro:assets'
+import type { CollectionEntry } from 'astro:content'
+import type { MarkdownHeading } from 'astro'
+import { Icon } from 'astro-icon/components'
+import dayjs from 'dayjs'
+import { siteConfig } from '@/site.config'
+import BaseLayout from './BaseLayout.astro'
 
 type Props = CollectionEntry<'blogPosts'>['data'] & {
 	headings: MarkdownHeading[]

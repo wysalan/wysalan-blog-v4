@@ -28,7 +28,7 @@ const { type = 'note', title = defaultTitle[type] } = Astro.props
 if (!types.includes(type)) {
 	throw new AstroError(
 		`Invalid \`type\` prop. (@Components/mdx/Aside.astro) \n`,
-		`Input: ${JSON.stringify(type)}\nExpected: One of ${types.map((i) => JSON.stringify(i)).join(', ')}`
+		`Input: ${JSON.stringify(type)}\nExpected: One of ${types.map((i) => JSON.stringify(i)).join(', ')}`,
 	)
 }
 ---

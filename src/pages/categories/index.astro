@@ -1,9 +1,9 @@
 ---
-import { siteConfig } from '@/site.config'
-import { getAllPosts } from '@Utils/postUtils'
-import { getAllCategories } from '@Utils/categoryUtils'
-import BaseLayout from '@Layouts/BaseLayout.astro'
 import CategoryCard from '@Components/common/CategoryCard.astro'
+import BaseLayout from '@Layouts/BaseLayout.astro'
+import { getAllCategories } from '@Utils/categoryUtils'
+import { getAllPosts } from '@Utils/postUtils'
+import { siteConfig } from '@/site.config'
 
 const allPosts = await getAllPosts()
 

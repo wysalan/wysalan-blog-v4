@@ -1,6 +1,6 @@
-import { visit, SKIP } from 'unist-util-visit'
-import type { Node, Parent } from 'unist'
 import type { Element, Properties } from 'hast'
+import type { Node, Parent } from 'unist'
+import { SKIP, visit } from 'unist-util-visit'
 
 export default function rehypeTableWrapper() {
 	return (tree: Node) => {

@@ -1,9 +1,9 @@
 ---
-import { siteConfig, siteSetting } from '@/site.config'
-import { Icon } from 'astro-icon/components'
-import { getAllPosts } from '@Utils/postUtils'
-import BaseLayout from '@Layouts/BaseLayout.astro'
 import PostCard from '@Components/common/PostCard.astro'
+import BaseLayout from '@Layouts/BaseLayout.astro'
+import { getAllPosts } from '@Utils/postUtils'
+import { Icon } from 'astro-icon/components'
+import { siteConfig, siteSetting } from '@/site.config'
 
 const posts = await getAllPosts(4)
 ---

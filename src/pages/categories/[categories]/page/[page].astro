@@ -1,12 +1,12 @@
 ---
-import { type GetStaticPathsOptions } from 'astro'
-import { siteConfig } from '@/site.config'
-import { Icon } from 'astro-icon/components'
-import { getAllPosts } from '@Utils/postUtils'
-import { getChiCategoryName } from '@Utils/categoryUtils'
-import BaseLayout from '@Layouts/BaseLayout.astro'
 import PostBlock from '@Components/common/PostBlock.astro'
 import Pagination from '@Components/Pagination.astro'
+import BaseLayout from '@Layouts/BaseLayout.astro'
+import { getChiCategoryName } from '@Utils/categoryUtils'
+import { getAllPosts } from '@Utils/postUtils'
+import { type GetStaticPathsOptions } from 'astro'
+import { Icon } from 'astro-icon/components'
+import { siteConfig } from '@/site.config'
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
 	const allPosts = await getAllPosts()

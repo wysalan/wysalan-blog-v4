@@ -1,12 +1,12 @@
 ---
-import { siteConfig } from '@/site.config'
-import { Icon } from 'astro-icon/components'
-import { Image } from 'astro:assets'
-import dayjs from 'dayjs'
-import FormattedDate from './FormattedDate.astro'
 import { getChiCategoryName } from '@Utils/categoryUtils'
 import { tagNameSlugify } from '@Utils/tagUtils'
+import { Image } from 'astro:assets'
+import { Icon } from 'astro-icon/components'
+import dayjs from 'dayjs'
+import { siteConfig } from '@/site.config'
 import defaultPostImage from '../../../public/defaultOgImage.jpg'
+import FormattedDate from './FormattedDate.astro'
 
 const { post, showCategory = true } = Astro.props
 

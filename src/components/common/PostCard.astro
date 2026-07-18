@@ -1,9 +1,9 @@
 ---
-import { siteConfig } from '@/site.config'
-import FormattedDate from './FormattedDate.astro'
+import { getChiCategoryName } from '@Utils/categoryUtils'
 import { Image } from 'astro:assets'
 import { Icon } from 'astro-icon/components'
-import { getChiCategoryName } from '@Utils/categoryUtils'
+import { siteConfig } from '@/site.config'
+import FormattedDate from './FormattedDate.astro'
 
 const { post } = Astro.props
 ---

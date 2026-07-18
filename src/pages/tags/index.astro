@@ -1,9 +1,9 @@
 ---
-import { siteConfig } from '@/site.config'
+import TagCard from '@Components/common/TagCard.astro'
+import BaseLayout from '@Layouts/BaseLayout.astro'
 import { getAllPosts } from '@Utils/postUtils'
 import { getAllTags } from '@Utils/tagUtils'
-import BaseLayout from '@Layouts/BaseLayout.astro'
-import TagCard from '@Components/common/TagCard.astro'
+import { siteConfig } from '@/site.config'
 
 const allPosts = await getAllPosts()
 
