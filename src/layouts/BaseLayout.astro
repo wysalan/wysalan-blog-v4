@@ -10,15 +10,18 @@ interface Props {
 	title?: string
 	description?: string
 	image?: string
+	type?: 'website' | 'article'
+	pubDate?: Date
+	updatedDate?: Date
 }
 
-const { title, description, image } = Astro.props
+const { title, description, image, type, pubDate, updatedDate } = Astro.props
 ---
 
 <!doctype html>
 <html lang={siteConfig.language || 'en'}>
 	<head>
-		<BaseHead title={title || siteConfig.title} description={description || siteConfig.description} image={image} />
+		<BaseHead title={title || siteConfig.title} description={description || siteConfig.description} image={image} type={type} pubDate={pubDate} updatedDate={updatedDate} />
 		<ClientRouter />
 		<LoadingIndicator color="#1369a2" height="3px" />
 		<script is:inline>

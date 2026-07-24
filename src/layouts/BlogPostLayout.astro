@@ -17,7 +17,7 @@ type Props = CollectionEntry<'blogPosts'>['data'] & {
 const { title, description, categories, pubDate, updatedDate, coverImage, coverImageCredit, headings } = Astro.props
 ---
 
-<BaseLayout title=`${title} | ${siteConfig.title}` description={description} image={coverImage}>
+<BaseLayout title=`${title} | ${siteConfig.title}` description={description} image={coverImage} type="article" pubDate={pubDate} updatedDate={updatedDate}>
 	<main>
 		<article class="basic-container flex flex-col justify-around gap-8 pb-10 lg:flex-row-reverse">
 			<aside class="relative hidden lg:block lg:w-65">
