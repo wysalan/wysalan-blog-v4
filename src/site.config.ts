@@ -14,6 +14,7 @@ interface siteSetting {
 	footerDescription: string
 }
 
+/** 網站資訊及功能設定 */
 export const siteConfig: siteConfig = {
 	url: 'https://wysalan.com/',
 	base: '',
@@ -24,12 +25,26 @@ export const siteConfig: siteConfig = {
 	pageSize: 10,
 }
 
+/** 網站頁面內容設定 */
 export const siteSetting: siteSetting = {
 	homePageDescription: '沙連的個人網站邁入第四代，歡迎參觀',
 	footerTitle: '',
 	footerDescription: '不只是分享，也是為了記錄',
 }
 
+/** 分類資料設定 */
+export const categoryDetails: Record<string, { slug: string; description?: string }> = {
+	使用心得: { slug: 'review' },
+	動畫心得: { slug: 'anime-review' },
+	遊戲心得: { slug: 'game-review' },
+	體驗心得: { slug: 'first-impression' },
+	開箱: { slug: 'unboxing' },
+	攝影: { slug: 'photography' },
+	網站開發: { slug: 'web-dev' },
+	未分類: { slug: 'uncategorized' },
+}
+
+/** 社群連結設定 */
 export const SocialLinks = [
 	{
 		name: 'GitHub',

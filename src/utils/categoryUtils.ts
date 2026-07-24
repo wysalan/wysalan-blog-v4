@@ -1,19 +1,11 @@
 import type { CollectionEntry } from 'astro:content'
+import { categoryDetails } from '@/site.config'
 
 /** 中英文分類名稱對應表 */
-export const categoryMap: Record<string, string> = {
-	使用心得: 'review',
-	動畫心得: 'anime-review',
-	遊戲心得: 'game-review',
-	體驗心得: 'first-impression',
-	開箱: 'unboxing',
-	攝影: 'photography',
-	網站開發: 'web-dev',
-	未分類: 'uncategorized',
-} as const
+export const categoryMap = Object.fromEntries(Object.entries(categoryDetails).map(([chiName, { slug }]) => [chiName, slug]))
 
 /** 英中文分類名稱對應表（反轉後的中英文分類名稱對應表） */
-const reversedCategoryMap = Object.fromEntries(Object.entries(categoryMap).map(([key, value]) => [value, key]))
+const reversedCategoryMap = Object.fromEntries(Object.entries(categoryDetails).map(([chiName, { slug }]) => [slug, chiName]))
 
 /**
  * 使用中文分類名稱取得對應的英文分類名稱
