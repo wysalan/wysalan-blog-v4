@@ -1,4 +1,5 @@
 import type { CollectionEntry } from 'astro:content'
+import { tagDetails } from '@/site.config'
 
 /**
  * 找出所有標籤及其出現次數，並進行排序處理
@@ -31,4 +32,13 @@ export async function getAllTags(allPosts: CollectionEntry<'blogPosts'>[], sortB
  */
 export function tagNameSlugify(tagName?: string) {
 	return tagName?.replace(' ', '-').toLowerCase()
+}
+
+/**
+ * 取得標籤描述
+ * @param tagName 標籤名稱
+ * @returns 已設定的標籤描述，若無設定則返回固定描述
+ */
+export function getTagDescription(tagName: string) {
+	return tagDetails[tagName]?.description ?? `含有「${tagName}」標籤的所有文章`
 }

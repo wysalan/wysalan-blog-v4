@@ -2,7 +2,7 @@
 import PostBlock from '@Components/common/PostBlock.astro'
 import Pagination from '@Components/Pagination.astro'
 import BaseLayout from '@Layouts/BaseLayout.astro'
-import { getChiCategoryName } from '@Utils/categoryUtils'
+import { getCategoryDescription, getChiCategoryName } from '@Utils/categoryUtils'
 import { getAllPosts } from '@Utils/postUtils'
 import { type GetStaticPathsOptions } from 'astro'
 import { Icon } from 'astro-icon/components'
@@ -25,7 +25,7 @@ const { data } = page
 const { categories } = Astro.params
 ---
 
-<BaseLayout title=`分類：${getChiCategoryName(categories)} | ${siteConfig.title}`>
+<BaseLayout title=`分類：${getChiCategoryName(categories)} | ${siteConfig.title}` description={getCategoryDescription(categories)}>
 	<main class="page-container">
 		<div class="flex flex-wrap items-center">
 			<Icon name="lucide:folder-open" class="mr-3" size={38} />

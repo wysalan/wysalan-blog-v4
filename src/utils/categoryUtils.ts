@@ -56,3 +56,13 @@ export async function getAllCategories(allPosts: CollectionEntry<'blogPosts'>[],
 		return result.sort((a, b) => getChiCategoryName(a.name).localeCompare(getChiCategoryName(b.name), 'zh-TW'))
 	}
 }
+
+/**
+ * 取得分類描述
+ * @param categorySlug 分類 Slug
+ * @returns 已設定的分類描述，若無設定則返回固定描述
+ */
+export function getCategoryDescription(categorySlug: string) {
+	const chiCategoryName = getChiCategoryName(categorySlug)
+	return categoryDetails[chiCategoryName]?.description ?? `分類「${chiCategoryName}」的所有文章`
+}

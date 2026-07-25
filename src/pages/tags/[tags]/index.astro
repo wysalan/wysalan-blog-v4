@@ -3,7 +3,7 @@ import PostBlock from '@Components/common/PostBlock.astro'
 import Pagination from '@Components/Pagination.astro'
 import BaseLayout from '@Layouts/BaseLayout.astro'
 import { getAllPosts } from '@Utils/postUtils'
-import { tagNameSlugify } from '@Utils/tagUtils'
+import { getTagDescription, tagNameSlugify } from '@Utils/tagUtils'
 import { Icon } from 'astro-icon/components'
 import { siteConfig } from '@/site.config'
 
@@ -47,7 +47,7 @@ const page = {
 }
 ---
 
-<BaseLayout title=`標籤：${origTagName} | ${siteConfig.title}`>
+<BaseLayout title=`標籤：${origTagName} | ${siteConfig.title}` description={getTagDescription(origTagName)}>
 	<main class="page-container">
 		<div class="flex items-center">
 			<Icon name="material-symbols:tag-rounded" class="mr-3" size={38} />
