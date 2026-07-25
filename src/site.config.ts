@@ -44,6 +44,9 @@ export const categoryDetails: Record<string, { slug: string; description?: strin
 	未分類: { slug: 'uncategorized' },
 }
 
+/** 標籤資料設定 */
+export const tagDetails: Record<string, { description: string }> = {}
+
 /** 社群連結設定 */
 export const SocialLinks = [
 	{
