@@ -15,7 +15,10 @@ const { Content } = await render(entry)
 
 <BaseLayout title=`${title} | ${siteConfig.title}`>
 	<main class="page-container">
-		<section class="pb-10">
+		<div class="flex flex-wrap items-center">
+			<h1 class="page-title">關於</h1>
+		</div>
+		<section class="py-10">
 			<div class="prose prose-zinc prose-base md:prose-lg dark:prose-invert prose-element-modify max-w-none text-justify">
 				<Content />
 			</div>
