@@ -44,7 +44,7 @@ const { data } = page
 			</div>
 		</section>
 		<div class="my-10">
-			<Pagination page={page} firstPageUrl={`/tags/${tags}`} urlPattern={`/tags/${tags}/page/{}`} />
+			<Pagination page={page} baseUrl={`/tags/${tags}`} />
 		</div>
 	</main>
 </BaseLayout>

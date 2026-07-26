@@ -43,7 +43,7 @@ const { categories } = Astro.params
 			</div>
 		</section>
 		<div class="my-10">
-			<Pagination page={page} firstPageUrl={`/categories/${categories}`} urlPattern={`/categories/${categories}/page/{}`} />
+			<Pagination page={page} baseUrl={`/categories/${categories}`} />
 		</div>
 	</main>
 </BaseLayout>

@@ -2,12 +2,12 @@
 import { type Page } from 'astro'
 import { Icon } from 'astro-icon/components'
 
-const { page, firstPageUrl, urlPattern } = Astro.props
+const { page, baseUrl } = Astro.props
 
 /**
- * 取得 Page 並回傳需要顯示的頁碼
- * @param page {Page} 分頁物件
- * @param pageItemSize {Number} 欲顯示的頁碼數量 (預設為 3)
+ * 取得分頁列要顯示的頁碼區間
+ * @param page 分頁物件
+ * @param pageItemSize 欲顯示的頁碼數量 (預設為 3)
  */
 export function getPageNumbers(page: Page, pageItemSize: number = 3) {
 	let first = 1
@@ -32,27 +32,20 @@ export function getPageNumbers(page: Page, pageItemSize: number = 3) {
 }
 
 /**
- * 將 Pattern 轉換成對應的分頁網址
- * @param pattern 完整網址（以 "/{}" 結尾，會被替換成頁碼）
+ * 取得對應的分頁網址
+ * @param baseUrl 基礎網址，該分頁的首頁（第一頁）網址
  * @param targetPageNumber 目標頁碼
- * @param firstPageUrl 此分頁第一頁的網址
  */
-export function patternToUrl(pattern: string, targetPageNumber: number, firstPageUrl?: string) {
-	if (targetPageNumber === 1) {
-		if (firstPageUrl) {
-			return firstPageUrl
-		}
-		return pattern.replace('{}', '')
-	}
-	return pattern.replace('{}', targetPageNumber.toString())
+export function getPageUrl(baseUrl: string, targetPageNumber: number) {
+	return targetPageNumber === 1 ? baseUrl : `${baseUrl}/page/${targetPageNumber}`
 }
 
 const pageNumbers = getPageNumbers(page)
 const firstPageNumber = pageNumbers[0]
 const lastPageNumber = pageNumbers[pageNumbers.length - 1]
 const currentPage = page.currentPage
-const prevUrl = firstPageUrl && currentPage === 2 ? firstPageUrl : page.url.prev
-const nextUrl = page.url.next
+const prevUrl = currentPage > 1 ? getPageUrl(baseUrl, currentPage - 1) : null
+const nextUrl = currentPage < page.lastPage ? getPageUrl(baseUrl, currentPage + 1) : null
 const showFirstPage = pageNumbers[0] !== 1
 const showLastPage = lastPageNumber !== page.lastPage
 ---
@@ -75,7 +68,7 @@ const showLastPage = lastPageNumber !== page.lastPage
 		{
 			showFirstPage && (
 				<li>
-					<a href={patternToUrl(urlPattern, 1, firstPageUrl)} class="btn-pagination" aria-label="前往第 1 頁">
+					<a href={getPageUrl(baseUrl, 1)} class="btn-pagination" aria-label="前往第 1 頁">
 						1
 					</a>
 				</li>
@@ -96,7 +89,7 @@ const showLastPage = lastPageNumber !== page.lastPage
 							{pageNumber}
 						</span>
 					) : (
-						<a href={patternToUrl(urlPattern, pageNumber, firstPageUrl)} class="btn-pagination" aria-label={`前往第 ${pageNumber} 頁`}>
+						<a href={getPageUrl(baseUrl, pageNumber)} class="btn-pagination" aria-label={`前往第 ${pageNumber} 頁`}>
 							{pageNumber}
 						</a>
 					)}
@@ -113,7 +106,7 @@ const showLastPage = lastPageNumber !== page.lastPage
 		{
 			showLastPage && (
 				<li>
-					<a href={patternToUrl(urlPattern, page.lastPage, firstPageUrl)} class="btn-pagination" aria-label={`前往第 ${page.lastPage} 頁`}>
+					<a href={getPageUrl(baseUrl, page.lastPage)} class="btn-pagination" aria-label={`前往第 ${page.lastPage} 頁`}>
 						{page.lastPage}
 					</a>
 				</li>

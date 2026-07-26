@@ -38,7 +38,7 @@ const { data } = page
 			</div>
 		</section>
 		<div class="my-10">
-			<Pagination page={page} firstPageUrl={'/posts'} urlPattern={'/posts/page/{}'} />
+			<Pagination page={page} baseUrl={`/posts`} />
 		</div>
 	</main>
 </BaseLayout>
