@@ -17,7 +17,13 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
 			params: { tags: tagNameSlugify(tag) },
 			props: { origTagName: tag },
 			pageSize: siteConfig.pageSize,
-		})
+		}).map((entry) => ({
+			...entry,
+			params: {
+				...entry.params,
+				page: entry.props.page.currentPage === 1 ? undefined : `page/${entry.props.page.currentPage}`,
+			},
+		}))
 	})
 }
 

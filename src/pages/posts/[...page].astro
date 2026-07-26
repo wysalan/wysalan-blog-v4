@@ -9,7 +9,12 @@ import { siteConfig } from '@/site.config'
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
 	const posts = await getAllPosts()
-	return paginate(posts, { pageSize: siteConfig.pageSize })
+	return paginate(posts, { pageSize: siteConfig.pageSize }).map((entry) => ({
+		...entry,
+		params: {
+			page: entry.props.page.currentPage === 1 ? undefined : `page/${entry.props.page.currentPage}`,
+		},
+	}))
 }
 
 const { page } = Astro.props
