@@ -31,7 +31,7 @@ export async function getAllTags(allPosts: CollectionEntry<'blogPosts'>[], sortB
  * @returns 已處理過的標籤名稱
  */
 export function tagNameSlugify(tagName?: string) {
-	return tagName?.replace(' ', '-').toLowerCase()
+	return tagName?.replaceAll(' ', '-').toLowerCase()
 }
 
 /**
