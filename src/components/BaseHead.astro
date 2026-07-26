@@ -48,14 +48,17 @@ const {
 <meta name="author" content={author} />
 
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content={type} />
-<meta property="og:url" content={Astro.url} />
+<meta property="og:site_name" content={siteConfig.title} />
+<meta property="og:locale" content={siteConfig.language.replace('-', '_')} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
+<meta property="og:url" content={Astro.url} />
 <meta property="og:image" content={new URL(image, Astro.url)} />
-{(type === 'article' && pubDate) && <meta property="article:published_time" content={pubDate.toISOString()} /> }
-{(type === 'article' && updatedDate) && <meta property="article:modified_time" content={updatedDate.toISOString()} /> }
-{(type === 'article') && <meta property="article:author" content={author} /> }
+<meta property="og:image:alt" content={title.replace(` | ${siteConfig.title}`, '')} />
+<meta property="og:type" content={type} />
+{type === 'article' && pubDate && <meta property="article:published_time" content={pubDate.toISOString()} /> }
+{type === 'article' && updatedDate && <meta property="article:modified_time" content={updatedDate.toISOString()} /> }
+{type === 'article' && <meta property="article:author" content={author} /> }
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
