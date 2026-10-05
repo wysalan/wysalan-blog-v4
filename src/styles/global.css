@@ -112,7 +112,7 @@ html {
 }
 
 .archive-post-item {
-	@apply hover:bg-white ml-2.5 grid items-center rounded-md not-hover:rounded-l-none not-hover:border-l-2 py-2 transition-all hover:shadow-xl hover:ring-2 md:grid-cols-[120px_1fr] md:gap-y-0 md:hover:scale-[1.0125];
+	@apply hover:bg-white dark:hover:bg-white/10 ml-2.5 grid items-center rounded-md not-hover:rounded-l-none not-hover:border-l-2 py-2 transition-all hover:shadow-xl hover:ring-2 md:grid-cols-[120px_1fr] md:gap-y-0 md:hover:scale-[1.0125];
 }
 
 /* Plugin Modifies */
