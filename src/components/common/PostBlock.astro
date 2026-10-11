@@ -64,7 +64,7 @@ const { title, description, pubDate, updatedDate, categories, tags, coverImage }
 		>
 			<a href={`${siteConfig.base}/posts/${post.id}/`}>{title}</a>
 		</h2>
-		<p class="line-clamp-1 opacity-90 lg:text-lg">{description}</p>
+		<p class="line-clamp-1 opacity-90">{description}</p>
 		<div class="group flex items-center gap-2 overflow-auto">
 			{
 				tags.flat()[0] !== '' &&
