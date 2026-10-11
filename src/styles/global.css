@@ -172,11 +172,12 @@ html {
 
 /* Table Of Content */
 .toc-item {
-	@apply hover:text-primary dark:hover:text-primary-dark line-clamp-2 max-xl:text-sm max-w-fit rounded-md rounded-l-none px-3 py-1 transition-all;
+	@apply relative hover:text-primary dark:hover:text-primary-dark line-clamp-2 text-sm max-w-fit px-3 py-1 transition
+	before:absolute before:inset-y-1 before:left-0 before:w-1 before:rounded-full before:bg-background-dark dark:before:bg-background before:opacity-0 before:transition-opacity;
 }
 
 .toc-highlight {
-	@apply text-primary dark:text-primary-dark shadow-[inset_3.5px_0_0_0_#2b2b2b] dark:shadow-[inset_3.5px_0_0_0_#FAFAFA];
+	@apply text-primary dark:text-primary-dark before:opacity-100;
 }
 
 /* Other */

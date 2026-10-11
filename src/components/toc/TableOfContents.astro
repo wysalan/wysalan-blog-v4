@@ -52,23 +52,23 @@ const nestedHeadings = generateNestedHeading(headings)
 
 {
 	nestedHeadings.length ? (
-		<nav class="toc sticky top-35">
+		<nav class="toc sticky top-28">
 			<div class="mb-4 flex items-center">
 				<h2 class="font-bold md:text-lg 2xl:text-xl">目錄</h2>
-				<div class="group relative ml-1.5 w-12 md:h-6 2xl:h-7">
+				<div class="group relative ml-2.5 w-12 md:h-6 2xl:h-7">
 					<span
 						class="pagePercent absolute inset-0 flex items-center justify-center font-mono font-semibold opacity-60 transition-opacity group-hover:opacity-0"
 						title="文章瀏覽百分比"
 					/>
 					<span
-						class="back-to-top absolute inset-0 flex cursor-pointer items-center justify-center rounded-lg opacity-0 shadow transition-all group-hover:opacity-100 hover:bg-zinc-200/70 active:shadow-none dark:hover:bg-zinc-200/20"
+						class="back-to-top absolute inset-0 flex cursor-pointer items-center justify-center rounded-lg opacity-0 shadow-md transition group-hover:opacity-100 hover:bg-white dark:hover:bg-white/10 hover:ring-2 hover:ring-black dark:ring-white active:scale-95"
 						title="回到文章頂部"
 					>
 						<Icon name="lucide:arrow-up-to-line" size={20} class="dark:text-foreground-dark" />
 					</span>
 				</div>
 			</div>
-			<ul class="toc-list max-h-[60vh] space-y-1 overflow-y-auto">
+			<ul class="toc-list max-h-[65vh] space-y-1 overflow-y-auto px-2 py-3 bg-white dark:bg-white/5 ring-2 rounded-md shadow-lg scrollbar-none">
 				{/* H2 */}
 				{nestedHeadings.map((heading) => (
 					<li>
