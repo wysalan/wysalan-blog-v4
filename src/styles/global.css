@@ -158,7 +158,7 @@ html {
 
 /* TailwindCSS Typography Modifies */
 .prose-element-modify {
-	@apply prose-headings:first:mt-0 prose-headings:mt-[1.2em] prose-h2:mb-[0.8em] prose-ul:mt-[1.2em] prose-table:my-5 prose-pre:mt-[2em] prose-img:rounded-sm prose-img:mx-auto prose-img:my-0;
+	@apply prose-h2:text-2xl prose-h3:text-xl prose-h4:text-lg prose-headings:first:mt-0 prose-headings:mt-[1.2em] prose-h2:mb-[0.8em] prose-ul:mt-[1.2em] prose-table:my-0 prose-table:whitespace-nowrap prose-pre:mt-[2em] prose-img:rounded-sm prose-img:mx-auto prose-img:my-0;
 }
 
 .prose blockquote > p::before {
