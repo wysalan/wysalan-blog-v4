@@ -62,32 +62,32 @@ html {
 
 /* Button */
 .btn-primary {
-	@apply bg-foreground hover:bg-foreground/75 text-background dark:bg-foreground-dark hover:dark:bg-foreground-dark/85 dark:text-background-dark flex w-fit items-center gap-2 rounded-lg px-3 py-2 transition-all hover:shadow-lg active:shadow-none;
+	@apply flex max-w-max items-center gap-2 rounded-lg px-3 py-1.75 transition hover:shadow-md bg-foreground hover:bg-background dark:bg-foreground-dark dark:hover:bg-background-dark text-foreground-dark dark:text-foreground hover:text-background-dark dark:hover:text-background hover:ring-2 hover:ring-foreground dark:ring-foreground-dark active:scale-95;
 }
 
 .btn-secondary {
-	@apply flex max-w-max items-center gap-2 rounded-lg bg-zinc-200/75 px-3 py-2 ring ring-black/10 transition-all hover:bg-zinc-300/75 hover:shadow-md active:shadow-none dark:bg-zinc-600/50 dark:hover:bg-zinc-500/75;
+	@apply flex max-w-max items-center gap-2 rounded-lg px-3 py-2 transition hover:ring-2 hover:ring-black dark:hover:ring-white hover:bg-white dark:hover:bg-zinc-500/75 hover:shadow-md active:scale-95;
 }
 
 .btn-folded {
-	@apply flex items-center rounded-lg bg-zinc-200/75 px-2 py-1.5 ring ring-black/10 transition-[max-width] duration-250 ease-in-out hover:bg-zinc-300/75 hover:shadow-md active:shadow-none dark:bg-zinc-600/75 dark:hover:bg-zinc-500/75;
+	@apply flex items-center rounded-lg px-2 py-1.5 hover:ring-2 hover:ring-black hover:dark:ring-white transition hover:shadow-md hover:bg-white hover:dark:bg-white/10 active:scale-95;
 }
 
 /* Pagination */
 .btn-pagination {
-	@apply text-foreground dark:text-foreground-dark hover:bg-foreground/15 hover:dark:bg-foreground-dark/15 active:bg-foreground/35 active:dark:bg-foreground-dark/35 m-1 flex w-fit items-center gap-2 rounded-md px-3 py-2 transition-colors;
+	@apply text-foreground dark:text-foreground-dark hover:bg-white hover:dark:bg-white/10 active:scale-95 hover:ring-2 hover:shadow-md active:shadow-none m-1 flex items-center w-fit px-3 py-2 rounded-md transition;
 }
 
 .pagination-ellipsis {
-	@apply text-foreground dark:text-foreground-dark flex w-fit items-center gap-2 rounded-md px-3 py-2;
+	@apply text-foreground dark:text-foreground-dark flex w-fit items-center rounded-md px-3 py-2;
 }
 
 .btn-pagination-active {
-	@apply text-foreground-dark dark:text-foreground bg-foreground/80 dark:bg-foreground-dark/80 m-1 flex w-fit items-center gap-2 rounded-md px-3 py-2;
+	@apply text-foreground-dark dark:text-foreground bg-background-dark dark:bg-background m-1 flex items-center w-fit px-3 py-2 rounded-md;
 }
 
 .btn-pagination-arrow {
-	@apply text-foreground dark:text-foreground-dark hover:bg-foreground/15 hover:dark:bg-foreground-dark/15 active:bg-foreground/35 active:dark:bg-foreground-dark/35 m-1 flex w-fit items-center gap-2 rounded-md px-1 py-2 transition-colors;
+	@apply text-foreground dark:text-foreground-dark hover:bg-white hover:dark:bg-white/10 active:scale-95 hover:ring-2 hover:shadow-md active:shadow-none m-1 flex items-center w-fit px-1 py-2 rounded-md transition;
 }
 
 /* Components */
