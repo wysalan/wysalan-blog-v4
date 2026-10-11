@@ -19,11 +19,11 @@ const { title, description, categories, pubDate, updatedDate, coverImage, coverI
 
 <BaseLayout title=`${title} | ${siteConfig.title}` description={description} image={coverImage} type="article" pubDate={pubDate} updatedDate={updatedDate}>
 	<main>
-		<article class="basic-container flex flex-col justify-around gap-8 pb-10 lg:flex-row-reverse">
-			<aside class="relative hidden lg:block lg:w-65">
+		<article class="basic-container flex flex-col lg:flex-row-reverse justify-between pb-10 gap-8">
+			<aside class="relative hidden lg:block lg:w-65 lg:pt-12">
 				<TableOfContents headings={headings} />
 			</aside>
-			<div class="w-full grow md:max-w-[95ch]">
+			<div class="w-full grow lg:max-w-[95ch]">
 				<header class:list={['mt-5', 'md:mt-10', { 'mb-5': !coverImage }]}>
 					<h1 class="text-2xl leading-snug font-bold md:text-3xl">{title}</h1>
 					<div class="flex flex-wrap items-center gap-3 pt-3 pb-4 md:gap-4">
